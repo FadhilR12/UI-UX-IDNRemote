@@ -1,0 +1,31 @@
+{
+  "trialDays": 7,
+  "plans": [
+    {
+      "id": "bulanan",
+      "name": "Bulanan",
+      "price": 99000,
+      "period": "bulan",
+      "note": "Bisa berhenti kapan saja",
+      "features": [
+        "Semua kursus",
+        "Sertifikat setiap kursus",
+        "Belajar di HP dan laptop"
+      ]
+    },
+    {
+      "id": "tahunan",
+      "name": "Tahunan",
+      "price": 899000,
+      "period": "tahun",
+      "note": "Hemat 24% dibanding bulanan",
+      "recommended": true,
+      "features": [
+        "Semua kursus",
+        "Sertifikat setiap kursus",
+        "Belajar di HP dan laptop",
+        "Kursus baru setiap bulan"
+      ]
+    }
+  ]
+}

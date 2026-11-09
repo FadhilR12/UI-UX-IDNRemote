@@ -1,0 +1,26 @@
+[
+  {
+    "q": "Perlu kartu kredit untuk uji coba?",
+    "a": "Nggak perlu. Kamu bisa coba semua kursus selama 7 hari tanpa isi data pembayaran apa pun."
+  },
+  {
+    "q": "Habis 7 hari, apa yang terjadi?",
+    "a": "Uji cobanya selesai sendiri, dan nggak ada tagihan apa pun. Kalau mau lanjut belajar, tinggal pilih paket bulanan atau tahunan."
+  },
+  {
+    "q": "Satu kursus berapa lama?",
+    "a": "Setiap kursus punya 6 pelajaran pendek. Kamu bisa menyelesaikannya pelan-pelan, sesuai waktu luangmu."
+  },
+  {
+    "q": "Dapat sertifikat nggak?",
+    "a": "Dapat. Sertifikatnya muncul setelah kamu menyelesaikan semua pelajaran dan latihan di satu kursus."
+  },
+  {
+    "q": "Bisa berhenti langganan kapan aja?",
+    "a": "Bisa, kapan aja, dari halaman profil. Kamu tetap bisa belajar sampai periode yang sudah dibayar habis."
+  },
+  {
+    "q": "Bisa belajar dari HP?",
+    "a": "Bisa, dari browser HP maupun laptop. Progresmu tersimpan di keduanya, jadi bisa lanjut di mana aja."
+  }
+]

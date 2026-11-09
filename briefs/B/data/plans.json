@@ -1,0 +1,30 @@
+{
+  "plans": [
+    {
+      "id": "per-sesi",
+      "name": "Per sesi",
+      "price": 250000,
+      "unit": "sesi",
+      "note": "Cocok untuk mencoba",
+      "features": [
+        "1 sesi video call",
+        "Catatan dari mentor",
+        "Jadwal ulang sampai 24 jam sebelum sesi"
+      ]
+    },
+    {
+      "id": "paket-4",
+      "name": "Paket 4 sesi",
+      "price": 880000,
+      "unit": "4 sesi",
+      "note": "Hemat 12%, berlaku 3 bulan",
+      "recommended": true,
+      "features": [
+        "4 sesi dengan mentor mana pun",
+        "Catatan dari mentor",
+        "Jadwal ulang sampai 24 jam sebelum sesi",
+        "Ringkasan progres setelah sesi ke-4"
+      ]
+    }
+  ]
+}

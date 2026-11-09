@@ -1,0 +1,38 @@
+{
+  "name": "Rino Saputra",
+  "email": "rino@contoh.id",
+  "plan": "paket-4",
+  "sessionsLeft": 1,
+  "goal": "Lolos interview untuk posisi tech lead",
+  "upcoming": [
+    {
+      "id": "s3",
+      "mentorId": "hendra",
+      "date": "2026-12-03",
+      "time": "15:00",
+      "topic": "Simulasi interview perilaku",
+      "callUrl": "https://meet.contoh.id/mentorku-s3",
+      "canReschedule": true
+    }
+  ],
+  "past": [
+    {
+      "id": "s1",
+      "mentorId": "nadia",
+      "date": "2026-11-12",
+      "time": "19:00",
+      "topic": "Persiapan negosiasi promosi",
+      "notes": "Siapkan tiga bukti kontribusi dengan angka sebelum bicara dengan atasan.",
+      "reviewed": true
+    },
+    {
+      "id": "s2",
+      "mentorId": "putri",
+      "date": "2026-11-20",
+      "time": "13:00",
+      "topic": "Review CV",
+      "notes": "Ringkasan CV terlalu umum. Mulai setiap poin dengan hasil, bukan tugas, dan tautkan repo yang paling rapi.",
+      "reviewed": false
+    }
+  ]
+}

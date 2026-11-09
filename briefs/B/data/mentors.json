@@ -1,0 +1,283 @@
+{
+  "fields": [
+    "Interview",
+    "CV dan portofolio",
+    "Presentasi",
+    "Bahasa Inggris untuk kerja",
+    "Negosiasi",
+    "Memimpin tim"
+  ],
+  "timezone": "WIB",
+  "sessionMinutes": 45,
+  "mentors": [
+    {
+      "id": "nadia",
+      "name": "Nadia Rahma",
+      "field": "Negosiasi",
+      "title": "Engineering manager di perusahaan logistik",
+      "years": 12,
+      "rating": 4.9,
+      "sessions": 214,
+      "summary": "Menyiapkan negosiasi gaji, promosi, dan pindah perusahaan.",
+      "topics": [
+        "Negosiasi gaji",
+        "Promosi",
+        "Pindah perusahaan"
+      ],
+      "availability": [
+        {
+          "date": "2026-12-01",
+          "times": [
+            "09:00"
+          ]
+        },
+        {
+          "date": "2026-12-03",
+          "times": [
+            "10:00",
+            "15:00"
+          ]
+        },
+        {
+          "date": "2026-12-05",
+          "times": []
+        }
+      ]
+    },
+    {
+      "id": "hendra",
+      "name": "Hendra Wijaya",
+      "field": "Interview",
+      "title": "Technical recruiter di perusahaan teknologi",
+      "years": 8,
+      "rating": 4.8,
+      "sessions": 176,
+      "summary": "Simulasi interview dengan feedback langsung, dari pertanyaan perilaku sampai bercerita tentang proyek.",
+      "topics": [
+        "Simulasi interview",
+        "Pertanyaan perilaku",
+        "Bercerita dengan metode STAR"
+      ],
+      "availability": [
+        {
+          "date": "2026-12-01",
+          "times": [
+            "09:00",
+            "13:00"
+          ]
+        },
+        {
+          "date": "2026-12-03",
+          "times": [
+            "10:00",
+            "15:00"
+          ]
+        },
+        {
+          "date": "2026-12-05",
+          "times": [
+            "08:00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "putri",
+      "name": "Putri Ayu",
+      "field": "CV dan portofolio",
+      "title": "Talent acquisition lead di startup",
+      "years": 7,
+      "rating": 4.7,
+      "sessions": 158,
+      "summary": "CV dan portofolio yang menunjukkan hasil kerjamu, bukan daftar tugas.",
+      "topics": [
+        "Review CV",
+        "Portofolio",
+        "Profil LinkedIn"
+      ],
+      "availability": [
+        {
+          "date": "2026-12-01",
+          "times": [
+            "09:00",
+            "13:00",
+            "19:00"
+          ]
+        },
+        {
+          "date": "2026-12-03",
+          "times": [
+            "10:00",
+            "15:00"
+          ]
+        },
+        {
+          "date": "2026-12-05",
+          "times": []
+        }
+      ]
+    },
+    {
+      "id": "bagus",
+      "name": "Bagus Setiawan",
+      "field": "Presentasi",
+      "title": "Senior backend engineer dan pembicara konferensi",
+      "years": 9,
+      "rating": 4.8,
+      "sessions": 132,
+      "summary": "Latihan presentasi dan demo sampai kamu tenang di depan tim dan klien.",
+      "topics": [
+        "Demo fitur",
+        "Presentasi ke atasan",
+        "Mengatasi gugup"
+      ],
+      "availability": [
+        {
+          "date": "2026-12-01",
+          "times": [
+            "09:00"
+          ]
+        },
+        {
+          "date": "2026-12-03",
+          "times": [
+            "10:00",
+            "15:00"
+          ]
+        },
+        {
+          "date": "2026-12-05",
+          "times": [
+            "08:00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "citra",
+      "name": "Citra Maharani",
+      "field": "Bahasa Inggris untuk kerja",
+      "title": "Product manager di perusahaan global",
+      "years": 10,
+      "rating": 4.6,
+      "sessions": 98,
+      "summary": "Latihan percakapan kerja berbahasa Inggris dengan tim, atasan, dan klien dari luar negeri.",
+      "topics": [
+        "Percakapan dengan klien",
+        "Bicara dengan atasan",
+        "Rapat berbahasa Inggris"
+      ],
+      "availability": [
+        {
+          "date": "2026-12-01",
+          "times": [
+            "09:00",
+            "13:00"
+          ]
+        },
+        {
+          "date": "2026-12-03",
+          "times": [
+            "10:00",
+            "15:00"
+          ]
+        },
+        {
+          "date": "2026-12-05",
+          "times": []
+        }
+      ]
+    },
+    {
+      "id": "fajar",
+      "name": "Fajar Kurniawan",
+      "field": "Memimpin tim",
+      "title": "Engineering manager",
+      "years": 11,
+      "rating": 4.9,
+      "sessions": 187,
+      "summary": "Bersiap dari senior developer menjadi tech lead.",
+      "topics": [
+        "Menjadi tech lead",
+        "One-on-one",
+        "Delegasi"
+      ],
+      "availability": [
+        {
+          "date": "2026-12-01",
+          "times": [
+            "09:00",
+            "13:00",
+            "19:00"
+          ]
+        },
+        {
+          "date": "2026-12-03",
+          "times": [
+            "10:00",
+            "15:00"
+          ]
+        },
+        {
+          "date": "2026-12-05",
+          "times": [
+            "08:00"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "laras",
+      "name": "Laras Sukma",
+      "field": "Bahasa Inggris untuk kerja",
+      "title": "Engineering lead di perusahaan remote internasional",
+      "years": 9,
+      "rating": 4.5,
+      "sessions": 74,
+      "summary": "Percakapan kerja berbahasa Inggris: standup, code review, dan interview.",
+      "topics": [
+        "Percakapan dengan tim",
+        "Standup berbahasa Inggris",
+        "Interview berbahasa Inggris"
+      ],
+      "availability": []
+    },
+    {
+      "id": "yusuf",
+      "name": "Yusuf Hidayat",
+      "field": "Interview",
+      "title": "Hiring manager di startup",
+      "years": 6,
+      "rating": 4.6,
+      "sessions": 63,
+      "summary": "Persiapan interview di startup, sampai pertanyaan yang perlu kamu ajukan ke perusahaan.",
+      "topics": [
+        "Interview startup",
+        "Bercerita tentang proyek",
+        "Pertanyaan untuk perusahaan"
+      ],
+      "availability": [
+        {
+          "date": "2026-12-01",
+          "times": [
+            "09:00",
+            "13:00"
+          ]
+        },
+        {
+          "date": "2026-12-03",
+          "times": [
+            "10:00",
+            "15:00"
+          ]
+        },
+        {
+          "date": "2026-12-05",
+          "times": [
+            "08:00"
+          ]
+        }
+      ]
+    }
+  ]
+}
