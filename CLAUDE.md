@@ -111,11 +111,11 @@ Isi "Tanggapan peserta" dari pesan peserta berikutnya; kalau belum ada, tulis "m
 Setiap langkah punya panduan di `langkah/pekan-N.md` dengan nomor yang sama: kenapa, apa yang ditulis, template, dan kapan cukup. *(kamu)* = kamu yang menulis, di chat atau langsung di dokumen ini. *(Claude Code)* = Claude Code membangun dari tulisanmu. Langkah dicentang setelah kamu menilai hasilnya: lewat `/cek`, atau dengan bilang sudah pas.
 
 ### Pekan 1 · Dokumen kedua project
-- [ ] 1.1 Pilih brief dari fasilitator *(Claude Code)*
-- [ ] 1.2 Pahami brief-mu: pilih masalah yang paling mengancam goal di website dan web app, dan sikapmu saat bisnis dan user bertabrakan *(kamu)*
-- [ ] 1.3 Tulis isi yang menjawab masalah M1–M3 website *(kamu)*
-- [ ] 1.4 Tandai titik di flow kunci yang butuh validasi, loading, atau pesan error *(kamu)*
-- [ ] 1.5 Laporan pekan ini dengan `/laporan` *(kamu dan Claude Code)*
+- [x] 1.1 Pilih brief dari fasilitator *(Claude Code)*
+- [x] 1.2 Pahami brief-mu: pilih masalah yang paling mengancam goal di website dan web app, dan sikapmu saat bisnis dan user bertabrakan *(kamu)*
+- [x] 1.3 Tulis isi yang menjawab masalah M1–M3 website *(kamu)*
+- [x] 1.4 Tandai titik di flow kunci yang butuh validasi, loading, atau pesan error *(kamu)*
+- [x] 1.5 Laporan pekan ini dengan `/laporan` *(kamu dan Claude Code)*
 
 ### Pekan 2 · Wireframe tiga halaman website
 - [ ] 2.1 Tulis rencana Beranda website: tujuan, aksi utama, urutan section *(kamu)*
@@ -184,34 +184,39 @@ Setiap langkah punya panduan di `langkah/pekan-N.md` dengan nomor yang sama: ken
 
 ## 1. Brief
 
-- **Brief-mu:** [A atau B] → baca `briefs/[A atau B]/brief.md`
-- **Data contoh:** `briefs/[A atau B]/data/`
+- **Brief-mu:** B (Mentorku) → baca `briefs/B/brief.md`
+- **Data contoh:** `briefs/B/data/`
 
 ## 2. User, goal, dan flow (pekan 1)
 
 _Disalin Claude Code dari brief di langkah 1.1, apa adanya. Kalau ada yang terasa kurang tepat, tanyakan ke fasilitator, jangan diubah sendiri._
 
-**User:** [dari brief]
+**User:** Developer 22–35 tahun yang punya target karier beberapa bulan ke depan, misalnya pindah kerja, naik menjadi tech lead, atau bekerja dengan klien luar negeri, dan butuh arahan spesifik dari orang berpengalaman, bukan materi umum. Mencari dan memesan mentor dari laptop, lalu mengecek jadwal sesi dari HP.
 
-**User goal:** [dari brief]
+**User goal:** Saat ingin naik ke peran berikutnya, misalnya tech lead atau posisi di perusahaan luar negeri, saya ingin dibimbing rutin oleh orang yang sudah menempuh jalan itu, supaya dalam beberapa bulan saya tahu apa yang harus dilatih dan bisa melihat kemajuannya.
 
-**Business goal:** [dari brief]
+**Business goal:** Pengunjung memesan sesi pertama di website, lalu hadir di sesi itu dan memesan sesi berikutnya di web app, supaya user kembali membayar sesi atau membeli paket 4 sesi.
 
-**Bisa bertabrakan dengan user goal:** [dari brief]
+**Bisa bertabrakan dengan user goal:** Di pilih jadwal dan bayar: bisnis ingin user langsung membeli paket 4 sesi, sedangkan user ingin mencoba satu sesi dulu sebelum yakin mentornya cocok.
 
 **Flow kunci:**
 
-- **F1 · [judul]:** [langkah dari brief]
-- **F2 · [judul]:** [langkah dari brief]
-- **F3 · [judul]:** [langkah dari brief]
+- **F1 · Dari website sampai masuk ke web app:** Beranda atau Daftar mentor → Pesan sesi → Daftar → Masuk ke web app (menjawab P1 M1, M2 · P2 M1)
+- **F2 · Onboarding sampai sesi pertama (Web app):** Pilih bidang dan tujuan → Rekomendasi mentor di akhir onboarding → Pilih jadwal dan bayar → Sesi terkonfirmasi (menjawab P2 M1)
+- **F3 · Kembali untuk sesi berikutnya (Web app, sudah masuk):** Beranda user → Detail sesi → Jadwal ulang atau baca catatan → Pesan lagi (menjawab P2 M2, M3)
 
 **Prioritasku** (langkah 1.2, kamu yang menulis):
 
-- **Website:** [M1/M2/M3] paling mengancam goal, karena [akibatnya]
-- **Web app:** [M1/M2/M3] paling mengancam goal, karena [akibatnya]
-- **Saat bertabrakan:** di [layar], bisnis ingin user [aksi], sedangkan user takut [kekhawatirannya]. Kalau bisnis didahulukan, user [apa yang dia lakukan]. Kalau user didahulukan, bisnis [apa yang hilang]. Aku mendahulukan [bisnis atau user], dan tampilannya menjawab keduanya dengan [caranya]
+- **Website:** M3 paling mengancam goal, karena kalau tidak terjawab, pengunjung tidak akan memesan satupun sesi jika pengunjung ragu akan kualitas mentor yang ditawarkan.
+- **Web app:** M2 paling mengancam goal, karena kalau tidak terjawab, user yang sudah membeli sesi akan merasa kecewa kepada produk dan tidak membeli sesi berikutnya karena user tidak mengikuti sesi yang dijadwalkan karena lupa, ini bisa dicegah dengan adanya kemudahan dalam menemukan sesi yang sudah dijadwalkan dan user juga dapat menjadwal ulang jika pengingat sudah terlewat.
+- **Saat bertabrakan:** Di Pilih jadwal dan bayar, bisnis ingin user membeli langsung 4 sesi, sedangkan user takut "payah, aku sudah membeli 4 sesi dan yang aku terima hanya ini saja selama 1 sesi, aku merasa tidak worth it untuk memebeli 4 sesi ini." Kalau bisnis didahulukan, user akan menutup layar jadwal dan bayar sebelum melakukan pertimbangan karena user merasa ada rasa khawatir yang ditimbulkan. Kalau user didahlukan, bisnis tidak mendapatkan keuntungan yang sebesar 4 sesi. Aku mendahulukan user, dan tampilannya menjawab keduanya dengan cara menampilkan pilihan Per sesi yang sudah ada di plans sebagai coba dulu, lalu setelah itu user dapat memilih membayar 4 sesi selanjutnya atau tidak menggunakan jasa ini.
 
-**Titik yang butuh validasi, loading, atau pesan error** (langkah 1.4, kamu yang menulis): [daftar]
+**Titik yang butuh validasi, loading, atau pesan error** (langkah 1.4, kamu yang menulis):
+
+- F1 langkah 3 (Daftar): butuh validasi, karena email jika tidak sesua dengan format dan salah membuat user tidak bisa mendaftarkan dirinya ke web.
+- F2 langkah 3 (jadwal dan bayar): saat user melakukan pembayaran membutuhkan loading dan block sampai ssesi terkonfirmasi sehingga tidak menyebabkan multiple click yang mengakibatkan user membayar lebih dari 1 kali
+- F2 langhak 3 (jadwal dan pembayaran): butuh pesan error saat terjadi kegagalan, rollback ke form pengisian dan form tetap terisi hanya saja kembali sebelum dia menekan submit, karena jika user tidak mendapatkan pesan error user akan mengira sudah berhasil melakukan pembayaran sesi, ditambah jika itu error dan tidak di rollback maka akan ada kemungkinan uang user akan terambil walaupun error
+- F3 langkah 4 (Detail sesi): butuh loading dan tombol nonaktif, karena dapat mengurangi jatah sesi user (asumsi: jika user menekan pesan lagi maka akan terjadwal secara otomatis dengan mentor yang sama akan tetapi beda hari saja)
 
 _Panduan, format, dan contoh setiap bagian ada di `langkah/pekan-1.md`._
 
@@ -241,13 +246,13 @@ Mode tampilan menentukan seberapa jadi tampilannya: `wireframe` (pekan 2, websit
 **Halaman dulu, baru section.** Setiap halaman dibaca sebagai satu cerita: untuk apa halaman ini, dan urutan section apa yang membawa user ke aksi utamanya. Tulis rencana halaman dulu, lalu wireframe dibangun sebagai satu halaman utuh. Deskripsi per section dipakai saat memperbaiki section yang kurang efektif.
 
 **Daftar halaman** (disalin dari brief di langkah 1.1):
-- P1 · Website SaaS: [halaman wajib dari brief]
-- P2 · Web app: [halaman wajib dari brief]
+- P1 · Website SaaS: Beranda, Daftar mentor, Harga
+- P2 · Web app: Daftar, Onboarding: pilih bidang dan tujuan, Beranda user: sesi mendatang, Pilih jadwal dan bayar, dengan profil mentor ringkas, Detail sesi: catatan dan jadwal ulang
 
 **Isi yang menjawab masalah website** (langkah 1.3, kamu yang menulis; bahan untuk rencana halaman di pekan 2):
-- M1: pengunjung perlu [tahu atau melihat apa], isinya dari [brief atau data/...]
-- M2: []
-- M3: []
+- M1: pengunjung perlu melihat mentor yang cocok dengan topics yang diinginkan dan pengalaman mentor sehingga pengunjung dapat mempercayai mentor tersebut, isinya dari `data/mentors.json` (tiga mentor yang memenuhi dan pengalaman tertinggi)
+- M2: pengunjung perlu melihat harga dari sesi yang dia pilih dan deskripsi singkat pada sesi itu akan dilakukan apa sehingga pengunjung dapat membayangkan apa yang akan dia dapat di sesi tersebut, dan jika sesi sudah selesai pengunjung dapat membandingkan bayangan dan realita nya apa yang dia dapatkan, isinya dari `data/plans.json` dan `data/mentors.json`
+- M3: pengunjung perlu melihat record dari mentor tersebut seperti rating, jam terbang, banyaknya sesi yang ditangani, dan juga testimoni, isinya dari `data/mentors.json` dan `data/testimonials.json` (testimoni untuk Mentorku secara umum, bukan untuk mentor tertentu)
 
 ### P1 · Website SaaS
 
