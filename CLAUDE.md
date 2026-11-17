@@ -106,7 +106,7 @@ Isi "Tanggapan peserta" dari pesan peserta berikutnya; kalau belum ada, tulis "m
 
 ## Progres
 
-**Pekan sekarang:** 1
+**Pekan sekarang:** 2
 
 Setiap langkah punya panduan di `langkah/pekan-N.md` dengan nomor yang sama: kenapa, apa yang ditulis, template, dan kapan cukup. *(kamu)* = kamu yang menulis, di chat atau langsung di dokumen ini. *(Claude Code)* = Claude Code membangun dari tulisanmu. Langkah dicentang setelah kamu menilai hasilnya: lewat `/cek`, atau dengan bilang sudah pas.
 
@@ -118,13 +118,13 @@ Setiap langkah punya panduan di `langkah/pekan-N.md` dengan nomor yang sama: ken
 - [x] 1.5 Laporan pekan ini dengan `/laporan` *(kamu dan Claude Code)*
 
 ### Pekan 2 · Wireframe tiga halaman website
-- [ ] 2.1 Tulis rencana Beranda website: tujuan, aksi utama, urutan section *(kamu)*
-- [ ] 2.2 Tulis rencana dua halaman website lainnya *(kamu)*
-- [ ] 2.3 Bangun wireframe ketiga halaman, masing-masing satu halaman utuh *(Claude Code)*
-- [ ] 2.4 Nilai halaman utuh dengan squint test *(kamu)*
-- [ ] 2.5 Tulis deskripsi dan "kenapa layout ini" untuk section yang kurang efektif *(kamu)*
-- [ ] 2.6 Perbaiki section itu, lalu cek di HP dan desktop *(Claude Code)*
-- [ ] 2.7 Laporan pekan ini dengan `/laporan` *(kamu dan Claude Code)*
+- [x] 2.1 Tulis rencana Beranda website: tujuan, aksi utama, urutan section *(kamu)*
+- [x] 2.2 Tulis rencana dua halaman website lainnya *(kamu)*
+- [x] 2.3 Bangun wireframe ketiga halaman, masing-masing satu halaman utuh *(Claude Code)*
+- [x] 2.4 Nilai halaman utuh dengan squint test *(kamu)*
+- [x] 2.5 Tulis deskripsi dan "kenapa layout ini" untuk section yang kurang efektif *(kamu)*
+- [x] 2.6 Perbaiki section itu, lalu cek di HP dan desktop *(Claude Code)*
+- [x] 2.7 Laporan pekan ini dengan `/laporan` *(kamu dan Claude Code)*
 
 ### Pekan 3 · Typography dan warna website
 - [ ] 3.1 Tulis font, type scale, dan palet beserta alasannya *(kamu)*
@@ -256,15 +256,40 @@ Mode tampilan menentukan seberapa jadi tampilannya: `wireframe` (pekan 2, websit
 
 ### P1 · Website SaaS
 
-#### [Nama halaman, misalnya Beranda]
+#### Beranda
 
-- **Tujuan halaman:** [apa yang harus dipahami atau dilakukan user di sini]
-- **Posisi di flow:** [user datang dari mana, lanjut ke mana]
-- **Satu aksi utama:** []
-- **Urutan section:** (setiap section dengan alasan kenapa ada di urutan itu)
-  1. [Section]: [keraguan atau kebutuhan user yang dijawab]
-  2. []
-  3. []
+- **Tujuan halaman:** pengunjung paham bahwa Mentorku menyediakan sesi one on one dengan mentor berpengalaman, dan ada beberapa mentor dengan keahlian berbeda yang bisa dipilih.
+- **Posisi di flow:** datang dari iklan atau pencarian (asumsi), lanjut ke Daftar
+- **Satu aksi utama:** Pesan sesi
+- **Urutan section:**
+  1. Hero: slogan singkat tentang Mentorku dengan tombol Pesan sesi di bawahnya, dan beberapa mentor ditampilkan di sebelahnya beserta rating, jumlah sesi, dan pengalamannya, lalu link Lihat semua mentor ke Daftar mentor. Hanya beberapa mentor, supaya pengunjung tidak bingung memilih dari banyak pilihan. List Mentor terpisah dihapus karena redundan dengan hero dan Daftar mentor · menjawab M1, M3, aksi utama
+  2. Bidang: enam bidang yang bisa dilatih, masing-masing dengan satu kalimat isi latihannya dan anchor ke Daftar mentor dengan filter bidang itu sudah terpilih (referensi: section Skills di skillex.webflow.io) · menjawab M1 dan M2
+  3. Cerita User: testimoni dari user yang sudah memakai Mentorku, dengan foto user · menjawab M3
+
+#### Daftar mentor
+
+- **Tujuan halaman:** pengunjung bisa melihat semua mentor beserta detailnya dengan jelas, sehingga bisa memilih mentor yang cocok.
+- **Posisi di flow:** datang dari Beranda, lanjut ke Pesan sesi
+- **Satu aksi utama:** Pesan sesi
+- **Urutan section:**
+  1. Pencarian mentor: pengunjung memasukkan kriteria untuk menemukan mentor yang dicari, dengan pilihan bidang berupa chip yang bisa diklik (referensi: section Categories di skillex.webflow.io) · menjawab M1 dan M2
+  2. List mentor: menampilkan semua mentor beserta detailnya langsung di list (tanpa popup), dengan tombol Pesan sesi di setiap mentor · menjawab M1, M3
+
+**Section: List mentor** (langkah 2.5)
+- Tujuan: Pengunjung dapat mencari mentor yang sesuai dengan kriteria dan menampilkan semua mentor beserta detailnya sebagai default
+- Isi: detail dari para mentor harus sampai ke pengguna, dan pengguna juga dapat melihat foto dari mentor
+- Aksi utama: pesan sesi dengan mentor
+- Referensi: list dari olx
+- Kenapa layout ini: sebenarnya aku memilih layout ini karena memenuhi proximity dan similiarity dari card card mentor lain. layout ini efektif karena hierarki jelas dan saat dilakukan squint test dia berhasil fokus ke detail mentor
+
+#### Harga
+
+- **Tujuan halaman:** pengunjung bisa melihat harga dan benefit setiap pilihan dengan jelas.
+- **Posisi di flow:** datang dari Beranda atau Daftar mentor, lanjut ke Daftar
+- **Satu aksi utama:** Daftar
+- **Urutan section:**
+  1. Benefit: menunjukkan apa saja yang didapat dari sesi · menjawab M2
+  2. Harga: menampilkan dua pilihan, coba 1 sesi dan Paket 4 sesi. 1 sesi tampil paling menonjol, Paket 4 sesi tetap terlihat dengan label rekomendasi. Tombol Daftar dan coba 1 sesi disatukan di kartu Per sesi (section Ajakan untuk mencoba dihapus), dan kartu Paket 4 sesi punya tombol sekunder bergaris supaya paket tetap bisa dipilih tanpa bersaing dengan 1 sesi · menjawab M2, aksi utama
 
 **Section: [nama, misalnya Hero]** (diisi saat section ini diperbaiki)
 - Tujuan: [apa yang harus dipahami atau dilakukan user di section ini]

@@ -1,0 +1,1637 @@
+/* Wireframe Mentorku (pekan 2).
+   Aturan mode wireframe: grayscale, satu font sistem, gambar sebagai kotak abu-abu,
+   tanpa bayangan, gradien, dan animasi. Nilai pindah ke tokens.css di pekan 4. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #ffffff;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+.lead {
+  font-size: 18px;
+  color: #444444;
+}
+
+.muted {
+  color: #555555;
+  font-size: 14px;
+}
+
+/* Header dan footer */
+
+.site-header {
+  border-bottom: 1px solid #cccccc;
+}
+
+.site-header .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #444444;
+}
+
+.nav a[aria-current="page"] {
+  color: #1a1a1a;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.site-footer {
+  margin-top: 64px;
+  border-top: 1px solid #cccccc;
+  padding: 32px 0;
+}
+
+.site-footer .container {
+  display: grid;
+  gap: 12px;
+}
+
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  display: inline-block;
+  padding: 6px 0;
+  color: #444444;
+}
+
+/* Section */
+
+.section {
+  padding: 56px 0;
+}
+
+.section + .section {
+  border-top: 1px solid #e6e6e6;
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+/* Placeholder gambar */
+
+.ph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d9d9d9;
+  color: #555555;
+  font-size: 13px;
+  text-align: center;
+  padding: 8px;
+}
+
+.ph-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ph-avatar-lg {
+  width: 96px;
+  height: 96px;
+}
+
+/* Tombol */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 24px;
+  border: 2px solid #1a1a1a;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.btn-text {
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Kartu */
+
+.card {
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  padding: 20px;
+  background: #ffffff;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 720px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.tag {
+  display: inline-block;
+  padding: 2px 10px;
+  border: 1px solid #8c8c8c;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #333333;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: #333333;
+}
+
+.stats strong {
+  color: #1a1a1a;
+}
+
+/* Beranda: hero */
+
+.hero .container {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .hero .container {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+
+.hero h1 {
+  max-width: 14ch;
+}
+
+.hero-mentors {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-mentor {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.hero-mentor p {
+  margin: 0;
+}
+
+/* Beranda: list mentor */
+
+.mentor-card {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.mentor-card-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.mentor-card-top p {
+  margin: 0;
+}
+
+/* Beranda: cerita user */
+
+.quote p {
+  font-size: 17px;
+}
+
+.quote footer {
+  font-size: 14px;
+  color: #555555;
+}
+
+/* Ajakan */
+
+.cta {
+  text-align: center;
+}
+
+.cta .section-head {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Daftar mentor: pencarian */
+
+.search {
+  display: grid;
+  gap: 16px;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+@media (min-width: 720px) {
+  .search {
+    grid-template-columns: 2fr 1fr;
+    align-items: end;
+  }
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid #757575;
+  border-radius: 6px;
+  font: inherit;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+.result-count {
+  margin: 24px 0 16px;
+  font-weight: 600;
+}
+
+.empty {
+  border: 1px dashed #8c8c8c;
+  border-radius: 8px;
+  padding: 32px 20px;
+  text-align: center;
+}
+
+/* Daftar mentor: popup detail */
+
+dialog {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100% - 32px);
+  padding: 0;
+  border: 2px solid #1a1a1a;
+  border-radius: 8px;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-body {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.dialog-head {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.dialog-head p {
+  margin: 0;
+}
+
+.dialog-close {
+  justify-self: end;
+  margin: -8px -8px 0 0;
+  min-width: 44px;
+  min-height: 44px;
+  border: 1px solid #8c8c8c;
+  border-radius: 6px;
+  background: #ffffff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.detail-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0;
+}
+
+.detail-stats div {
+  border: 1px solid #bdbdbd;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.detail-stats dt {
+  font-size: 13px;
+  color: #555555;
+}
+
+.detail-stats dd {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* Harga */
+
+.benefits {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 720px) {
+  .benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .benefits {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.benefit .ph {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 12px;
+  font-size: 11px;
+}
+
+.plans {
+  display: grid;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (min-width: 760px) {
+  .plans {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+.plan {
+  display: grid;
+  gap: 12px;
+}
+
+.plan-main {
+  border: 3px solid #1a1a1a;
+  padding: 28px;
+}
+
+.plan-label {
+  justify-self: start;
+}
+
+.plan-label-strong {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.price {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.plan:not(.plan-main) .price {
+  font-size: 28px;
+}
+
+.price span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+}
+
+.plan ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.plan li + li {
+  margin-top: 4px;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+.plain-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quote,
+.quote blockquote {
+  margin: 0;
+}
+
+.h3-size {
+  font-size: 18px;
+}
+
+.mentor-card .tag {
+  justify-self: start;
+}
+
+.ph-avatar-sm {
+  width: 40px;
+  height: 40px;
+  font-size: 11px;
+}
+
+.quote-by {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cta-card {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  border: 2px solid #1a1a1a;
+  text-align: center;
+}
+
+.cta-card .lead {
+  max-width: 520px;
+  margin-bottom: 20px;
+}
+
+.mentor-card > .btn {
+  align-self: end;
+  margin-top: 4px;
+}
+
+.mentor-card .tags {
+  margin-top: -4px;
+}
+
+/* Harga: kedua kartu harga sama ukuran, persegi panjang tegak dengan sudut rounded */
+
+.plans {
+  max-width: 760px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+@media (min-width: 640px) {
+  .plans {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.plan,
+.plan-main {
+  min-height: 460px;
+  padding: 28px;
+  border-radius: 16px;
+  align-content: start;
+}
+
+.plan:not(.plan-main) {
+  border: 3px solid #bdbdbd;
+}
+
+.plan:not(.plan-main) .price {
+  font-size: 36px;
+}
+
+.section-head-center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.tag-under-name {
+  margin: -6px 0 6px;
+}
+
+/* Beranda, List Mentor: nama, bidang, dan jabatan jadi satu kelompok rapat (proximity),
+   statistik diberi jarak lebih lebar supaya terbaca sebagai kelompok terpisah */
+
+.mentor-card-top > div:has(.tag-under-name) {
+  display: grid;
+  gap: 2px;
+}
+
+.mentor-card-top > div:has(.tag-under-name) h3 {
+  margin: 0;
+}
+
+.tag-under-name {
+  justify-self: start;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+}
+
+.mentor-card:has(.tag-under-name) .stats {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.mentor-card:has(.tag-under-name) {
+  align-content: space-between;
+}
+
+/* Beranda, List Mentor: jabatan diberi jarak dari nama + bidang */
+
+.mentor-card-top > div:has(.tag-under-name) .muted {
+  margin-top: 8px;
+}
+
+/* Statistik rata kiri-kanan, angka di atas dan keterangannya di bawah */
+
+.stats-spread {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.stats-spread li {
+  display: grid;
+  gap: 2px;
+}
+
+.stats-spread li:nth-child(2) {
+  text-align: center;
+}
+
+.stats-spread li:last-child {
+  text-align: right;
+}
+
+.stats-spread strong {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.stats-spread span {
+  font-size: 13px;
+  color: #555555;
+}
+
+.stats-spread {
+  flex-wrap: nowrap;
+}
+
+.stats-spread li {
+  min-width: 0;
+}
+
+/* Statistik kembali satu baris per angka, tetap rata kiri-kanan */
+
+.stats-spread li {
+  display: block;
+  white-space: nowrap;
+}
+
+.stats-spread strong {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Harga, Benefit: ikon, judul, dan isi sejajar antar kartu (subgrid) */
+
+.benefits .benefit {
+  display: grid;
+  grid-row: span 3;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  align-content: start;
+}
+
+.benefits .benefit .ph {
+  margin-bottom: 12px;
+}
+
+.benefits .benefit h2 {
+  align-self: start;
+}
+
+.benefits .benefit p {
+  margin: 0;
+}
+
+/* Urutan: nama, jabatan, lalu bidang di bawah jabatan */
+
+.mentor-card-top > div:has(.tag-under-name) .muted {
+  margin-top: 0;
+}
+
+.mentor-card-top > div:has(.tag-under-name) .tag-under-name {
+  margin-top: 6px;
+}
+
+/* ===== Daftar mentor: kartu mentor =====
+   1 kolom di HP, 2 di tablet, 3 di desktop.
+   Kartu tegak: foto persegi panjang penuh di atas.
+   Isi kartu sejajar antar kartu dalam satu baris lewat subgrid:
+   baris 1 identitas, 2 deskripsi, 3 topik, 4 statistik, 5 tombol.
+   Hierarki: nama paling kuat, lalu jabatan + bidang, deskripsi, topik, statistik, tombol.
+   Proximity: rapat di dalam kelompok, longgar antarkelompok. */
+
+#mentor-list {
+  grid-template-columns: 1fr;
+  row-gap: 16px;
+}
+
+@media (min-width: 720px) {
+  #mentor-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  #mentor-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#mentor-list .mentor-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row: span 5;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  padding: 0 20px 20px;
+  overflow: hidden;
+}
+
+/* baris 1: foto + identitas */
+#mentor-list .mentor-card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+#mentor-list .ph-photo {
+  aspect-ratio: 16 / 9;
+  margin: 0 -20px;
+}
+
+#mentor-list .mentor-card-top > div {
+  display: grid;
+  gap: 2px;
+}
+
+#mentor-list .mentor-card-top h3 {
+  margin: 0 0 2px;
+  font-size: 20px;
+}
+
+#mentor-list .mentor-card-top .muted {
+  margin: 0;
+  font-size: 14px;
+}
+
+#mentor-list .tag-under-name {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #444444;
+}
+
+/* baris 2: deskripsi */
+#mentor-list .mentor-card > p {
+  margin: 16px 0 0;
+  font-size: 15px;
+  color: #333333;
+}
+
+/* baris 3: topik */
+#mentor-list .mentor-card > div:not(.mentor-card-top) {
+  display: grid;
+  align-content: start;
+  gap: 6px;
+  margin: 12px 0 24px;
+}
+
+#mentor-list .mentor-card > div:not(.mentor-card-top) > .muted {
+  margin: 0;
+  font-size: 13px;
+}
+
+#mentor-list .tags .tag {
+  font-size: 12px;
+  color: #444444;
+}
+
+/* baris 4: statistik */
+#mentor-list .stats-spread {
+  flex-wrap: nowrap;
+  align-self: end;
+  padding-top: 12px;
+  border-top: 1px solid #e6e6e6;
+  font-size: 13px;
+  color: #555555;
+}
+
+#mentor-list .stats-spread strong {
+  font-size: 16px;
+}
+
+/* baris 5: tombol */
+#mentor-list .mentor-card > .btn {
+  align-self: end;
+  margin-top: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-cta {
+  margin-top: 12px;
+}
+
+/* Daftar mentor (2.5/2.6): kartu sebagai aksi, seperti OLX.
+   Tombol hitam diganti link teks kecil; seluruh kartu bisa diklik lewat link itu. */
+#mentor-list .mentor-card-clickable {
+  position: relative;
+  cursor: pointer;
+}
+
+#mentor-list .mentor-card-clickable:hover {
+  border-color: #1a1a1a;
+}
+
+#mentor-list .mentor-card-clickable:focus-within {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+#mentor-list .card-link {
+  align-self: end;
+  margin-top: 12px;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#mentor-list .card-link:focus-visible {
+  outline: none;
+}
+
+#mentor-list .card-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+#mentor-list .card-link {
+  font-size: 14px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Kartu tanpa tulisan aksi: link tak terlihat, area kliknya tetap seluruh kartu */
+#mentor-list .card-link-hidden {
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
+/* Beranda hero: bukti kualitas di kartu mentor + jalan ke Daftar mentor */
+.hero-side {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-stats {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #555555;
+}
+
+.hero-more {
+  justify-self: end;
+  padding: 10px 0;
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+/* Daftar mentor: chip bidang (ref. Categories skillex) */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  grid-column: 1 / -1;
+}
+
+.chips legend {
+  margin-bottom: 6px;
+  padding: 0;
+  font-weight: 600;
+}
+
+.chip {
+  position: relative;
+}
+
+.chip input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.chip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid #757575;
+  border-radius: 999px;
+  background: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chip input:checked + span {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.chip input:focus-visible + span {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+@media (min-width: 720px) {
+  .search {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Beranda: section Bidang (ref. Skills skillex) */
+.bidang-list {
+  display: grid;
+  gap: 24px 32px;
+}
+
+@media (min-width: 720px) {
+  .bidang-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .bidang-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bidang-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.bidang-item h3 {
+  margin-bottom: 4px;
+  font-size: 17px;
+}
+
+.bidang-item p {
+  margin: 0;
+}
+
+.bidang-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  font-size: 11px;
+}
+
+/* Beranda, Bidang (ref. Skills): judul besar kiri, penjelasan kanan, lalu daftar bidang */
+.split-head {
+  display: grid;
+  gap: 12px 48px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 860px) {
+  .split-head {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .split-head h2 {
+    font-size: 36px;
+  }
+}
+
+.split-head .lead {
+  margin: 0;
+}
+
+.bidang-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  height: 100%;
+  padding: 16px;
+  margin: -16px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.bidang-item:hover {
+  border-color: #1a1a1a;
+}
+
+.bidang-more {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Daftar mentor, filter bidang (ref. Categories): label teks, yang aktif bergaris bawah */
+.chip span {
+  min-height: 44px;
+  padding: 8px 4px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  background: none;
+  color: #444444;
+}
+
+.chip input:checked + span {
+  background: none;
+  color: #1a1a1a;
+  border-bottom-color: #1a1a1a;
+  font-weight: 700;
+}
+
+.chips {
+  gap: 4px 20px;
+}
+
+/* Beranda, Bidang: setiap bidang jadi kartu yang bisa diklik, tanpa teks link */
+.bidang-list {
+  gap: 16px;
+}
+
+.bidang-card {
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.bidang-card:hover {
+  border-color: #1a1a1a;
+}
+
+.bidang-list > li {
+  display: flex;
+}
+
+.bidang-list > li > .bidang-card {
+  flex: 1;
+}
+
+/* Beranda, Bidang: kartu gaya referensi Categories — gambar besar rounded,
+   judul di bawahnya, satu baris deskripsi singkat. Tanpa garis kartu. */
+.bidang-list {
+  gap: 32px 24px;
+}
+
+.bidang-tile {
+  display: block;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.bidang-img {
+  aspect-ratio: 1 / 1;
+  margin-bottom: 16px;
+  border-radius: 16px;
+}
+
+.bidang-tile h3 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.bidang-tile p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.bidang-tile:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.bidang-tile:hover .bidang-img {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+@media (max-width: 719px) {
+  .bidang-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 12px;
+  }
+
+  .bidang-img {
+    margin-bottom: 10px;
+    border-radius: 12px;
+    font-size: 11px;
+  }
+
+  .bidang-tile h3 {
+    font-size: 16px;
+  }
+
+  .bidang-tile p {
+    font-size: 13px;
+  }
+}
+
+.h2-lg {
+  font-size: 36px;
+}
+
+@media (max-width: 480px) {
+  .h2-lg {
+    font-size: 26px;
+  }
+}
+
+/* Gambar bidang: persegi panjang mendatar 4:3 */
+.bidang-img {
+  aspect-ratio: 4 / 3;
+}
+
+/* Gambar bidang: persegi panjang tegak 3:4 */
+.bidang-img {
+  aspect-ratio: 3 / 4;
+}
+
+/* Navbar HP: tombol Menu, daftar halaman muncul di bawah header saat dibuka */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 719px) {
+  .site-header .container {
+    flex-wrap: wrap;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 8px 14px;
+    border: 1px solid #757575;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #1a1a1a;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .nav-toggle-bars,
+  .nav-toggle-bars::before,
+  .nav-toggle-bars::after {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background: #1a1a1a;
+  }
+
+  .nav-toggle-bars {
+    position: relative;
+  }
+
+  .nav-toggle-bars::before,
+  .nav-toggle-bars::after {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  .nav-toggle-bars::before {
+    top: -5px;
+  }
+
+  .nav-toggle-bars::after {
+    top: 5px;
+  }
+
+  .nav {
+    flex-basis: 100%;
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 8px;
+  }
+
+  .nav ul.is-open {
+    display: flex;
+  }
+
+  .nav ul li + li {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .nav a {
+    display: block;
+    padding: 12px 0;
+  }
+}
+
+/* Navbar HP v2: tombol ikon tanpa teks dan tanpa garis, menu jadi panel overlay dari kanan.
+   Mode wireframe: tanpa animasi geser; panel langsung muncul. */
+.nav-close,
+.nav-backdrop {
+  display: none;
+}
+
+@media (max-width: 719px) {
+  .nav-toggle {
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+
+  .nav-toggle-bars,
+  .nav-toggle-bars::before,
+  .nav-toggle-bars::after {
+    width: 22px;
+  }
+
+  .nav-toggle-bars::before {
+    top: -7px;
+  }
+
+  .nav-toggle-bars::after {
+    top: 7px;
+  }
+
+  .nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    width: min(300px, 80vw);
+    padding: 16px 24px;
+    background: #ffffff;
+    border-left: 1px solid #bdbdbd;
+    overflow-y: auto;
+  }
+
+  .nav.is-open {
+    display: block;
+  }
+
+  .nav ul,
+  .nav ul.is-open {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8px;
+  }
+
+  .nav-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    border: 0;
+    background: none;
+    font: inherit;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .nav-backdrop:not([hidden]) {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  body.nav-locked {
+    overflow: hidden;
+  }
+}
+
+/* Daftar mentor, filter bidang di HP: satu baris yang bisa digeser, bukan empat baris bertumpuk.
+   Yang tergeser hanya baris filter, halaman tetap tidak scroll ke samping. */
+@media (max-width: 719px) {
+  .chips {
+    flex-wrap: nowrap;
+    gap: 16px;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-right: -20px;
+    padding-right: 20px;
+  }
+
+  .chips::-webkit-scrollbar {
+    display: none;
+  }
+
+  .chip {
+    flex-shrink: 0;
+  }
+
+  .chip span {
+    white-space: nowrap;
+  }
+
+  .search {
+    min-width: 0;
+    overflow: hidden;
+  }
+}
+
+/* Filter bidang: rata kiri dengan label "Bidang", dan baris geser berhenti di dalam kotak pencarian */
+.chip span {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 719px) {
+  .chips {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  .search {
+    overflow: visible;
+  }
+
+  .search > * {
+    min-width: 0;
+  }
+}
+
+/* Filter bidang: judul "Bidang" didekatkan ke label-labelnya (sama dengan jarak label "Topik" ke kolomnya).
+   Area ketuk tetap 44px, teks digeser ke atas area itu. */
+.chips legend {
+  margin-bottom: 4px;
+}
+
+.chip span {
+  align-items: flex-start;
+  padding-top: 2px;
+  padding-bottom: 10px;
+}
+
+/* Garis bawah label aktif menempel ke teksnya; area ketuk 44px dipindah ke label pembungkus */
+.chip {
+  display: inline-flex;
+  align-items: flex-start;
+  min-height: 44px;
+}
+
+.chip span {
+  min-height: 0;
+  padding: 2px 0 6px;
+}
+
+/* Harga: tombol Daftar menyatu di kartu Per sesi, menempel di dasar kartu */
+.plan {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plan .plan-label {
+  align-self: flex-start;
+}
+
+.plan-cta {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* Harga, Benefit: 2 kolom × 2 baris, kartu mendatar (ikon kiri, teks kanan).
+   Baris teks lebih panjang dan deskripsi lebih gelap supaya enak dibaca. */
+.benefit-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 720px) {
+  .benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.benefit-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.benefit-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  font-size: 11px;
+}
+
+.benefit-row h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.benefit-row p {
+  margin: 0;
+  font-size: 16px;
+  color: #333333;
+}
+
+/* Daftar mentor: penanda kartu bisa diklik, panah ↗ di kanan atas foto */
+#mentor-list .ph-photo {
+  position: relative;
+}
+
+.card-arrow {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1a1a1a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+#mentor-list .mentor-card-clickable:hover .card-arrow {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Panah ↗ hanya di HP (tanpa hover); di desktop penandanya hover pada kartu */
+@media (min-width: 720px) {
+  .card-arrow {
+    display: none;
+  }
+}
+
+/* Hero: link Lihat semua mentor sebagai info pendukung, tidak bersaing dengan slogan dan tombol */
+.hero-more {
+  justify-self: end;
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hero-more:hover {
+  color: #1a1a1a;
+}
+
+/* Hero: mentor dan link "Lihat semua mentor" dikelompokkan dalam satu region (common region).
+   Satu kotak latar abu muda; mentor jadi baris di dalamnya, dipisah garis tipis. */
+.hero-side {
+  gap: 0;
+  padding: 8px 20px 4px;
+  border-radius: 12px;
+  background: #f2f2f2;
+}
+
+.hero-side .hero-mentors {
+  gap: 0;
+}
+
+.hero-side .hero-mentor {
+  border: 0;
+  border-radius: 0;
+  padding: 14px 0;
+  background: none;
+}
+
+.hero-side .hero-mentor + .hero-mentor {
+  border-top: 1px solid #d0d0d0;
+}
+
+.hero-side .hero-mentor .ph-avatar {
+  background: #d0d0d0;
+}
+
+.hero-side .hero-more {
+  border-top: 1px solid #d0d0d0;
+  justify-self: stretch;
+  text-align: right;
+  padding: 12px 0;
+}

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mentorku: belajar dari yang sudah sampai di sana</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Mentorku</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+      <nav class="nav" id="nav-menu" aria-label="Navigasi utama">
+        <button type="button" class="nav-close" aria-label="Tutup menu">✕</button>
+        <ul>
+          <li><a href="index.html" aria-current="page">Beranda</a></li>
+          <li><a href="mentor.html">Daftar mentor</a></li>
+          <li><a href="harga.html">Harga</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero: slogan + tombol Pesan sesi (aksi utama) + tiga mentor dengan rating, sesi, dan pengalaman (M1, M3) + link Lihat semua mentor -->
+    <section class="section hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div>
+          <h1 id="hero-title">Belajar dari orang yang sudah sampai di posisi impianmu.</h1>
+          <p class="lead">Ngobrol 1-on-1 lewat video call bareng praktisi berpengalaman. Mulai dari latihan interview sampai siap jadi tech lead.</p>
+          <a class="btn hero-cta" href="../app/daftar.html">Pesan sesi pertamamu</a>
+        </div>
+
+        <div class="hero-side">
+        <ul class="hero-mentors" aria-label="Beberapa mentor di Mentorku">
+          <li class="hero-mentor">
+            <div class="ph ph-avatar" aria-hidden="true">Foto</div>
+            <div>
+              <p><strong>Nadia Rahma</strong></p>
+              <p class="muted">Negosiasi</p>
+              <ul class="stats hero-stats">
+                <li><strong>4,9</strong> rating</li>
+                <li><strong>214</strong> sesi</li>
+                <li><strong>12</strong> tahun pengalaman</li>
+              </ul>
+            </div>
+          </li>
+          <li class="hero-mentor">
+            <div class="ph ph-avatar" aria-hidden="true">Foto</div>
+            <div>
+              <p><strong>Fajar Kurniawan</strong></p>
+              <p class="muted">Memimpin tim</p>
+              <ul class="stats hero-stats">
+                <li><strong>4,9</strong> rating</li>
+                <li><strong>187</strong> sesi</li>
+                <li><strong>11</strong> tahun pengalaman</li>
+              </ul>
+            </div>
+          </li>
+          <li class="hero-mentor">
+            <div class="ph ph-avatar" aria-hidden="true">Foto</div>
+            <div>
+              <p><strong>Citra Maharani</strong></p>
+              <p class="muted">Bahasa Inggris untuk kerja</p>
+              <ul class="stats hero-stats">
+                <li><strong>4,6</strong> rating</li>
+                <li><strong>98</strong> sesi</li>
+                <li><strong>10</strong> tahun pengalaman</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <a class="hero-more" href="mentor.html">Lihat semua mentor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Bidang: enam bidang dan apa yang dilatih di sesinya (ref. Categories skillex) · M1, M2 -->
+    <section class="section" aria-labelledby="bidang-title">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <h2 id="bidang-title" class="h2-lg">Mau latihan apa?</h2>
+          <p class="lead">Enam bidang soft skill buat kariermu.</p>
+        </div>
+        <ul class="bidang-list plain-list">
+          <li>
+            <a class="bidang-tile" href="mentor.html?bidang=Interview">
+              <div class="ph bidang-img" aria-hidden="true">Gambar Interview</div>
+              <h3>Interview</h3>
+              <p class="muted">Simulasi interview dan metode STAR</p>
+            </a>
+          </li>
+          <li>
+            <a class="bidang-tile" href="mentor.html?bidang=CV%20dan%20portofolio">
+              <div class="ph bidang-img" aria-hidden="true">Gambar CV dan portofolio</div>
+              <h3>CV dan portofolio</h3>
+              <p class="muted">Review CV, portofolio, dan LinkedIn</p>
+            </a>
+          </li>
+          <li>
+            <a class="bidang-tile" href="mentor.html?bidang=Presentasi">
+              <div class="ph bidang-img" aria-hidden="true">Gambar Presentasi</div>
+              <h3>Presentasi</h3>
+              <p class="muted">Demo fitur dan presentasi ke atasan</p>
+            </a>
+          </li>
+          <li>
+            <a class="bidang-tile" href="mentor.html?bidang=Bahasa%20Inggris%20untuk%20kerja">
+              <div class="ph bidang-img" aria-hidden="true">Gambar Bahasa Inggris untuk kerja</div>
+              <h3>Bahasa Inggris untuk kerja</h3>
+              <p class="muted">Standup, rapat, dan ngobrol sama klien</p>
+            </a>
+          </li>
+          <li>
+            <a class="bidang-tile" href="mentor.html?bidang=Negosiasi">
+              <div class="ph bidang-img" aria-hidden="true">Gambar Negosiasi</div>
+              <h3>Negosiasi</h3>
+              <p class="muted">Gaji, promosi, dan pindah kerja</p>
+            </a>
+          </li>
+          <li>
+            <a class="bidang-tile" href="mentor.html?bidang=Memimpin%20tim">
+              <div class="ph bidang-img" aria-hidden="true">Gambar Memimpin tim</div>
+              <h3>Memimpin tim</h3>
+              <p class="muted">Persiapan jadi tech lead</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 3. Cerita User: testimoni user Mentorku · M3 -->
+    <section class="section" aria-labelledby="cerita-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="cerita-title">Cerita developer yang sudah sesi duluan</h2>
+        </div>
+
+        <div class="grid grid-3">
+          <figure class="card quote">
+            <blockquote>
+              <p>"Cuma satu sesi review CV, dan bulan itu panggilan interview-ku naik dua kali lipat."</p>
+            </blockquote>
+            <figcaption class="quote-by"><div class="ph ph-avatar ph-avatar-sm" aria-hidden="true">Foto</div><span class="muted">Dimas, Backend developer</span></figcaption>
+          </figure>
+          <figure class="card quote">
+            <blockquote>
+              <p>"Mentornya bantu aku menjelaskan estimasi ke PM, tanpa kedengaran kayak cari alasan."</p>
+            </blockquote>
+            <figcaption class="quote-by"><div class="ph ph-avatar ph-avatar-sm" aria-hidden="true">Foto</div><span class="muted">Wulan, Frontend developer</span></figcaption>
+          </figure>
+          <figure class="card quote">
+            <blockquote>
+              <p>"Simulasi interview-nya mirip banget sama interview aslinya. Pas hari H jadi lebih siap."</p>
+            </blockquote>
+            <figcaption class="quote-by"><div class="ph ph-avatar ph-avatar-sm" aria-hidden="true">Foto</div><span class="muted">Reza, Software engineer</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="logo" href="index.html">Mentorku</a>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="mentor.html">Daftar mentor</a></li>
+        <li><a href="harga.html">Harga</a></li>
+      </ul>
+      <p class="muted">Langkah karier berikutnya terasa lebih ringan kalau ada yang menemani.</p>
+    </div>
+  </footer>
+  <script src="nav.js"></script>
+</body>
+</html>

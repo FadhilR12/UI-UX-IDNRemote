@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daftar mentor · Mentorku</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Mentorku</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+      <nav class="nav" id="nav-menu" aria-label="Navigasi utama">
+        <button type="button" class="nav-close" aria-label="Tutup menu">✕</button>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="mentor.html" aria-current="page">Daftar mentor</a></li>
+          <li><a href="harga.html">Harga</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Pencarian mentor: kolom topik + chip bidang (ref. Categories skillex) · M1 -->
+    <section class="section" aria-labelledby="cari-title">
+      <div class="container">
+        <div class="section-head">
+          <h1 id="cari-title">Cari mentor yang pas buat targetmu</h1>
+          <p class="lead">Pilih bidang yang mau kamu latih, atau ketik topiknya. Misalnya "tech lead" atau "interview".</p>
+        </div>
+
+        <form class="search" role="search" id="search-form">
+          <div class="field">
+            <label for="q">Topik atau nama mentor</label>
+            <input id="q" name="q" type="search" placeholder="Contoh: negosiasi gaji" autocomplete="off">
+          </div>
+          <fieldset class="chips">
+            <legend>Bidang</legend>
+            <label class="chip"><input type="radio" name="bidang" value="" checked><span>Semua bidang</span></label>
+            <label class="chip"><input type="radio" name="bidang" value="Interview"><span>Interview</span></label>
+            <label class="chip"><input type="radio" name="bidang" value="CV dan portofolio"><span>CV dan portofolio</span></label>
+            <label class="chip"><input type="radio" name="bidang" value="Presentasi"><span>Presentasi</span></label>
+            <label class="chip"><input type="radio" name="bidang" value="Bahasa Inggris untuk kerja"><span>Bahasa Inggris untuk kerja</span></label>
+            <label class="chip"><input type="radio" name="bidang" value="Negosiasi"><span>Negosiasi</span></label>
+            <label class="chip"><input type="radio" name="bidang" value="Memimpin tim"><span>Memimpin tim</span></label>
+          </fieldset>
+        </form>
+
+        <!-- 2. List mentor: semua mentor beserta detailnya dan tombol Pesan sesi · M1, M3 -->
+        <h2 class="result-count" id="result-count" aria-live="polite">8 mentor</h2>
+        <ul class="grid grid-2 plain-list" id="mentor-list" aria-labelledby="result-count"></ul>
+        <div class="empty" id="empty" hidden>
+          <p><strong>Belum ada mentor yang cocok dengan pencarianmu.</strong></p>
+          <p class="muted">Coba kata lain, atau pilih "Semua bidang".</p>
+          <button type="button" class="btn btn-secondary" id="reset">Lihat semua mentor</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="logo" href="index.html">Mentorku</a>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="mentor.html">Daftar mentor</a></li>
+        <li><a href="harga.html">Harga</a></li>
+      </ul>
+      <p class="muted">Langkah karier berikutnya terasa lebih ringan kalau ada yang menemani.</p>
+    </div>
+  </footer>
+
+  <script src="mentor.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>

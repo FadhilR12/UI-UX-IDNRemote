@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harga · Mentorku</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html">Mentorku</a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Buka menu">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <div class="nav-backdrop" hidden></div>
+      <nav class="nav" id="nav-menu" aria-label="Navigasi utama">
+        <button type="button" class="nav-close" aria-label="Tutup menu">✕</button>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="mentor.html">Daftar mentor</a></li>
+          <li><a href="harga.html" aria-current="page">Harga</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Benefit: apa saja yang didapat dari sesi · M2 -->
+    <section class="section" aria-labelledby="benefit-title">
+      <div class="container">
+        <div class="section-head">
+          <h1 id="benefit-title">Satu sesi, isinya apa aja?</h1>
+          <p class="lead">Biar kebayang dulu sebelum lihat harganya.</p>
+        </div>
+
+        <ul class="benefit-grid plain-list">
+          <li class="card benefit-row">
+            <div class="ph benefit-icon" aria-hidden="true">Ikon</div>
+            <div>
+              <h2 class="h3-size">45 menit, cuma kamu dan mentor</h2>
+              <p>Video call berdua, bukan kelas grup atau rekaman.</p>
+            </div>
+          </li>
+          <li class="card benefit-row">
+            <div class="ph benefit-icon" aria-hidden="true">Ikon</div>
+            <div>
+              <h2 class="h3-size">Latihan sesuai targetmu</h2>
+              <p>Dari latihan interview sampai siap jadi tech lead.</p>
+            </div>
+          </li>
+          <li class="card benefit-row">
+            <div class="ph benefit-icon" aria-hidden="true">Ikon</div>
+            <div>
+              <h2 class="h3-size">Dapat catatan dari mentor</h2>
+              <p>Biar kamu tahu apa yang perlu dilatih berikutnya.</p>
+            </div>
+          </li>
+          <li class="card benefit-row">
+            <div class="ph benefit-icon" aria-hidden="true">Ikon</div>
+            <div>
+              <h2 class="h3-size">Bisa ganti jadwal</h2>
+              <p>Paling lambat 24 jam sebelum sesi dimulai.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. Harga: 1 sesi paling menonjol dengan tombol Daftar (aksi utama), Paket 4 sesi tetap terlihat dengan label rekomendasi · M2 -->
+    <section class="section" aria-labelledby="harga-title">
+      <div class="container">
+        <div class="section-head section-head-center">
+          <h2 id="harga-title">Coba satu sesi dulu, lanjut kalau cocok</h2>
+          <p class="lead">Nggak perlu langsung beli paket. Kalau sudah klop sama mentornya, paket 4 sesi lebih hemat.</p>
+        </div>
+
+        <div class="plans">
+          <article class="card plan plan-main" aria-labelledby="plan-sesi">
+            <span class="tag plan-label plan-label-strong">Cocok buat mencoba</span>
+            <h3 id="plan-sesi">Per sesi</h3>
+            <p class="price">Rp250.000 <span>/ sesi</span></p>
+            <ul>
+              <li>1 sesi video call, 45 menit</li>
+              <li>Catatan dari mentor</li>
+              <li>Bisa ganti jadwal sampai 24 jam sebelum sesi</li>
+            </ul>
+            <a class="btn plan-cta" href="../app/daftar.html">Daftar dan coba 1 sesi</a>
+          </article>
+
+          <article class="card plan" aria-labelledby="plan-paket">
+            <span class="tag plan-label">Rekomendasi kami</span>
+            <h3 id="plan-paket">Paket 4 sesi</h3>
+            <p class="price">Rp880.000 <span>/ 4 sesi</span></p>
+            <p class="muted">Hemat 12%. Bisa dipakai selama 3 bulan.</p>
+            <ul>
+              <li>4 sesi dengan mentor mana pun</li>
+              <li>Catatan dari mentor</li>
+              <li>Bisa ganti jadwal sampai 24 jam sebelum sesi</li>
+              <li>Ringkasan progres setelah sesi ke-4</li>
+            </ul>
+            <a class="btn btn-secondary plan-cta" href="../app/daftar.html?paket=paket-4">Daftar dan ambil paket 4 sesi</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="logo" href="index.html">Mentorku</a>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="mentor.html">Daftar mentor</a></li>
+        <li><a href="harga.html">Harga</a></li>
+      </ul>
+      <p class="muted">Langkah karier berikutnya terasa lebih ringan kalau ada yang menemani.</p>
+    </div>
+  </footer>
+  <script src="nav.js"></script>
+</body>
+</html>
