@@ -14,6 +14,8 @@
 
 Hasil: `website/index.html` (Beranda), `website/mentor.html` (Daftar mentor), `website/harga.html` (Harga), dengan `style.css`, `mentor.js`, dan `nav.js`. Ketiga halaman tanpa scroll ke samping di lebar 360 px.
 
+**Tambahan 20 November 2026:** setelah 2.7 tercentang, peserta melanjutkan iterasi Beranda di luar langkah (17 permintaan). Rencana Beranda di `CLAUDE.md` bagian 4 belum diperbarui untuk perubahan ini.
+
 ## Keputusan design
 
 Dikutip dari `CLAUDE.md` bagian 4, versi akhir pekan ini.
@@ -27,6 +29,14 @@ Dikutip dari `CLAUDE.md` bagian 4, versi akhir pekan ini.
   1. Hero: slogan singkat tentang Mentorku dengan tombol Pesan sesi di bawahnya, dan beberapa mentor ditampilkan di sebelahnya beserta rating, jumlah sesi, dan pengalamannya, lalu link Lihat semua mentor ke Daftar mentor. Hanya beberapa mentor, supaya pengunjung tidak bingung memilih dari banyak pilihan. List Mentor terpisah dihapus karena redundan dengan hero dan Daftar mentor · menjawab M1, M3, aksi utama
   2. Bidang: enam bidang yang bisa dilatih, masing-masing dengan satu kalimat isi latihannya dan anchor ke Daftar mentor dengan filter bidang itu sudah terpilih (referensi: section Skills di skillex.webflow.io) · menjawab M1 dan M2
   3. Cerita User: testimoni dari user yang sudah memakai Mentorku, dengan foto user · menjawab M3
+
+**Beranda, perubahan 20 November 2026** (dari log, karena belum ditulis di rencana halaman)
+
+- Section About baru di antara Hero dan Bidang: manifesto "Naik level nggak harus ditebak sendirian. Tanya ke yang sudah pernah sampai.", satu paragraf (video call 1-on-1, 45 menit, khusus soft skill), kontras "Kalau sendirian" dan "Kalau bareng mentor", lalu contoh perjalanan Rino 01–03 dari `data/user.json`. Alasan peserta: "user akan merasa bosan karena merasa aplikasi ini tuh generic, aku mau ada identitas atau story tersendiri", dengan referensi kodlo.ai.
+- Bidang dan Cerita user diselaraskan dengan gaya About (label kecil, judul kapital bertumpuk, satu testimoni sorotan). Alasan peserta: "dari hero ke about section tingkat motivasi saya melonjak tinggi ... tapi melihat kebawah di mau latihan apa dan testimoni itu seperti berkurang."
+- Kartu ajakan kecil di bawah testimoni: kalimat di kiri, tombol sekunder di kanan, lebih lemah dari testimoni ("hierarki nya tetap menunjukan testimonial dahulu baru cta ini").
+- Ukuran font dan jarak di gaya baru memakai kelipatan 4; nomor per section dihapus; nama bidang jadi teks paling menonjol di kartu Bidang, label hook "Mau ...?" dicoba lalu dihapus.
+- HP: kolom "Kalau sendirian" tetap, contoh perjalanan Rino dan subjudul Bidang disembunyikan, diganti link "Dengarkan dari yang sudah coba →" ke testimoni (tidak tebal, abu, supaya tidak menonjol).
 
 **Daftar mentor**
 
@@ -83,6 +93,12 @@ Kapan rencana atau deskripsi diperbaiki dulu dibanding hanya mengulang permintaa
 - Peserta tiga kali meluruskan maksud setelah hasil tidak sesuai: soal "seragam" (diminta dikembalikan), soal "deskripsi di bawah subjudul", dan soal "persegi panjang kebawah".
 - Peserta dua kali memakai referensi luar untuk mengarahkan perubahan: OLX untuk kartu mentor, dan skillex.webflow.io (termasuk screenshot) untuk section Bidang dan filter bidang.
 
+Iterasi 20 November 2026 (Beranda, di luar langkah):
+
+- Permintaan kunci: "jangan dibuat seperti itu, user akan merasa bosan karena merasa aplikasi ini tuh generic, aku mau ada identitas atau story tersendiri untuk aplikasi yang dibuat mungkin seperti kodlo.ai mereka mempunyai ciri khas nya tersendiri", "tidak usah ada nomor per section, lalu font size tolong jangan terlalu besar make it effective, seperti gunakan prinsip yang kelipatan 4 gitu", "mungkin kolom kalau sendirian boleh tambahkan, trade off dengan cerita rino".
+- 17 permintaan: 3 untuk kartu ajakan, 2 untuk section About, 5 untuk penyelarasan section dan typography, 7 untuk tampilan HP.
+- Semua perubahan diminta langsung ke tampilan; rencana halaman belum diubah. Peserta dua kali menolak hasil dan meluruskan maksud (section ajakan menjadi kartu kecil; About generik menjadi cerita), dan sekali menulis copy sendiri ("Dengarkan dari yang sudah coba").
+
 ## Feedback dan tindak lanjut
 
 - **2.1:** feedback menanyakan Hero yang ditulis sebagai "mengurutkan mentor" dan Pricing di Beranda. Peserta menghapus Pricing dan menjadikan hero slogan dengan mentor di sebelahnya. Pertanyaan "di mana Pesan sesi muncul" dijawab dengan menambah section Ajakan Pesan sesi, lalu disesuaikan dengan F1 (pendaftaran dulu, baru pembayaran).
@@ -91,6 +107,8 @@ Kapan rencana atau deskripsi diperbaiki dulu dibanding hanya mengulang permintaa
 - **2.4:** temuan menyebut prinsip (hierarchy). Catatan: squint test dilakukan di Beranda, temuan kurang efektif ada di Daftar mentor.
 - **2.5:** versi pertama belum punya Referensi dan alasannya belum menjawab temuan 2.4. Peserta menambah referensi OLX, memilih kartu yang bisa diklik tanpa tombol, lalu menulis alasan hierarchy dari squint test ulang.
 - **2.6:** catatan bahwa kartu mentor di HP belum punya penanda bisa diketuk ditindaklanjuti peserta dengan panah ↗ di kanan atas foto, khusus HP. Catatan bahwa alasan perubahan besar (section Bidang, Benefit, penghapusan List Mentor) belum ditulis sebagai blok Section dengan "Kenapa layout ini" belum ditindaklanjuti.
+
+- **Iterasi 20 November 2026:** tidak ada `/cek`. Catatan dari tanggapan: About ditaruh di antara Hero dan Bidang; tiga clue diberikan (About bisa mengulang subjudul Hero, manifesto bisa lebih besar dari judul Hero, rencana Beranda di bagian 4 belum memuat About dan kartu ajakan). Clue ukuran manifesto ditindaklanjuti peserta lewat aturan kelipatan 4; rencana Beranda belum diperbarui.
 
 ## Refleksi
 

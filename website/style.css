@@ -1635,3 +1635,280 @@ dialog::backdrop {
   text-align: right;
   padding: 12px 0;
 }
+
+/* Beranda: kartu ajakan kecil di bawah testimoni */
+.cta-strip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: #f2f2f2;
+}
+
+.cta-strip p {
+  margin: 0;
+  font-size: 16px;
+  color: #333333;
+}
+
+@media (min-width: 720px) {
+  .cta-strip {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cta-strip .btn {
+    flex-shrink: 0;
+  }
+}
+
+/* Beranda: About dengan manifesto, kontras, dan contoh perjalanan */
+.about-kicker,
+.about-label {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+.about-manifesto {
+  display: grid;
+  margin: 0 0 20px;
+  font-size: 24px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.about-lead {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.about-contrast {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.about-col {
+  padding: 20px;
+  border: 1px dashed #8c8c8c;
+  border-radius: 8px;
+  color: #555555;
+}
+
+.about-col-strong {
+  border: 2px solid #1a1a1a;
+  color: #1a1a1a;
+}
+
+.about-col li + li {
+  margin-top: 12px;
+}
+
+.about-story {
+  margin: 0;
+  padding-top: 24px;
+  border-top: 1px solid #bdbdbd;
+}
+
+.about-steps {
+  display: grid;
+  gap: 20px;
+}
+
+.about-steps p {
+  margin: 0;
+}
+
+.about-num {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (min-width: 720px) {
+  .about-manifesto {
+    font-size: 32px;
+  }
+
+  .about-contrast {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Beranda: satu gaya cerita untuk About, Bidang, dan Cerita user */
+.kicker-num {
+  margin-right: 8px;
+  padding: 0 4px;
+  border: 1px solid #1a1a1a;
+  color: #1a1a1a;
+}
+
+.section-head .about-kicker {
+  margin-bottom: 16px;
+}
+
+.story-title {
+  display: grid;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.bidang-tile h3 {
+  margin-bottom: 4px;
+  font-size: 20px;
+}
+
+
+.quote-layout {
+  display: grid;
+  gap: 16px;
+}
+
+.quote-feature {
+  display: grid;
+  align-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  border: 2px solid #1a1a1a;
+  border-radius: 8px;
+}
+
+.quote-feature blockquote p {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.quote-side {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 720px) {
+  .story-title {
+    font-size: 24px;
+  }
+
+  .quote-layout {
+    grid-template-columns: 1.3fr 1fr;
+  }
+
+  .quote-feature blockquote p {
+    font-size: 24px;
+  }
+}
+
+/* Beranda di HP: lebih ringkas supaya cerita tetap mengalir saat di-scroll */
+@media (max-width: 719px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .about-lead {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .about-contrast {
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+
+  .about-col {
+    padding: 16px;
+  }
+
+  .about-col li + li {
+    margin-top: 8px;
+  }
+
+  /* Langkah Rino: nomor di kiri, teks di kanan, bukan nomor di baris sendiri */
+  .about-steps > li {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    column-gap: 12px;
+  }
+
+  .about-steps .about-num {
+    grid-row: span 2;
+    margin: 0;
+    font-size: 16px;
+  }
+
+  /* Gambar bidang lebih pendek supaya enam kartu nggak terlalu panjang */
+  .bidang-list {
+    gap: 24px 16px;
+  }
+
+  .bidang-img {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  .bidang-tile h3 {
+    font-size: 16px;
+  }
+
+  .quote-feature {
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .quote-feature .ph-avatar {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Beranda di HP: sembunyikan bagian yang mengulang, supaya teksnya nggak menumpuk */
+@media (max-width: 719px) {
+  .hide-mobile {
+    display: none;
+  }
+
+  .about-steps > li {
+    align-items: baseline;
+  }
+}
+
+/* Link ke testimoni, hanya tampil di HP */
+.show-mobile {
+  display: none;
+}
+
+@media (max-width: 719px) {
+  .show-mobile {
+    display: inline-flex;
+  }
+
+  /* Dekatkan link ke kolom kontras: satu kelompok dengan "Kalau bareng mentor" */
+  .about-contrast:has(+ .about-jump),
+  .about-contrast {
+    margin-bottom: 8px;
+  }
+
+  .about-jump {
+    display: inline-block;
+    padding: 12px 0;
+    min-height: 44px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555555;
+    text-underline-offset: 4px;
+  }
+}

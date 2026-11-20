@@ -80,12 +80,73 @@
       </div>
     </section>
 
-    <!-- 2. Bidang: enam bidang dan apa yang dilatih di sesinya (ref. Categories skillex) · M1, M2 -->
+    <!-- About: identitas Mentorku lewat manifesto, kontras sebelum/sesudah, dan contoh perjalanan Rino (data/user.json) · atas permintaan peserta -->
+    <section class="section about" aria-labelledby="about-title">
+      <div class="container">
+        <p class="about-kicker">Kenapa Mentorku ada</p>
+        <h2 id="about-title" class="about-manifesto">
+          <span>Naik level nggak harus</span>
+          <span>ditebak sendirian.</span>
+          <span>Tanya ke yang sudah</span>
+          <span>pernah sampai.</span>
+        </h2>
+        <p class="lead about-lead">Mentorku mempertemukan kamu dengan praktisi lewat video call 1-on-1, 45 menit, khusus soft skill. Bukan kelas grup, bukan video rekaman, bukan bantuan coding.</p>
+
+        <div class="about-contrast">
+          <div class="about-col">
+            <p class="about-label">Kalau sendirian</p>
+            <ul class="plain-list">
+              <li>Baca puluhan artikel, tapi nggak tahu mana yang cocok buat kamu.</li>
+              <li>Latihan interview di depan cermin.</li>
+              <li>Nggak tahu sudah maju atau belum.</li>
+            </ul>
+          </div>
+          <div class="about-col about-col-strong">
+            <p class="about-label">Kalau bareng mentor</p>
+            <ul class="plain-list">
+              <li>Arahan spesifik dari orang yang sudah lewat jalan itu.</li>
+              <li>Simulasi bareng orang yang biasa jadi pewawancara.</li>
+              <li>Catatan setelah tiap sesi, jadi kemajuannya kelihatan.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Hanya di HP: pengganti contoh perjalanan Rino, mengarah ke testimoni -->
+        <a class="about-jump show-mobile" href="#cerita">Dengarkan dari yang sudah coba <span aria-hidden="true">→</span></a>
+
+        <figure class="about-story hide-mobile">
+          <figcaption class="about-label">Contoh perjalanan: Rino, target lolos interview tech lead</figcaption>
+          <ol class="plain-list about-steps">
+            <li>
+              <span class="about-num">01</span>
+              <p><strong>Negosiasi promosi</strong> bareng Nadia Rahma</p>
+              <p class="muted hide-mobile">Catatan: "Siapkan tiga bukti kontribusi dengan angka sebelum bicara dengan atasan."</p>
+            </li>
+            <li>
+              <span class="about-num">02</span>
+              <p><strong>Review CV</strong> bareng Putri Ayu</p>
+              <p class="muted hide-mobile">Catatan: "Mulai setiap poin dengan hasil, bukan tugas."</p>
+            </li>
+            <li>
+              <span class="about-num">03</span>
+              <p><strong>Simulasi interview perilaku</strong> bareng Hendra Wijaya</p>
+              <p class="muted hide-mobile">Terjadwal 3 Desember, 15.00 WIB.</p>
+            </li>
+          </ol>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 2. Bidang:enam bidang dan apa yang dilatih di sesinya (ref. Categories skillex) · M1, M2 -->
     <section class="section" aria-labelledby="bidang-title">
       <div class="container">
-        <div class="section-head section-head-center">
-          <h2 id="bidang-title" class="h2-lg">Mau latihan apa?</h2>
-          <p class="lead">Enam bidang soft skill buat kariermu.</p>
+        <div class="section-head">
+          <p class="about-kicker">Mau latihan apa</p>
+          <h2 id="bidang-title" class="story-title">
+            <span>Targetmu beda,</span>
+            <span>latihannya juga beda.</span>
+          </h2>
+          <p class="lead hide-mobile">Enam bidang soft skill yang bisa kamu latih bareng mentor. Pilih satu, lalu lihat siapa yang bisa bantu.</p>
         </div>
         <ul class="bidang-list plain-list">
           <li>
@@ -134,32 +195,44 @@
       </div>
     </section>
 
-    <!-- 3. Cerita User: testimoni user Mentorku · M3 -->
-    <section class="section" aria-labelledby="cerita-title">
+    <!-- 3. Cerita User: testimoni user Mentorku · M3. Satu kutipan besar sebagai sorotan, dua lainnya di sampingnya -->
+    <section class="section" id="cerita" aria-labelledby="cerita-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="cerita-title">Cerita developer yang sudah sesi duluan</h2>
+          <p class="about-kicker">Cerita user</p>
+          <h2 id="cerita-title" class="story-title">
+            <span>Mereka sudah duluan.</span>
+            <span>Ini kata mereka.</span>
+          </h2>
         </div>
 
-        <div class="grid grid-3">
-          <figure class="card quote">
+        <div class="quote-layout">
+          <figure class="quote quote-feature">
             <blockquote>
               <p>"Cuma satu sesi review CV, dan bulan itu panggilan interview-ku naik dua kali lipat."</p>
             </blockquote>
-            <figcaption class="quote-by"><div class="ph ph-avatar ph-avatar-sm" aria-hidden="true">Foto</div><span class="muted">Dimas, Backend developer</span></figcaption>
+            <figcaption class="quote-by"><div class="ph ph-avatar" aria-hidden="true">Foto</div><span><strong>Dimas</strong><br><span class="muted">Backend developer</span></span></figcaption>
           </figure>
-          <figure class="card quote">
-            <blockquote>
-              <p>"Mentornya bantu aku menjelaskan estimasi ke PM, tanpa kedengaran kayak cari alasan."</p>
-            </blockquote>
-            <figcaption class="quote-by"><div class="ph ph-avatar ph-avatar-sm" aria-hidden="true">Foto</div><span class="muted">Wulan, Frontend developer</span></figcaption>
-          </figure>
-          <figure class="card quote">
-            <blockquote>
-              <p>"Simulasi interview-nya mirip banget sama interview aslinya. Pas hari H jadi lebih siap."</p>
-            </blockquote>
-            <figcaption class="quote-by"><div class="ph ph-avatar ph-avatar-sm" aria-hidden="true">Foto</div><span class="muted">Reza, Software engineer</span></figcaption>
-          </figure>
+          <div class="quote-side">
+            <figure class="card quote">
+              <blockquote>
+                <p>"Mentornya bantu aku menjelaskan estimasi ke PM, tanpa kedengaran kayak cari alasan."</p>
+              </blockquote>
+              <figcaption class="quote-by"><div class="ph ph-avatar ph-avatar-sm" aria-hidden="true">Foto</div><span class="muted">Wulan, Frontend developer</span></figcaption>
+            </figure>
+            <figure class="card quote">
+              <blockquote>
+                <p>"Simulasi interview-nya mirip banget sama interview aslinya. Pas hari H jadi lebih siap."</p>
+              </blockquote>
+              <figcaption class="quote-by"><div class="ph ph-avatar ph-avatar-sm" aria-hidden="true">Foto</div><span class="muted">Reza, Software engineer</span></figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <!-- Kartu ajakan kecil di bawah testimoni: kalimat kiri, tombol kanan · aksi utama -->
+        <div class="cta-strip">
+          <p>Siap ngobrol sama mentor pertamamu? Mulai dari satu sesi aja.</p>
+          <a class="btn btn-secondary" href="../app/daftar.html">Pesan sesi pertamamu</a>
         </div>
       </div>
     </section>

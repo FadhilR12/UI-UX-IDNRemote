@@ -375,3 +375,111 @@
 - **Yang dikerjakan:** bahasa refleksi di laporan/pekan-2.md dirapikan atas permintaan peserta, isi tetap sama; versi rapi disetujui peserta.
 - **Tanggapan peserta:** diterima
 - **Feedback `/cek`:** - · tercentang: ya (sudah dari sebelumnya)
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "tolong untuk di beranda tambahkan card cta lagi dengan teks ajakan di bawah testimoni"
+- **Yang dikerjakan:** menambah section Ajakan (kartu CTA dengan judul, satu kalimat ajakan, dan tombol Pesan sesi pertamamu) setelah Cerita User di website/index.html, memakai style .cta-card yang sudah ada.
+- **Tanggapan peserta:** minta ulang: "jangan mmebuat section tapi hanya buat card kecil mungkin persegi panjang dengan kalimat ajakan di sebelah kiri dan button cta di sebelah kanan nya"
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "jangan mmebuat section tapi hanya buat card kecil mungkin persegi panjang dengan kalimat ajakan di sebelah kiri dan button cta di sebelah kanan nya"
+- **Yang dikerjakan:** section Ajakan dihapus; diganti kartu persegi panjang kecil (kalimat kiri, tombol kanan; bertumpuk di HP) di dalam section Cerita User, di bawah testimoni. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** minta ulang: "tolong hierarki nya tetap menunjukan testimonial dahulu baru cta ini"
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "tolong hierarki nya tetap menunjukan testimonial dahulu baru cta ini"
+- **Yang dikerjakan:** kartu ajakan dibuat lebih lemah dari kartu testimoni: tanpa garis tebal, latar abu muda, teks 15px tanpa bold, tombol sekunder bergaris. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** lanjut ke permintaan berikutnya, tanpa komentar
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "untuk beranda ini aku tuh ngerasa butuh ada section about yang ngebahas mentorku ini tuh apa sih sebenernya jadi pengunjung juga bisa dapet gambaran mengenai aplikasi ini gitu"
+- **Yang dikerjakan:** section About ("Mentorku itu apa, sih?") ditambah di antara Hero dan Bidang: tiga kartu dari isi brief (video call 1-on-1, fokus soft skill bukan coding, catatan setelah sesi). File: website/index.html.
+- **Tanggapan peserta:** minta ulang: "jangan dibuat seperti itu, user akan merasa bosan karena merasa aplikasi ini tuh generic, aku mau ada identitas atau story tersendiri untuk aplikasi yang dibuat mungkin seperti kodlo.ai mereka mempunyai ciri khas nya tersendiri"
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "jangan dibuat seperti itu, user akan merasa bosan karena merasa aplikasi ini tuh generic, aku mau ada identitas atau story tersendiri untuk aplikasi yang dibuat mungkin seperti kodlo.ai mereka mempunyai ciri khas nya tersendiri"
+- **Yang dikerjakan:** isi About diganti, mengikuti cara kodlo.ai bercerita: manifesto besar bertumpuk, kontras "kalau sendirian" vs "kalau bareng mentor", dan contoh perjalanan bernomor 01–03 dari sesi Rino di data/user.json. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** diterima ("oke nice")
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "oke nice sekarang tolong selaraskan dengan semua section nya karena aku merasa ada gap yang jauh saat dari hero ke about section tingkat motivasi saya melonjak tinggi untuk mendaftar tapi melihat kebawah di mau latihan apa dan testimoni itu seperti berkurang."
+- **Yang dikerjakan:** Bidang dan Cerita user diberi gaya cerita yang sama dengan About: label bernomor 01–03, judul kapital bertumpuk, target karier bernomor di tiap bidang, dan satu testimoni besar sebagai sorotan dengan dua lainnya di samping. Urutan section dan kartu ajakan tetap. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** minta ulang: nomor per section dihapus, ukuran font dikecilkan dengan kelipatan 4
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "tidak usah ada nomor per section, lalu font size tolong jangan terlalu besar make it effective, seperti gunakan prinsip yang kelipatan 4 gitu"
+- **Yang dikerjakan:** nomor 01–03 di label section dihapus; ukuran font, spacing, dan padding di gaya baru Beranda (About, Bidang, Cerita user, kartu ajakan) diubah ke kelipatan 4: manifesto 24/32px, judul section 20/24px, kutipan sorotan 20/24px, label 12px. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** minta ulang: label target di kartu Bidang juga di-tone down
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "yang di section mau latihan apa itu di card nya juga di tone down juga seperti Mau pindah kerja dan sebagainya. lalu tolong hierarki tertinggi di cardnya tetap di nama bidang nya"
+- **Yang dikerjakan:** nomor 01–06 di kartu Bidang dihapus; label target jadi 12px, tidak tebal, tidak kapital, abu; nama bidang 20px tebal sebagai teks paling menonjol di kartu. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** diterima, lalu minta tambah tanda tanya
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "mungkin tambahkan tanda tanya"
+- **Yang dikerjakan:** keenam label target di kartu Bidang diberi tanda tanya, misalnya "Mau pindah kerja?". File: website/index.html.
+- **Tanggapan peserta:** ditolak: "hmmm mungkin tidak usah menambahkan hook deh"
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "hmmm mungkin tidak usah menambahkan hook deh"
+- **Yang dikerjakan:** label target ("Mau pindah kerja?" dan lainnya) dihapus dari keenam kartu Bidang beserta style-nya; kartu kembali ke gambar, nama bidang (20px tebal), dan deskripsi. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** diterima, lanjut minta merapikan tampilan HP
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "nah sekarang di mobile nya sepertinya aga aneh ya coba di selaraskan untuk tujuan mobile"
+- **Yang dikerjakan:** Beranda dicek di lebar 390px, lalu dibuat lebih ringkas di HP: judul Hero 32px, nomor langkah Rino di kiri teks, gambar bidang 4:3 (bukan persegi), jarak dan padding About dan kutipan sorotan dirapatkan (kelipatan 4). Subjudul Bidang ditulis ulang karena label target sudah dihapus. File: website/style.css, website/index.html.
+- **Tanggapan peserta:** minta ulang: teks di HP masih terlalu banyak
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "tolong hilangkan beberapa bagian yang terasa redundan di versi mobile karena versi mobile sangat banyak teks, jadi user akan merasa overwhelming untuk membaca"
+- **Yang dikerjakan:** di HP saja (class .hide-mobile) disembunyikan: kolom "Kalau sendirian", catatan mentor dan jadwal di langkah Rino, dan subjudul Bidang. Desktop tetap. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** mengubah: kolom "Kalau sendirian" dikembalikan, ditukar dengan cerita Rino
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "mungkin kolom kalau sendirian boleh tambahkan, trade off dengan cerita rino"
+- **Yang dikerjakan:** di HP, kolom "Kalau sendirian" tampil lagi dan seluruh contoh perjalanan Rino disembunyikan. Desktop tetap menampilkan keduanya. File: website/index.html.
+- **Tanggapan peserta:** diterima, lalu minta link ke testimoni sebagai pengganti Rino di HP
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "mungkin tambahkan cta yang mengarah ke testimoni untu versi mobile sebagai pengganti rino"
+- **Yang dikerjakan:** link teks "Lihat cerita developer yang sudah duluan" (hanya di HP, target sentuh 44px) di akhir About, menuju section Cerita user (#cerita); tanpa scroll halus karena mode wireframe tanpa animasi. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** minta ulang: proximity, panah, dan teks hook
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "tolong proximity nya dibuat lebih pas dan mungkin ditambahkan -> lalu ubah teksnya menjadi hooks yang menarik"
+- **Yang dikerjakan:** di HP, jarak kolom kontras ke link dirapatkan dari 32px ke 8px; teks link jadi "Penasaran hasilnya? Dengar dari yang sudah coba →" (panah aria-hidden). File: website/index.html, website/style.css.
+- **Tanggapan peserta:** mengubah copy link
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "langsung saja dengarkan dari yang sudah coba"
+- **Yang dikerjakan:** teks link di HP diganti dengan kalimat peserta: "Dengarkan dari yang sudah coba →". File: website/index.html.
+- **Tanggapan peserta:** diterima, lalu minta link diturunkan hierarkinya
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · di luar langkah (Beranda)
+- **Permintaan:** "hierarki dari cta nya masih terasa lebih menonjol dari yang lain"
+- **Yang dikerjakan:** link "Dengarkan dari yang sudah coba →" di HP diturunkan: tidak tebal, warna abu #555 (kontras 7,5:1), garis bawah tetap sebagai tanda link. File: website/style.css.
+- **Tanggapan peserta:** lanjut /laporan
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-20 · 2.7 Laporan pekan ini dengan `/laporan`
+- **Permintaan:** "/laporan"
+- **Yang dikerjakan:** laporan/pekan-2.md diperbarui dengan iterasi Beranda 20 November 2026; refleksi lama tetap.
+- **Tanggapan peserta:** menunggu
+- **Feedback `/cek`:** - · tercentang: ya (sudah dari sebelumnya)
