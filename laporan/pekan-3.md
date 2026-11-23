@@ -13,6 +13,8 @@
 
 Hasil: ketiga halaman website (`website/index.html`, `website/mentor.html`, `website/harga.html`) dalam mode high fidelity, dengan `style.css`, `hero.js`, `bidang.js` (baru), `mentor.js`, dan `nav.js`. Sebelum 3.1, rencana halaman di `CLAUDE.md` bagian 4 diperbarui dengan keputusan iterasi pekan 2 atas permintaan peserta.
 
+**Tambahan setelah laporan, 23 November 2026:** peserta mengubah halaman Harga di luar langkah (8 permintaan). Rencana Harga di `CLAUDE.md` bagian 4 belum diperbarui (section Benefit masih tertulis).
+
 ## Keputusan design
 
 Dikutip dari `CLAUDE.md` bagian 5.
@@ -59,6 +61,7 @@ Dikutip dari `CLAUDE.md` bagian 5.
 - Label "Kalau sendirian" dan "Kalau bareng mentor" kembali jadi label teks abu (polish 3.4); kedua kolom About dan kartu testimoni utama memakai warna kartu yang sama (latar putih, garis tipis).
 - Bidang di Beranda: satu wadah hitam berisi enam kartu; desktop grid 3 × 2 dengan gambar 1:1; HP satu bidang selebar wadah dengan tombol panah ← → dan panah ↗ di gambar.
 - Jarak antar isi section disamakan 64px di desktop dan 48px di HP.
+- **Halaman Harga, setelah laporan:** "aku masih kurang srek dengan tampilan di halaman harga bisakah kamu berikan rekomendasi", lalu mengikuti referensi pricing ("coba ubah menjadi seperti ini"). Hasil akhir: section Benefit dihapus ("tidak usah ada section yang kamu dapat deh redundan soalnya"); "Coba satu sesi dulu, lanjut kalau cocok" jadi judul halaman; label, judul, paragraf, dan kartu harga ada di satu kotak hitam bersudut di atas latar terang; kedua kartu bertumpuk dan mendatar (nama, harga, catatan, dan tombol di kiri, "Yang kamu dapat" bercentang di kanan); Per sesi kartu hijau neon dengan tombol hitam bertulisan hijau dan catatan "Bayar satu sesi aja, nggak terikat paket."; Paket 4 sesi kartu putih bergaris atas hijau; kedua tombol sama panjang ("button nya samakan dong si panjangnya"). Section hitam penuh dan kotak selebar layar dicoba lalu dikembalikan ("hmmm jangan semuanya hitam deh", "nope balikin lagi deh kurang cocok ternyata").
 
 ## Cara mengarahkan Claude Code
 
@@ -78,6 +81,7 @@ Jumlah iterasi (dihitung dari log):
 - Section Bidang setelah 3.5: 7 permintaan (geser ke samping, grid desktop, kartu hitam, satu wadah hitam, gambar lebih pendek, tombol panah HP, panah ↗ hanya di HP).
 - Daftar mentor: 2 permintaan (list mentor dalam wadah hitam, jumlah hasil ikut masuk).
 - Lain-lain: menu header dikembalikan, jarak antar section, kartu Cerita user.
+- Halaman Harga setelah laporan: 8 permintaan (rekomendasi diterapkan, layout mengikuti referensi pricing, Benefit dihapus dan hitam penuh, hitam penuh dikembalikan, tombol sama panjang, tombol lebar penuh, kotak selebar layar, kotak dikembalikan).
 
 Kapan rencana atau deskripsi diperbaiki dulu dibanding hanya mengulang permintaan:
 
@@ -85,6 +89,7 @@ Kapan rencana atau deskripsi diperbaiki dulu dibanding hanya mengulang permintaa
 - Palet Paper Cream ditulis peserta sebagai deskripsi lengkap pemakaian setiap warna sebelum diterapkan.
 - Perubahan lain diminta langsung ke tampilan. Peserta empat kali meluruskan maksud setelah hasil tidak sesuai: kartu Cerita user ("bukan layout nya tapi warna nya"), hover ("kenapa malah highlight"), Bidang ("maksudnya persegi panjang ke bawah ...", lalu "disatukan semua menjadi satu div ..."), dan sekali mengurungkan perubahan ("urungkan").
 - Peserta memakai referensi warna dari coolors (gambar palet) dan meminta daftar warna yang terpakai sebelum menulis palet final.
+- Untuk halaman Harga, peserta meminta rekomendasi dulu, lalu memakai screenshot referensi pricing; dua kali meluruskan maksud ("bukan button nya, tapi si black box nya") dan dua kali meminta hasil dikembalikan.
 
 ## Feedback dan tindak lanjut
 
@@ -94,6 +99,8 @@ Kapan rencana atau deskripsi diperbaiki dulu dibanding hanya mengulang permintaa
 - **3.4:** polish About ditindaklanjuti; nilai di luar scale (16/16, 20/24, #000000) dikembalikan ke scale dan palet.
 - **3.5:** semua pasangan teks minimal 4,5:1 setelah penggantian ke #4F7000; #4F7000 ditambahkan ke warna pendukung.
 - **Setelah 3.5, "apakah masih ada yang belum efektif":** gambar Bidang terlalu dominan (ditindaklanjuti: wadah hitam, gambar lebih pendek, versi HP dengan tombol panah) dan Daftar mentor tanpa penanda aksi utama (ditindaklanjuti sebagian: list mentor dalam wadah hitam). Belum ditindaklanjuti: section harga di halaman Harga belum memakai wadah hitam padahal berisi aksi utama, Daftar mentor belum menyebut "Pesan sesi", dan aturan "hitam untuk blok yang berisi aksi" belum ditulis di bagian 5.
+
+- **Setelah laporan, halaman Harga:** rekomendasi Claude Code (kartu harga dalam wadah hitam sesuai aturan peserta, judul benefit diturunkan, ruang kosong kartu Per sesi diisi catatan) diterapkan, lalu diganti layout referensi pricing. Catatan yang belum ditindaklanjuti: rencana Harga di bagian 4 perlu diperbarui karena section Benefit (yang menjawab M2) dihapus dan isinya pindah ke daftar di kartu harga.
 
 ## Refleksi
 

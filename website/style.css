@@ -3336,3 +3336,268 @@ button {
     display: none;
   }
 }
+
+/* ===== Harga (rekomendasi setelah pekan 3) =====
+   1. Kedua kartu harga di dalam wadah hitam (blok yang berisi aksi utama).
+      Per sesi: kartu putih, paling terang di dalam wadah. Paket 4 sesi: kartu gelap bergaris tipis, teks terang. */
+.plans {
+  padding: 24px;
+  border-radius: 16px;
+  background: #111110;
+}
+
+.plan-main {
+  background: #FFFFFF;
+  border: 2px solid #FFFFFF;
+}
+
+.plan:not(.plan-main) {
+  background: transparent;
+  border: 1px solid #595958;
+  color: #F4F3EE;
+}
+
+.plan:not(.plan-main) h3,
+.plan:not(.plan-main) .price,
+.plan:not(.plan-main) li {
+  color: #F4F3EE;
+}
+
+.plan:not(.plan-main) .muted,
+.plan:not(.plan-main) .price span {
+  color: #CCCBC7;
+}
+
+.plan:not(.plan-main) .plan-label {
+  border-color: #CCCBC7;
+  color: #F4F3EE;
+}
+
+.plan:not(.plan-main) .btn-secondary {
+  background: transparent;
+  border-color: #F4F3EE;
+  color: #F4F3EE;
+}
+
+.plan:not(.plan-main) .btn-secondary:hover {
+  background: transparent;
+  border-color: #B5FF00;
+  color: #B5FF00;
+}
+
+.plans :focus-visible {
+  outline-color: #B5FF00;
+}
+
+/* 2. Judul kartu benefit diturunkan ke Teks pembuka (20/28), supaya judul halaman tetap paling kuat */
+.benefit-row h2,
+.benefit-row .h3-size {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+/* 3. Kartu Per sesi: catatan di bawah harga, sejajar dengan catatan "Hemat 12%" di kartu paket */
+.plan .muted {
+  margin: 0;
+}
+
+@media (max-width: 719px) {
+  .plans {
+    padding: 16px;
+  }
+}
+
+/* Tombol kartu harga: teks tetap di tengah walau turun dua baris di HP */
+.plan-cta {
+  text-align: center;
+}
+
+/* ===== Harga: layout pricing bertumpuk (ref. peserta) =====
+   Seluruh section harga di wadah hitam. Kartu mendatar: nama, harga, catatan, dan tombol di kiri;
+   "Yang kamu dapat" dengan ikon centang di kanan. Per sesi kartu hijau (paling menonjol), Paket 4 sesi kartu putih. */
+.pricing-box {
+  padding: 48px;
+  border-radius: 16px;
+  background: #111110;
+  color: #F4F3EE;
+}
+
+.pricing-box .section-head h2 {
+  color: #F4F3EE;
+}
+
+.pricing-box .about-kicker,
+.pricing-box .section-head .lead {
+  color: #CCCBC7;
+}
+
+.plan-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.plan-row {
+  display: grid;
+  gap: 24px;
+  padding: 24px;
+  border-top: 4px solid #B5FF00;
+  border-radius: 12px;
+  background: #FFFFFF;
+  color: #111110;
+}
+
+@media (min-width: 720px) {
+  .plan-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+}
+
+.plan-row-main {
+  background: #B5FF00;
+  border-top-color: #B5FF00;
+}
+
+.plan-row-info {
+  display: grid;
+  align-content: start;
+  justify-items: start;
+  gap: 8px;
+}
+
+.plan-row h3 {
+  margin: 0;
+  color: #111110;
+}
+
+.plan-row .price,
+.plan-row .price span {
+  color: #111110;
+}
+
+.plan-row .price span {
+  font-weight: 400;
+}
+
+.plan-desc {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #111110;
+}
+
+.plan-row:not(.plan-row-main) .plan-desc,
+.plan-row:not(.plan-row-main) .price span {
+  color: #595958;
+}
+
+.plan-row .plan-label {
+  border: 1px solid #111110;
+  background: transparent;
+  color: #111110;
+}
+
+.plan-row .plan-cta {
+  width: auto;
+  margin-top: 0;
+}
+
+/* Tombol di kartu hijau: hitam dengan teks hijau, supaya tetap terlihat di atas hijau (15,5:1) */
+.plan-row-main .btn {
+  background: #111110;
+  border-color: #111110;
+  color: #B5FF00;
+}
+
+.plan-row-main .btn:hover {
+  background: #FFFFFF;
+  border-color: #111110;
+  color: #111110;
+}
+
+.plan-row:not(.plan-row-main) .btn-secondary {
+  background: #FFFFFF;
+  border-color: #111110;
+  color: #111110;
+}
+
+.plan-row:not(.plan-row-main) .btn-secondary:hover {
+  background: #B5FF00;
+  border-color: #111110;
+  color: #111110;
+}
+
+.plan-list-title {
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.check-list {
+  display: grid;
+  gap: 12px;
+}
+
+.check-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.check-list li::before {
+  content: "✓";
+  flex: 0 0 20px;
+  height: 20px;
+  margin-top: 2px;
+  border-radius: 50%;
+  background: #111110;
+  color: #FFFFFF;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.pricing-box :focus-visible {
+  outline-color: #B5FF00;
+}
+
+.plan-row :focus-visible {
+  outline-color: #111110;
+}
+
+@media (max-width: 719px) {
+  .pricing-box {
+    padding: 24px 16px;
+  }
+
+  .plan-row {
+    padding: 20px 16px;
+  }
+
+  .plan-row .plan-cta {
+    width: 100%;
+  }
+}
+
+/* Tombol dengan panah: jarak antara teks dan panah */
+.btn {
+  gap: 8px;
+}
+
+
+/* Harga: judul halaman di dalam kotak hitam berwarna terang */
+.pricing-box .section-head h1 {
+  color: #F4F3EE;
+}
+
+/* Harga: kedua tombol kartu sama panjang */
+.plan-row .plan-cta {
+  width: 100%;
+  max-width: 340px;
+}
+
+@media (max-width: 719px) {
+  .plan-row .plan-cta {
+    max-width: none;
+  }
+}

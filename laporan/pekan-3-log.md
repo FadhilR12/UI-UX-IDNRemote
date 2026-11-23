@@ -263,3 +263,57 @@
 - **Yang dikerjakan:** laporan/pekan-3.md disusun dari log, Progres, dan CLAUDE.md bagian 4–5; refleksi ditanyakan ke peserta. File: laporan/pekan-3.md.
 - **Tanggapan peserta:** refleksi ditulis peserta dan dimasukkan apa adanya
 - **Feedback `/cek`:** - · tercentang: ya
+
+### 2026-11-23 · di luar langkah, setelah laporan (halaman Harga)
+- **Permintaan:** "aku masih kurang srek dengan tampilan di halaman harga bisakah kamu berikan rekomendasi", lalu "oke coba terapkan" (tiga rekomendasi: kartu harga dalam wadah hitam, judul benefit diturunkan, ruang kosong kartu Per sesi)
+- **Yang dikerjakan:** kedua kartu harga dimasukkan ke wadah hitam #111110; kartu Per sesi putih (paling terang di wadah) dengan label dan tombol hijau, kartu Paket 4 sesi gelap bergaris #595958 dengan teks #F4F3EE, keterangan #CCCBC7, dan tombol bergaris terang (hover hijau neon). Judul kartu benefit dari 24/32 jadi 20/28. Kartu Per sesi diberi catatan di bawah harga "Bayar satu sesi aja, nggak terikat paket." (dari data plans.json: per sesi, cocok untuk mencoba), sejajar dengan catatan "Hemat 12%" di kartu paket. Teks tombol kartu harga dirata tengah. File: website/harga.html, website/style.css.
+- **Tanggapan peserta:** minta layout lain dengan referensi gambar
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah, setelah laporan (Harga mengikuti referensi pricing)
+- **Permintaan:** "coba ubah menjadi seperti ini" (screenshot referensi: section pricing di wadah gelap, kartu harga bertumpuk mendatar dengan info dan tombol di kiri, "What's included" bercentang di kanan, satu kartu berlatar hijau)
+- **Yang dikerjakan:** seluruh section harga (label, judul, paragraf, kartu) masuk ke wadah hitam; kedua kartu harga bertumpuk dan mendatar: nama, harga, catatan, dan tombol di kiri, "Yang kamu dapat" dengan ikon centang di kanan; di HP bertumpuk. Per sesi jadi kartu hijau neon dengan tombol hitam bertulisan hijau (paling menonjol, sesuai sikap mendahulukan user); Paket 4 sesi kartu putih dengan garis atas hijau dan tombol bergaris hitam. Tombol diberi panah →. Toggle tahunan dari referensi tidak dipakai karena tidak ada di brief dan data. File: website/harga.html, website/style.css.
+- **Tanggapan peserta:** diterima sebagian
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah, setelah laporan (Harga tanpa section Benefit, hitam penuh)
+- **Permintaan:** "tidak usah ada section yang kamu dapat deh redundan soalnya, lalu tolong buat menjadi full hitam seperti hero"
+- **Yang dikerjakan:** section Benefit (label "Yang kamu dapat", "Satu sesi, isinya apa aja?", empat kartu benefit) dihapus karena isinya sudah ada di daftar centang setiap kartu harga; "Coba satu sesi dulu, lanjut kalau cocok" jadi judul halaman (h1). Section harga jadi hitam penuh selebar layar seperti Hero, bukan kotak bersudut. Footer diberi garis tipis #595958 di atasnya supaya terpisah dari section hitam. Rencana Harga di bagian 4 belum diperbarui (section Benefit masih tertulis). File: website/harga.html, website/style.css.
+- **Tanggapan peserta:** penghapusan section Benefit diterima; hitam penuh ditolak ("hmmm jangan semuanya hitam deh")
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah, setelah laporan (Harga kembali kotak hitam)
+- **Permintaan:** "hmmm jangan semuanya hitam deh"
+- **Yang dikerjakan:** section harga kembali jadi kotak hitam bersudut di atas latar terang (seperti referensi), bukan hitam penuh; garis tipis di atas footer dihapus lagi. Section Benefit tetap dihapus. File: website/style.css.
+- **Tanggapan peserta:** diterima
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah, setelah laporan (tombol harga sama panjang)
+- **Permintaan:** "button nya samakan dong si panjangnya"
+- **Yang dikerjakan:** tombol "Daftar dan coba 1 sesi" dan "Daftar dan ambil paket 4 sesi" dibuat sama panjang (lebar penuh kolom kiri, maksimal 340px di desktop; selebar kartu di HP). File: website/style.css.
+- **Tanggapan peserta:** diterima, minta dicoba selebar penuh
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah, setelah laporan (tombol harga lebar penuh)
+- **Permintaan:** "coba jika dibuat si lebar nya full"
+- **Yang dikerjakan:** batas 340px dihapus; kedua tombol kartu harga selebar kolom kiri kartu. File: website/style.css.
+- **Tanggapan peserta:** meluruskan maksud: yang dibuat lebar penuh kotak hitamnya, bukan tombol
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah, setelah laporan (kotak hitam Harga selebar layar)
+- **Permintaan:** "bukan button nya, tapi si black box nya"
+- **Yang dikerjakan:** tombol kartu harga kembali sama panjang 340px; kotak hitam harga dibuat selebar layar (tepi ke tepi, tanpa sudut), dengan latar terang tetap di atas dan di bawahnya; isi di dalamnya sejajar dengan tepi kiri header. File: website/style.css.
+- **Tanggapan peserta:** ditolak ("nope balikin lagi deh kurang cocok ternyata")
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah, setelah laporan (kotak hitam Harga dikembalikan)
+- **Permintaan:** "nope balikin lagi deh kurang cocok ternyata"
+- **Yang dikerjakan:** kotak hitam harga kembali bersudut selebar container (seperti sebelumnya); pengaman geser ke samping ikut dihapus. Tombol tetap sama panjang 340px. File: website/style.css.
+- **Tanggapan peserta:** diterima, minta ditambahkan ke laporan lalu push
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · 3.6 (laporan diperbarui)
+- **Permintaan:** "tambahkan di laporan lalu push"
+- **Yang dikerjakan:** laporan/pekan-3.md ditambah iterasi halaman Harga setelah laporan (refleksi tetap); commit dan push. File: laporan/pekan-3.md.
+- **Tanggapan peserta:** menunggu
+- **Feedback `/cek`:** - · tercentang: ya (sudah dari sebelumnya)

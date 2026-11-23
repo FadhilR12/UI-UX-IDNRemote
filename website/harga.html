@@ -30,83 +30,55 @@
   </header>
 
   <main>
-    <!-- 1. Benefit: apa saja yang didapat dari sesi · M2 -->
-    <section class="section" aria-labelledby="benefit-title">
+    <!-- Harga (ref. layout pricing bertumpuk): section hitam penuh seperti Hero; section Benefit dihapus karena redundan dengan daftar di kartu; kartu mendatar, info dan tombol di kiri,
+         "Yang kamu dapat" di kanan. Per sesi paling menonjol (kartu hijau), Paket 4 sesi tetap terlihat dengan label rekomendasi · M2 -->
+    <section class="section pricing-section" aria-labelledby="harga-title">
       <div class="container">
-        <div class="section-head">
-          <p class="about-kicker">Yang kamu dapat</p>
-          <h1 id="benefit-title">Satu sesi, isinya apa aja?</h1>
-          <p class="lead">Biar kebayang dulu sebelum lihat harganya.</p>
-        </div>
+        <div class="pricing-box">
+          <div class="section-head">
+            <p class="about-kicker">Harga</p>
+            <h1 id="harga-title" class="title-lines"><span>Coba satu sesi dulu,</span> <span>lanjut kalau cocok</span></h1>
+            <p class="lead">Nggak perlu langsung beli paket. Kalau sudah klop sama mentornya, paket 4 sesi lebih hemat.</p>
+          </div>
 
-        <ul class="benefit-grid plain-list">
-          <li class="card benefit-row">
-            <div class="ph benefit-icon" aria-hidden="true">Ikon</div>
-            <div>
-              <h2 class="h3-size">45 menit, cuma kamu dan mentor</h2>
-              <p>Video call berdua, bukan kelas grup atau rekaman.</p>
-            </div>
-          </li>
-          <li class="card benefit-row">
-            <div class="ph benefit-icon" aria-hidden="true">Ikon</div>
-            <div>
-              <h2 class="h3-size">Latihan sesuai targetmu</h2>
-              <p>Dari latihan interview sampai siap jadi tech lead.</p>
-            </div>
-          </li>
-          <li class="card benefit-row">
-            <div class="ph benefit-icon" aria-hidden="true">Ikon</div>
-            <div>
-              <h2 class="h3-size">Dapat catatan dari mentor</h2>
-              <p>Biar kamu tahu apa yang perlu dilatih berikutnya.</p>
-            </div>
-          </li>
-          <li class="card benefit-row">
-            <div class="ph benefit-icon" aria-hidden="true">Ikon</div>
-            <div>
-              <h2 class="h3-size">Bisa ganti jadwal</h2>
-              <p>Paling lambat 24 jam sebelum sesi dimulai.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
+          <div class="plan-stack">
+            <article class="plan-row plan-row-main" aria-labelledby="plan-sesi">
+              <div class="plan-row-info">
+                <span class="tag plan-label">Cocok buat mencoba</span>
+                <h3 id="plan-sesi">Per sesi</h3>
+                <p class="price">Rp250.000 <span>/ sesi</span></p>
+                <p class="plan-desc">Bayar satu sesi aja, nggak terikat paket.</p>
+                <a class="btn plan-cta" href="../app/daftar.html">Daftar dan coba 1 sesi <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="plan-row-list">
+                <p class="plan-list-title">Yang kamu dapat</p>
+                <ul class="check-list plain-list">
+                  <li>1 sesi video call, 45 menit</li>
+                  <li>Catatan dari mentor</li>
+                  <li>Bisa ganti jadwal sampai 24 jam sebelum sesi</li>
+                </ul>
+              </div>
+            </article>
 
-    <!-- 2. Harga: 1 sesi paling menonjol dengan tombol Daftar (aksi utama), Paket 4 sesi tetap terlihat dengan label rekomendasi · M2 -->
-    <section class="section" aria-labelledby="harga-title">
-      <div class="container">
-        <div class="section-head">
-          <p class="about-kicker">Harga</p>
-          <h2 id="harga-title" class="title-lines"><span>Coba satu sesi dulu,</span> <span>lanjut kalau cocok</span></h2>
-          <p class="lead">Nggak perlu langsung beli paket. Kalau sudah klop sama mentornya, paket 4 sesi lebih hemat.</p>
-        </div>
-
-        <div class="plans">
-          <article class="card plan plan-main" aria-labelledby="plan-sesi">
-            <span class="tag plan-label plan-label-strong">Cocok buat mencoba</span>
-            <h3 id="plan-sesi">Per sesi</h3>
-            <p class="price">Rp250.000 <span>/ sesi</span></p>
-            <ul>
-              <li>1 sesi video call, 45 menit</li>
-              <li>Catatan dari mentor</li>
-              <li>Bisa ganti jadwal sampai 24 jam sebelum sesi</li>
-            </ul>
-            <a class="btn plan-cta" href="../app/daftar.html">Daftar dan coba 1 sesi</a>
-          </article>
-
-          <article class="card plan" aria-labelledby="plan-paket">
-            <span class="tag plan-label">Rekomendasi kami</span>
-            <h3 id="plan-paket">Paket 4 sesi</h3>
-            <p class="price">Rp880.000 <span>/ 4 sesi</span></p>
-            <p class="muted">Hemat 12%. Bisa dipakai selama 3 bulan.</p>
-            <ul>
-              <li>4 sesi dengan mentor mana pun</li>
-              <li>Catatan dari mentor</li>
-              <li>Bisa ganti jadwal sampai 24 jam sebelum sesi</li>
-              <li>Ringkasan progres setelah sesi ke&#8209;4</li>
-            </ul>
-            <a class="btn btn-secondary plan-cta" href="../app/daftar.html?paket=paket-4">Daftar dan ambil paket 4 sesi</a>
-          </article>
+            <article class="plan-row" aria-labelledby="plan-paket">
+              <div class="plan-row-info">
+                <span class="tag plan-label">Rekomendasi kami</span>
+                <h3 id="plan-paket">Paket 4 sesi</h3>
+                <p class="price">Rp880.000 <span>/ 4 sesi</span></p>
+                <p class="plan-desc">Hemat 12%. Bisa dipakai selama 3 bulan.</p>
+                <a class="btn btn-secondary plan-cta" href="../app/daftar.html?paket=paket-4">Daftar dan ambil paket 4 sesi <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="plan-row-list">
+                <p class="plan-list-title">Yang kamu dapat</p>
+                <ul class="check-list plain-list">
+                  <li>4 sesi dengan mentor mana pun</li>
+                  <li>Catatan dari mentor</li>
+                  <li>Bisa ganti jadwal sampai 24 jam sebelum sesi</li>
+                  <li>Ringkasan progres setelah sesi ke&#8209;4</li>
+                </ul>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
