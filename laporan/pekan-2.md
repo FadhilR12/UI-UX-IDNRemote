@@ -12,9 +12,11 @@
 - [x] 2.6 Perbaiki section itu, lalu cek di HP dan desktop
 - [x] 2.7 Laporan pekan ini
 
-Hasil: `website/index.html` (Beranda), `website/mentor.html` (Daftar mentor), `website/harga.html` (Harga), dengan `style.css`, `mentor.js`, dan `nav.js`. Ketiga halaman tanpa scroll ke samping di lebar 360 px.
+Hasil: `website/index.html` (Beranda), `website/mentor.html` (Daftar mentor), `website/harga.html` (Harga), dengan `style.css`, `mentor.js`, `hero.js`, dan `nav.js`. Ketiga halaman tanpa scroll ke samping di lebar 360 px.
 
 **Tambahan 20 November 2026:** setelah 2.7 tercentang, peserta melanjutkan iterasi Beranda di luar langkah (17 permintaan). Rencana Beranda di `CLAUDE.md` bagian 4 belum diperbarui untuk perubahan ini.
+
+**Tambahan 23 November 2026:** sebelum pindah ke pekan 3, peserta melanjutkan perbaikan wireframe ketiga halaman di luar langkah (14 permintaan). Rencana halaman di `CLAUDE.md` bagian 4 juga belum diperbarui untuk perubahan ini.
 
 ## Keputusan design
 
@@ -37,6 +39,18 @@ Dikutip dari `CLAUDE.md` bagian 4, versi akhir pekan ini.
 - Kartu ajakan kecil di bawah testimoni: kalimat di kiri, tombol sekunder di kanan, lebih lemah dari testimoni ("hierarki nya tetap menunjukan testimonial dahulu baru cta ini").
 - Ukuran font dan jarak di gaya baru memakai kelipatan 4; nomor per section dihapus; nama bidang jadi teks paling menonjol di kartu Bidang, label hook "Mau ...?" dicoba lalu dihapus.
 - HP: kolom "Kalau sendirian" tetap, contoh perjalanan Rino dan subjudul Bidang disembunyikan, diganti link "Dengarkan dari yang sudah coba →" ke testimoni (tidak tebal, abu, supaya tidak menonjol).
+
+**Ketiga halaman, perubahan 23 November 2026** (dari log, karena belum ditulis di rencana halaman)
+
+- Hierarchy judul disamakan di semua halaman: "untuk hierarki tolong samakan di semua section dan halaman, samakan juga font case dan font size nya per bagian, seperti section title itu sama semua tidak ada kesenjangan". Judul halaman 48px (36px di HP), judul section 32px (24px di HP), judul kartu 20px (18px di HP), semua huruf biasa; huruf kapital hanya untuk label kecil di atas judul. Label kecil juga ditambahkan di Daftar mentor ("Pilih mentormu") dan Harga ("Yang kamu dapat", "Harga"); "8 mentor" dikecilkan jadi info jumlah hasil.
+- Potongan baris judul mengikuti frasa ("tolong ubah potongan kalimat di setiap title nya dong biar lebih enak").
+- Hero Beranda mengikuti kartu foto Topmate: slogan dan tombol di kiri, kartu foto satu mentor per bidang di kanan dengan tombol panah, link "Lihat semua mentor →" di bawahnya. Daftar nama di kiri sempat dibuat lalu dihapus ("tidak usah ada nama di kiri aku hanya ingin menggunakan card foto nya dibuat seperti itu saja"). Di HP, nama, jabatan, dan rating pindah ke bawah foto tanpa kotak putih.
+- Tombol di kartu ajakan bawah testimoni jadi tombol utama ("pada cta di cerita user jadi highllight juga").
+- Contoh perjalanan Rino sempat diubah jadi timeline, lalu dihapus di semua ukuran layar ("jujur cerita rino ini redundan ya", "yasudah kalau begitu samakan saja seperti yang di hp"); link "Dengarkan dari yang sudah coba →" sekarang tampil di desktop dan HP.
+- Tampilan HP: kartu mentor memakai foto kecil di samping nama (detail tetap utuh), kartu harga setinggi isinya, kartu benefit lebih ringkas.
+- Similarity: "kelompokan elemen yang fungsinya sama dengan menyamakan tampilannya". Semua kartu isi bersudut 12px; kartu biasa bergaris abu tipis, kartu sorotan bergaris hitam 2px; semua gambar bersudut 12px; link pendukung satu gaya dengan panah; angka statistik sama ukurannya.
+- Proximity: "mengelompokan mereka yang sudah kamu kelompokan itu lewat jaraknya". Skala jarak 4, 8, 16, 24, 32, 48, 64: 4–8 di dalam satu info, 16 antar bagian satu kelompok dan antar kartu sejenis, 24 sebelum tombol, 32 dari kepala section ke isinya, 64 antar section (48 di HP).
+- Belum diputuskan: skala ukuran huruf kelipatan 4 (peserta mengusulkan `<p>` mulai 12px; usulan Claude Code: label 12, `<p>` 16, h3 20, h2 24, h1 28), dan apakah judul section Harga tetap rata tengah.
 
 **Daftar mentor**
 
@@ -99,6 +113,12 @@ Iterasi 20 November 2026 (Beranda, di luar langkah):
 - 17 permintaan: 3 untuk kartu ajakan, 2 untuk section About, 5 untuk penyelarasan section dan typography, 7 untuk tampilan HP.
 - Semua perubahan diminta langsung ke tampilan; rencana halaman belum diubah. Peserta dua kali menolak hasil dan meluruskan maksud (section ajakan menjadi kartu kecil; About generik menjadi cerita), dan sekali menulis copy sendiri ("Dengarkan dari yang sudah coba").
 
+Iterasi 23 November 2026 (ketiga halaman, di luar langkah):
+
+- Permintaan kunci: "untuk hierarki tolong samakan di semua section dan halaman, samakan juga font case dan font size nya per bagian", "untuk hero daripada memunculkan list mentor, sepertinya lebih baik jika seperti di attachment" (screenshot Topmate), "tolong untuk semua halaman kelompokan elemen yang fungsinya sama dengan menyamakan tampilannya", "setelah dikelompokan aku ingin kamu untuk mengelompokan mereka yang sudah kamu kelompokan itu lewat jaraknya".
+- 14 permintaan: 4 untuk Hero, 2 untuk contoh perjalanan Rino, 2 untuk ukuran dan potongan judul, 3 untuk tampilan HP, 1 untuk tombol ajakan, 1 untuk similarity, 1 untuk proximity.
+- Peserta memulai dengan screenshot Beranda yang diberi coretan (hierarchy, huruf kapital, judul section yang lebih kecil, contoh Rino). Semua perubahan diminta langsung ke tampilan; rencana halaman belum diubah. Peserta dua kali meminta ulang hasil Hero (daftar nama dihapus, ukuran kartu dikurangi) dan sekali meminta ulang tampilan HP ("sepetinya masih kurang efektif").
+
 ## Feedback dan tindak lanjut
 
 - **2.1:** feedback menanyakan Hero yang ditulis sebagai "mengurutkan mentor" dan Pricing di Beranda. Peserta menghapus Pricing dan menjadikan hero slogan dengan mentor di sebelahnya. Pertanyaan "di mana Pesan sesi muncul" dijawab dengan menambah section Ajakan Pesan sesi, lalu disesuaikan dengan F1 (pendaftaran dulu, baru pembayaran).
@@ -109,6 +129,8 @@ Iterasi 20 November 2026 (Beranda, di luar langkah):
 - **2.6:** catatan bahwa kartu mentor di HP belum punya penanda bisa diketuk ditindaklanjuti peserta dengan panah ↗ di kanan atas foto, khusus HP. Catatan bahwa alasan perubahan besar (section Bidang, Benefit, penghapusan List Mentor) belum ditulis sebagai blok Section dengan "Kenapa layout ini" belum ditindaklanjuti.
 
 - **Iterasi 20 November 2026:** tidak ada `/cek`. Catatan dari tanggapan: About ditaruh di antara Hero dan Bidang; tiga clue diberikan (About bisa mengulang subjudul Hero, manifesto bisa lebih besar dari judul Hero, rencana Beranda di bagian 4 belum memuat About dan kartu ajakan). Clue ukuran manifesto ditindaklanjuti peserta lewat aturan kelipatan 4; rencana Beranda belum diperbarui.
+
+- **Iterasi 23 November 2026:** tidak ada `/cek`. Catatan dari tanggapan: judul huruf kapital terlihat lebih besar dari ukurannya, sehingga About menyaingi Hero (ditindaklanjuti dengan satu skala judul); `<p>` 12px terlalu kecil untuk teks yang dibaca panjang (belum diputuskan); di HP, menyembunyikan rating di Hero menghilangkan jawaban M3 (ditindaklanjuti dengan rating di bawah foto); contoh Rino sebagian mengulang kolom kontras dan testimoni, dengan pertanyaan apakah sesi berulang perlu diyakinkan di Beranda sesuai sikap "Saat bertabrakan" (peserta memilih menghapusnya).
 
 ## Refleksi
 

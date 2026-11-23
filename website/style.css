@@ -41,18 +41,40 @@ h2,
 h3 {
   margin: 0 0 12px;
   line-height: 1.2;
+  /* Baris judul dipotong seimbang, supaya nggak ada satu kata yatim di baris terakhir */
+  text-wrap: balance;
 }
 
+/* Satu skala judul untuk semua halaman website:
+   h1 = judul halaman, h2 = judul section, h3 = judul kartu.
+   Semua judul huruf biasa; hanya label kecil di atas judul yang kapital. */
 h1 {
-  font-size: 40px;
+  font-size: 48px;
+  line-height: 1.15;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 32px;
 }
 
-h3 {
-  font-size: 18px;
+h3,
+.h3-size {
+  font-size: 20px;
+}
+
+@media (max-width: 719px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3,
+  .h3-size {
+    font-size: 18px;
+  }
 }
 
 p {
@@ -551,14 +573,6 @@ dialog::backdrop {
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 32px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
   .section {
     padding: 40px 0;
   }
@@ -577,10 +591,6 @@ dialog::backdrop {
 .quote,
 .quote blockquote {
   margin: 0;
-}
-
-.h3-size {
-  font-size: 18px;
 }
 
 .mentor-card .tag {
@@ -841,7 +851,6 @@ dialog::backdrop {
 
 #mentor-list .mentor-card-top h3 {
   margin: 0 0 2px;
-  font-size: 20px;
 }
 
 #mentor-list .mentor-card-top .muted {
@@ -1094,10 +1103,6 @@ dialog::backdrop {
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
-
-  .split-head h2 {
-    font-size: 36px;
-  }
 }
 
 .split-head .lead {
@@ -1198,7 +1203,6 @@ dialog::backdrop {
 
 .bidang-tile h3 {
   margin: 0 0 4px;
-  font-size: 20px;
 }
 
 .bidang-tile p {
@@ -1228,24 +1232,11 @@ dialog::backdrop {
     font-size: 11px;
   }
 
-  .bidang-tile h3 {
-    font-size: 16px;
-  }
-
   .bidang-tile p {
     font-size: 13px;
   }
 }
 
-.h2-lg {
-  font-size: 36px;
-}
-
-@media (max-width: 480px) {
-  .h2-lg {
-    font-size: 26px;
-  }
-}
 
 /* Gambar bidang: persegi panjang mendatar 4:3 */
 .bidang-img {
@@ -1543,7 +1534,6 @@ dialog::backdrop {
 
 .benefit-row h2 {
   margin: 0 0 6px;
-  font-size: 18px;
 }
 
 .benefit-row p {
@@ -1680,9 +1670,6 @@ dialog::backdrop {
 .about-manifesto {
   display: grid;
   margin: 0 0 20px;
-  font-size: 24px;
-  line-height: 1.2;
-  text-transform: uppercase;
 }
 
 .about-lead {
@@ -1735,10 +1722,6 @@ dialog::backdrop {
 }
 
 @media (min-width: 720px) {
-  .about-manifesto {
-    font-size: 32px;
-  }
-
   .about-contrast {
     grid-template-columns: 1fr 1fr;
   }
@@ -1762,14 +1745,6 @@ dialog::backdrop {
 
 .story-title {
   display: grid;
-  font-size: 20px;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.bidang-tile h3 {
-  margin-bottom: 4px;
-  font-size: 20px;
 }
 
 
@@ -1799,10 +1774,6 @@ dialog::backdrop {
 }
 
 @media (min-width: 720px) {
-  .story-title {
-    font-size: 24px;
-  }
-
   .quote-layout {
     grid-template-columns: 1.3fr 1fr;
   }
@@ -1814,10 +1785,6 @@ dialog::backdrop {
 
 /* Beranda di HP: lebih ringkas supaya cerita tetap mengalir saat di-scroll */
 @media (max-width: 719px) {
-  .hero h1 {
-    font-size: 32px;
-  }
-
   .about-lead {
     font-size: 16px;
     margin-bottom: 24px;
@@ -1858,10 +1825,6 @@ dialog::backdrop {
     aspect-ratio: 4 / 3;
     margin-bottom: 12px;
     border-radius: 12px;
-  }
-
-  .bidang-tile h3 {
-    font-size: 16px;
   }
 
   .quote-feature {
@@ -1910,5 +1873,519 @@ dialog::backdrop {
     font-weight: 400;
     color: #555555;
     text-underline-offset: 4px;
+  }
+}
+
+/* Hero (ref. kartu foto Topmate): teks di kiri, kartu foto mentor di kanan.
+   Di HP: teks dulu, lalu kartu foto. */
+.hero .hero-grid {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 860px) {
+  .hero .hero-grid {
+    grid-template-columns: 1.1fr 1fr;
+    column-gap: 64px;
+  }
+}
+
+.hero-arrow:focus-visible {
+  outline: 3px solid #1a1a1a;
+  outline-offset: 2px;
+}
+
+.hero-photo .hero-more {
+  display: block;
+  margin-top: 8px;
+  text-align: right;
+}
+
+.hero-frame {
+  position: relative;
+}
+
+.hero-photo-img {
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  align-items: flex-start;
+  padding-top: 25%;
+}
+
+/* HP: kartu foto lebih pendek supaya section berikutnya cepat terlihat */
+@media (max-width: 719px) {
+  .hero-photo-img {
+    aspect-ratio: 4 / 3;
+    padding-top: 15%;
+  }
+}
+
+.hero-photo-card {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  max-width: calc(100% - 140px);
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.hero-photo-card p {
+  margin: 0;
+}
+
+.hero-photo-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.hero-photo-nav {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.hero-arrow {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #1a1a1a;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #1a1a1a;
+  font: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 719px) {
+  /* HP: foto lebih pendek dengan tombol panah di pojok foto; info mentor jadi teks biasa
+     di bawah foto (tanpa kotak putih), selebar layar. Nama, jabatan, dan rating tetap terbaca (M3). */
+  .hero-frame {
+    display: grid;
+    grid-template-areas:
+      "img"
+      "card";
+    gap: 12px;
+  }
+
+  .hero-photo-img {
+    grid-area: img;
+    aspect-ratio: 16 / 10;
+    padding-top: 0;
+    align-items: center;
+  }
+
+  .hero-photo-card {
+    grid-area: card;
+    position: static;
+    max-width: none;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+  }
+
+  .hero-photo-card .hero-stats {
+    margin-top: 6px;
+  }
+
+  .hero-photo-nav {
+    grid-area: img;
+    position: static;
+    align-self: end;
+    justify-self: end;
+    margin: 12px;
+  }
+
+  .hero-arrow {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Judul yang dipotong per frasa: setiap span satu baris */
+.title-lines span {
+  display: block;
+}
+
+/* Daftar mentor: jumlah hasil pencarian sebagai info, bukan judul section besar */
+.result-count {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ===== Tampilan HP (≤719px) ===== */
+@media (max-width: 719px) {
+  /* Daftar mentor: foto jadi kotak kecil di samping nama, bukan gambar lebar di atas.
+     Kartu jauh lebih pendek, detail (ringkasan, topik, rating) tetap utuh. */
+  #mentor-list .mentor-card {
+    grid-row: auto;
+    grid-template-rows: none;
+    row-gap: 12px;
+    padding: 16px;
+  }
+
+  #mentor-list .mentor-card-top {
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    padding-right: 40px;
+  }
+
+  #mentor-list .ph-photo {
+    position: static;
+    width: 72px;
+    height: 72px;
+    aspect-ratio: auto;
+    margin: 0;
+    flex-shrink: 0;
+    border-radius: 12px;
+    font-size: 0;
+  }
+
+  #mentor-list .card-arrow {
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #bdbdbd;
+    font-size: 16px;
+  }
+
+  #mentor-list .mentor-card > p {
+    margin: 0;
+  }
+
+  #mentor-list .mentor-card > div:not(.mentor-card-top) {
+    margin: 0;
+  }
+
+  #mentor-list .card-link-hidden {
+    position: static;
+  }
+
+  /* Harga: kartu harga setinggi isinya, tanpa ruang kosong di atas tombol */
+  .plan,
+  .plan-main {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .plan-cta {
+    margin-top: 8px;
+  }
+
+  /* Harga, Benefit: kartu lebih ringkas supaya harga cepat terlihat */
+  .benefit-grid {
+    gap: 12px;
+  }
+
+  .benefit-row {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 10px;
+  }
+
+  .benefit-row p {
+    font-size: 15px;
+  }
+}
+
+/* About: link ke Cerita user tampil di semua ukuran layar, dekat dengan kolom kontras */
+.about-contrast {
+  margin-bottom: 8px;
+}
+
+.about-jump {
+  display: inline-block;
+  padding: 12px 0;
+  min-height: 44px;
+  font-size: 16px;
+  color: #555555;
+  text-underline-offset: 4px;
+}
+
+.about-jump:hover {
+  color: #1a1a1a;
+}
+
+/* ===== Kelompok elemen: fungsi sama, tampilan sama (similarity) =====
+   Ditaruh paling akhir supaya menimpa ukuran lepas di atas. */
+
+/* 1. Kartu isi: semua kartu pakai sudut, garis, dan jarak dalam yang sama.
+      Kartu biasa: garis tipis abu. Kartu yang disorot: garis tebal hitam. */
+.card,
+.search,
+.about-col,
+.quote-feature,
+.benefit-row,
+.plan,
+.plan-main,
+.empty,
+#mentor-list .mentor-card {
+  border-radius: 12px;
+}
+
+.card,
+.search,
+.about-col,
+.quote-feature,
+.benefit-row,
+.plan,
+.plan-main,
+.empty {
+  padding: 24px;
+}
+
+.card,
+.search,
+.benefit-row,
+.plan:not(.plan-main),
+#mentor-list .mentor-card {
+  border: 1px solid #bdbdbd;
+}
+
+.about-col-strong,
+.quote-feature,
+.plan-main {
+  border: 2px solid #1a1a1a;
+}
+
+#mentor-list .mentor-card {
+  padding: 0 24px 24px;
+}
+
+#mentor-list .ph-photo {
+  margin: 0 -24px;
+}
+
+.cta-strip {
+  border-radius: 12px;
+  padding: 16px 24px;
+}
+
+/* 2. Gambar dan foto: sudut sama di semua halaman (avatar tetap bulat) */
+.hero-photo-img,
+.bidang-img,
+.benefit-icon {
+  border-radius: 12px;
+}
+
+/* 3. Link teks pendukung: satu gaya, selalu dengan panah */
+.hero-more,
+.about-jump {
+  display: inline-block;
+  min-height: 44px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hero-more:hover,
+.about-jump:hover {
+  color: #1a1a1a;
+}
+
+/* 4. Angka statistik mentor (rating, sesi, pengalaman): ukuran sama di Hero dan Daftar mentor */
+.stats {
+  font-size: 13px;
+  color: #555555;
+}
+
+.stats strong,
+#mentor-list .stats-spread strong {
+  font-size: 15px;
+  color: #1a1a1a;
+}
+
+@media (max-width: 719px) {
+  .card,
+  .search,
+  .about-col,
+  .quote-feature,
+  .benefit-row,
+  .plan,
+  .plan-main,
+  .empty {
+    padding: 16px;
+  }
+
+  #mentor-list .mentor-card {
+    padding: 16px;
+  }
+
+  #mentor-list .ph-photo {
+    margin: 0;
+  }
+
+  .cta-strip {
+    padding: 16px;
+  }
+}
+
+/* ===== Jarak antar kelompok (proximity) =====
+   Skala jarak: 4, 8, 16, 24, 32, 48, 64.
+   Makin dekat hubungannya, makin rapat jaraknya:
+   - 4–8   : baris dalam satu info (nama–jabatan–bidang, label–judul)
+   - 16    : antar bagian di dalam satu kelompok (judul–paragraf, antar kartu sejenis)
+   - 24    : sebelum aksi di dalam kelompok (paragraf–tombol, isi kartu–tombol)
+   - 32    : kepala section ke isinya, antar kelompok di dalam section
+   - 64/48 : antar section (desktop/HP) */
+
+/* Antar section */
+.section {
+  padding: 64px 0;
+}
+
+.site-footer {
+  margin-top: 0;
+}
+
+/* Kepala section: label, judul, dan paragraf jadi satu kelompok; isi section 32px di bawahnya */
+.about-kicker,
+.section-head .about-kicker {
+  margin-bottom: 8px;
+}
+
+.section-head h1,
+.section-head h2,
+.about-manifesto {
+  margin-bottom: 16px;
+}
+
+.section-head .lead {
+  margin: 0;
+}
+
+.section-head,
+.about-lead {
+  margin-bottom: 32px;
+}
+
+/* Hero: judul–paragraf 16, paragraf–tombol 24 */
+.hero h1 {
+  margin-bottom: 16px;
+}
+
+.hero .lead {
+  margin: 0 0 24px;
+}
+
+.hero-cta {
+  margin-top: 0;
+}
+
+/* Kartu sejenis dalam satu kelompok: jarak 16 */
+.about-contrast,
+.benefit-grid,
+.plans,
+#mentor-list,
+.quote-layout,
+.quote-side {
+  gap: 16px;
+}
+
+/* Kartu bidang tanpa garis: jarak antar baris lebih lebar supaya judul tidak menempel ke gambar di bawahnya */
+.bidang-list {
+  gap: 32px 16px;
+}
+
+/* Link pendukung menempel ke kelompok yang dia lengkapi */
+.about-contrast {
+  margin-bottom: 8px;
+}
+
+.hero-photo .hero-more {
+  margin-top: 8px;
+}
+
+/* Ajakan di bawah testimoni: kelompok terpisah, 32 dari kartu testimoni */
+.cta-strip {
+  margin-top: 32px;
+}
+
+/* Daftar mentor: kotak pencarian – jumlah hasil 32, jumlah hasil – kartu 16 */
+.result-count {
+  margin: 32px 0 16px;
+}
+
+/* Di dalam kartu mentor: identitas rapat (4), blok berbeda 16 */
+#mentor-list .mentor-card-top {
+  gap: 16px;
+}
+
+#mentor-list .mentor-card-top > div {
+  gap: 4px;
+}
+
+#mentor-list .mentor-card > p {
+  margin: 16px 0 0;
+}
+
+#mentor-list .mentor-card > div:not(.mentor-card-top) {
+  gap: 8px;
+  margin: 16px 0;
+}
+
+#mentor-list .stats-spread {
+  padding-top: 16px;
+}
+
+/* Kartu harga: label–nama–harga rapat (8), daftar isi 16, tombol 24 */
+.plan,
+.plan-main {
+  gap: 8px;
+}
+
+.plan ul {
+  margin: 8px 0 16px;
+}
+
+/* Tombol tetap menempel di dasar kartu supaya sejajar; minimal 24 dari daftar isi (16 + 8) */
+.plan-cta,
+.plan .btn {
+  margin-top: auto;
+}
+
+/* Kartu benefit dan testimoni: judul–teks rapat */
+.benefit-row h2 {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 719px) {
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-head,
+  .about-lead {
+    margin-bottom: 24px;
+  }
+
+  .bidang-list {
+    gap: 24px 16px;
+  }
+
+  #mentor-list .mentor-card > p {
+    margin: 0;
+  }
+
+  #mentor-list .mentor-card > div:not(.mentor-card-top) {
+    margin: 0;
+  }
+
+  #mentor-list .mentor-card {
+    row-gap: 16px;
   }
 }

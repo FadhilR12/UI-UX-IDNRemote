@@ -27,68 +27,45 @@
   </header>
 
   <main>
-    <!-- 1. Hero: slogan + tombol Pesan sesi (aksi utama) + tiga mentor dengan rating, sesi, dan pengalaman (M1, M3) + link Lihat semua mentor -->
+    <!-- 1. Hero (ref. kartu foto Topmate): slogan + tombol Pesan sesi (aksi utama) di kiri;
+         kartu foto besar di kanan, satu mentor per bidang bergantian lewat tombol panah, dengan rating, sesi, dan pengalaman (M1, M3) -->
     <section class="section hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div>
-          <h1 id="hero-title">Belajar dari orang yang sudah sampai di posisi impianmu.</h1>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1 id="hero-title" class="title-lines"><span>Belajar dari orang</span> <span>yang sudah sampai</span> <span>di posisi impianmu.</span></h1>
           <p class="lead">Ngobrol 1-on-1 lewat video call bareng praktisi berpengalaman. Mulai dari latihan interview sampai siap jadi tech lead.</p>
           <a class="btn hero-cta" href="../app/daftar.html">Pesan sesi pertamamu</a>
         </div>
 
-        <div class="hero-side">
-        <ul class="hero-mentors" aria-label="Beberapa mentor di Mentorku">
-          <li class="hero-mentor">
-            <div class="ph ph-avatar" aria-hidden="true">Foto</div>
-            <div>
-              <p><strong>Nadia Rahma</strong></p>
-              <p class="muted">Negosiasi</p>
-              <ul class="stats hero-stats">
-                <li><strong>4,9</strong> rating</li>
-                <li><strong>214</strong> sesi</li>
-                <li><strong>12</strong> tahun pengalaman</li>
-              </ul>
-            </div>
-          </li>
-          <li class="hero-mentor">
-            <div class="ph ph-avatar" aria-hidden="true">Foto</div>
-            <div>
-              <p><strong>Fajar Kurniawan</strong></p>
-              <p class="muted">Memimpin tim</p>
-              <ul class="stats hero-stats">
-                <li><strong>4,9</strong> rating</li>
-                <li><strong>187</strong> sesi</li>
-                <li><strong>11</strong> tahun pengalaman</li>
-              </ul>
-            </div>
-          </li>
-          <li class="hero-mentor">
-            <div class="ph ph-avatar" aria-hidden="true">Foto</div>
-            <div>
-              <p><strong>Citra Maharani</strong></p>
-              <p class="muted">Bahasa Inggris untuk kerja</p>
-              <ul class="stats hero-stats">
-                <li><strong>4,6</strong> rating</li>
-                <li><strong>98</strong> sesi</li>
-                <li><strong>10</strong> tahun pengalaman</li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-        <a class="hero-more" href="mentor.html">Lihat semua mentor</a>
+        <div class="hero-photo">
+          <div class="hero-frame">
+          <div class="ph hero-photo-img" aria-hidden="true" id="hero-photo-label">Foto Nadia Rahma</div>
+          <div class="hero-photo-card" aria-live="polite">
+            <p class="hero-photo-name" id="hero-photo-name">Nadia Rahma</p>
+            <p class="muted" id="hero-photo-title">Engineering manager di perusahaan logistik</p>
+            <ul class="stats hero-stats" id="hero-photo-stats">
+              <li><strong>4,9</strong> rating</li>
+              <li><strong>214</strong> sesi</li>
+              <li><strong>12</strong> tahun pengalaman</li>
+            </ul>
+          </div>
+          <div class="hero-photo-nav">
+            <button type="button" class="hero-arrow" id="hero-prev" aria-label="Mentor sebelumnya">&larr;</button>
+            <button type="button" class="hero-arrow" id="hero-next" aria-label="Mentor berikutnya">&rarr;</button>
+          </div>
+          </div>
+          <a class="hero-more" href="mentor.html">Lihat semua mentor <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
 
-    <!-- About: identitas Mentorku lewat manifesto, kontras sebelum/sesudah, dan contoh perjalanan Rino (data/user.json) · atas permintaan peserta -->
+    <!-- About: identitas Mentorku lewat manifesto dan kontras sebelum/sesudah, lalu link ke Cerita user · atas permintaan peserta -->
     <section class="section about" aria-labelledby="about-title">
       <div class="container">
         <p class="about-kicker">Kenapa Mentorku ada</p>
         <h2 id="about-title" class="about-manifesto">
-          <span>Naik level nggak harus</span>
-          <span>ditebak sendirian.</span>
-          <span>Tanya ke yang sudah</span>
-          <span>pernah sampai.</span>
+          <span>Naik level nggak harus ditebak sendirian.</span>
+          <span>Tanya ke yang sudah pernah sampai.</span>
         </h2>
         <p class="lead about-lead">Mentorku mempertemukan kamu dengan praktisi lewat video call 1-on-1, 45 menit, khusus soft skill. Bukan kelas grup, bukan video rekaman, bukan bantuan coding.</p>
 
@@ -111,29 +88,9 @@
           </div>
         </div>
 
-        <!-- Hanya di HP: pengganti contoh perjalanan Rino, mengarah ke testimoni -->
-        <a class="about-jump show-mobile" href="#cerita">Dengarkan dari yang sudah coba <span aria-hidden="true">→</span></a>
+        <!-- Link ke testimoni, menggantikan contoh perjalanan Rino (dihapus karena redundan) -->
+        <a class="about-jump" href="#cerita">Dengarkan dari yang sudah coba <span aria-hidden="true">→</span></a>
 
-        <figure class="about-story hide-mobile">
-          <figcaption class="about-label">Contoh perjalanan: Rino, target lolos interview tech lead</figcaption>
-          <ol class="plain-list about-steps">
-            <li>
-              <span class="about-num">01</span>
-              <p><strong>Negosiasi promosi</strong> bareng Nadia Rahma</p>
-              <p class="muted hide-mobile">Catatan: "Siapkan tiga bukti kontribusi dengan angka sebelum bicara dengan atasan."</p>
-            </li>
-            <li>
-              <span class="about-num">02</span>
-              <p><strong>Review CV</strong> bareng Putri Ayu</p>
-              <p class="muted hide-mobile">Catatan: "Mulai setiap poin dengan hasil, bukan tugas."</p>
-            </li>
-            <li>
-              <span class="about-num">03</span>
-              <p><strong>Simulasi interview perilaku</strong> bareng Hendra Wijaya</p>
-              <p class="muted hide-mobile">Terjadwal 3 Desember, 15.00 WIB.</p>
-            </li>
-          </ol>
-        </figure>
       </div>
     </section>
 
@@ -232,7 +189,7 @@
         <!-- Kartu ajakan kecil di bawah testimoni: kalimat kiri, tombol kanan · aksi utama -->
         <div class="cta-strip">
           <p>Siap ngobrol sama mentor pertamamu? Mulai dari satu sesi aja.</p>
-          <a class="btn btn-secondary" href="../app/daftar.html">Pesan sesi pertamamu</a>
+          <a class="btn" href="../app/daftar.html">Pesan sesi pertamamu</a>
         </div>
       </div>
     </section>
@@ -250,6 +207,7 @@
       <p class="muted">Langkah karier berikutnya terasa lebih ringan kalau ada yang menemani.</p>
     </div>
   </footer>
+  <script src="hero.js"></script>
   <script src="nav.js"></script>
 </body>
 </html>

@@ -483,3 +483,93 @@
 - **Yang dikerjakan:** laporan/pekan-2.md diperbarui dengan iterasi Beranda 20 November 2026; refleksi lama tetap.
 - **Tanggapan peserta:** menunggu
 - **Feedback `/cek`:** - · tercentang: ya (sudah dari sebelumnya)
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "untuk hierarki tolong samakan di semua section dan halaman, samakan juga font case dan font size nya per bagian, seperti section title itu sama semua tidak ada kesenjangan"
+- **Yang dikerjakan:** satu skala judul untuk Beranda, Daftar mentor, dan Harga: judul halaman (h1) 48px desktop / 36px HP, judul section (h2) 32px / 24px, judul kartu (h3) 20px / 18px. Semua judul pakai huruf biasa; huruf kapital hanya untuk label kecil di atas judul. Ukuran lepas per section (About, Bidang, Cerita user, kartu mentor, kartu bidang, kartu benefit) dihapus. File: website/style.css.
+- **Tanggapan peserta:** menunggu
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Beranda, Cerita user)
+- **Permintaan:** "pada cta di cerita user jadi highllight juga"
+- **Yang dikerjakan:** tombol "Pesan sesi pertamamu" di kartu ajakan bawah testimoni diganti dari tombol bergaris (sekunder) ke tombol utama hitam, sama seperti tombol di Hero. File: website/index.html.
+- **Tanggapan peserta:** menunggu
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Beranda, Hero)
+- **Permintaan:** "untuk hero daripada memunculkan list mentor, sepertinya lebih baik jika seperti di attachment" (referensi: hero Topmate)
+- **Yang dikerjakan:** Hero disusun ulang: slogan, subjudul, dan tombol Pesan sesi di kiri, di bawahnya daftar enam nama mentor (satu per bidang) dengan bidangnya; foto besar di kanan menampilkan mentor yang dipilih beserta jabatan, rating, sesi, dan pengalaman, dengan tombol panah sebelumnya/berikutnya. Tanpa putar otomatis dan tombol jeda karena mode wireframe tanpa animasi. Di HP urutannya teks, foto, lalu daftar nama. File: website/index.html, website/style.css, website/hero.js (baru).
+- **Tanggapan peserta:** minta ulang: daftar nama di kiri dihapus, cukup kartu fotonya
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Beranda, Hero)
+- **Permintaan:** "tidak usah ada nama di kiri aku hanya ingin menggunakan card foto nya dibuat seperti itu saja"
+- **Yang dikerjakan:** daftar nama mentor di kiri dihapus; Hero jadi slogan, subjudul, dan tombol Pesan sesi di kiri, kartu foto mentor (berganti lewat tombol panah) di kanan, link "Lihat semua mentor" di bawah kartu foto. File: website/index.html, website/style.css, website/hero.js.
+- **Tanggapan peserta:** minta ukuran kartu foto dikurangi
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Beranda, Hero)
+- **Permintaan:** "sepetinya bisa dikurangi size nya"
+- **Yang dikerjakan:** kartu foto Hero diperpendek: rasio 4:5 jadi persegi 1:1 di desktop (tinggi sekitar 585px jadi 470px), dan 4:3 di HP (sekitar 580px jadi 350px). File: website/style.css.
+- **Tanggapan peserta:** lanjut ke potongan baris judul
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "tolong ubah potongan kalimat di setiap title nya dong biar lebih enak"
+- **Yang dikerjakan:** baris judul dipotong per frasa: About jadi satu kalimat per baris ("Naik level nggak harus ditebak sendirian." / "Tanya ke yang sudah pernah sampai."), Hero dikunci tiga frasa, judul Daftar mentor ("Cari mentor yang pas / buat targetmu") dan judul Harga ("Coba satu sesi dulu, / lanjut kalau cocok") dipotong di frasanya; semua judul pakai text-wrap: balance supaya di HP tidak ada kata yatim. File: website/index.html, website/mentor.html, website/harga.html, website/style.css.
+- **Tanggapan peserta:** lanjut ke contoh perjalanan Rino
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Beranda, About: contoh perjalanan Rino)
+- **Permintaan:** "untuk yang contoh rino itu tolong lebih diperjelas dengan mengganti layout nya"
+- **Yang dikerjakan:** tiga kolom bernomor 01–03 diganti timeline: label "Contoh perjalanan", judul kartu berisi target Rino, satu kalimat pengantar, lalu tiga kartu sesi yang disambung garis. Setiap kartu punya status dan tanggal (selesai 12 Nov, selesai 20 Nov, 3 Des 15.00 WIB), topik, mentor, dan kotak "Catatan mentor"; sesi berikutnya bertitik kosong dan bergaris putus. Fakta dari data/user.json. Tetap hanya di desktop. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** diterima ("sudah terlihat lebih rapih")
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Daftar mentor, Harga)
+- **Permintaan:** "oke sudah terliha lebih rapih, sekarang sesuaikan untuk di halaman daftar mentor dan harga"
+- **Yang dikerjakan:** pola judul Beranda dipakai di dua halaman lain: label kecil kapital di atas setiap judul ("Pilih mentormu" di Daftar mentor, "Yang kamu dapat" dan "Harga" di Harga); "8 mentor" dikecilkan jadi info jumlah hasil (18px tebal), bukan judul section besar. File: website/mentor.html, website/harga.html, website/style.css.
+- **Tanggapan peserta:** lanjut ke tampilan HP
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (semua halaman website, tampilan HP)
+- **Permintaan:** "tolong buatkan tampilan yang efektif untuk mobile"
+- **Yang dikerjakan:** ketiga halaman dicek di lebar 375px. Daftar mentor: foto lebar di atas kartu diganti kotak foto 72px di samping nama, jarak dalam kartu dirapatkan; ringkasan, topik, dan rating tetap utuh (kartu dari sekitar 550px jadi 340px, halaman dari sekitar 5.400px jadi 4.000px). Harga: ruang kosong di kartu Per sesi dihapus (tinggi minimum 460px hanya di desktop), kartu benefit diringkas, "ke-4" tidak lagi terpotong di akhir baris. Beranda tidak diubah. File: website/style.css, website/harga.html.
+- **Tanggapan peserta:** menilai cerita Rino redundan
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Beranda, About)
+- **Permintaan:** "jujur cerita rino ini redundan ya" lalu "yasudah kalau begitu samakan saja seperti yang di hp"
+- **Yang dikerjakan:** contoh perjalanan Rino dihapus juga di desktop (gaya timeline-nya ikut dihapus dari CSS); link "Dengarkan dari yang sudah coba →" ke Cerita user sekarang tampil di desktop dan HP, tepat di bawah kolom kontras. File: website/index.html, website/style.css.
+- **Tanggapan peserta:** diterima, lanjut ke kartu foto Hero di HP
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Beranda, Hero, tampilan HP)
+- **Permintaan:** "untuk card mentor di hp mungkin bisa dihilangkan putih nya jadi, nama nya saja langsung diatas foto"
+- **Yang dikerjakan:** di HP, kotak putih di kartu foto Hero dihapus; hanya nama mentor (20px tebal) langsung di atas foto, sejajar dengan tombol panah. Jabatan, rating, sesi, dan pengalaman disembunyikan di HP; desktop tidak berubah. File: website/style.css.
+- **Tanggapan peserta:** minta ulang: "sepetinya masih kurang efektif"
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Beranda, Hero, tampilan HP)
+- **Permintaan:** "sepetinya masih kurang efektif, tolong dibuat efektif"
+- **Yang dikerjakan:** di HP, foto Hero diperpendek (16:10) dengan tombol panah di pojok kanan bawah foto; nama, jabatan, dan rating/sesi/pengalaman pindah ke bawah foto sebagai teks biasa tanpa kotak putih, masing-masing satu baris. Desktop tidak berubah. File: website/style.css.
+- **Tanggapan peserta:** lanjut ke penyamaan elemen
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "tolong untuk semua halaman kelompokan elemen yang fungsinya sama dengan menyamakan tampilannya"
+- **Yang dikerjakan:** empat kelompok disamakan: (1) semua kartu isi pakai sudut 12px dan jarak dalam 24px (16px di HP); kartu biasa bergaris tipis abu, kartu sorotan (Kalau bareng mentor, testimoni utama, Per sesi) bergaris tebal hitam; (2) semua gambar placeholder bersudut 12px; (3) link teks pendukung ("Lihat semua mentor →", "Dengarkan dari yang sudah coba →") satu gaya, sama-sama berpanah; (4) angka rating, sesi, dan pengalaman sama ukurannya di Hero dan Daftar mentor. File: website/style.css, website/index.html.
+- **Tanggapan peserta:** diterima, lanjut ke jarak antar kelompok
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "setelah dikelompokan aku ingin kamu untuk mengelompokan mereka yang sudah kamu kelompokan itu lewat jaraknya"
+- **Yang dikerjakan:** satu skala jarak (4, 8, 16, 24, 32, 48, 64) dipakai di ketiga halaman: 4–8 untuk baris dalam satu info (label–judul, nama–jabatan–bidang), 16 untuk antar bagian dalam satu kelompok dan antar kartu sejenis, 24 sebelum tombol, 32 dari kepala section ke isinya dan antar kelompok dalam section, 64 antar section (48 di HP). Link pendukung menempel 8px ke kelompok yang dilengkapinya. File: website/style.css.
+- **Tanggapan peserta:** diterima, peserta menanyakan penerapan di desktop lalu meminta laporan dan push
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · 2.7 Laporan pekan ini dengan `/laporan`
+- **Permintaan:** "oke perbaiki laporan lalu push"
+- **Yang dikerjakan:** laporan/pekan-2.md diperbarui dengan iterasi 23 November 2026 (keputusan design, cara mengarahkan, feedback); refleksi lama tetap. Commit dan push ke origin/main.
+- **Tanggapan peserta:** menunggu
+- **Feedback `/cek`:** - · tercentang: ya (sudah dari sebelumnya)
