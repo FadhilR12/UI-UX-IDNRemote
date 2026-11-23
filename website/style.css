@@ -10,11 +10,11 @@
 
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: "Poppins", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #1a1a1a;
-  background: #ffffff;
+  color: #111110;
+  background: #FFFFFF;
 }
 
 img {
@@ -26,7 +26,7 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid #1a1a1a;
+  outline: 3px solid #111110;
   outline-offset: 2px;
 }
 
@@ -83,18 +83,18 @@ p {
 
 .lead {
   font-size: 18px;
-  color: #444444;
+  color: #595958;
 }
 
 .muted {
-  color: #555555;
+  color: #595958;
   font-size: 14px;
 }
 
 /* Header dan footer */
 
 .site-header {
-  border-bottom: 1px solid #cccccc;
+  border-bottom: 1px solid #CCCBC7;
 }
 
 .site-header .container {
@@ -126,11 +126,11 @@ p {
   display: inline-block;
   padding: 10px 0;
   text-decoration: none;
-  color: #444444;
+  color: #595958;
 }
 
 .nav a[aria-current="page"] {
-  color: #1a1a1a;
+  color: #111110;
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 6px;
@@ -138,7 +138,7 @@ p {
 
 .site-footer {
   margin-top: 64px;
-  border-top: 1px solid #cccccc;
+  border-top: 1px solid #CCCBC7;
   padding: 32px 0;
 }
 
@@ -159,7 +159,7 @@ p {
 .site-footer a {
   display: inline-block;
   padding: 6px 0;
-  color: #444444;
+  color: #595958;
 }
 
 /* Section */
@@ -169,7 +169,7 @@ p {
 }
 
 .section + .section {
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #CCCBC7;
 }
 
 .section-head {
@@ -183,8 +183,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #d9d9d9;
-  color: #555555;
+  background: #CCCBC7;
+  color: #595958;
   font-size: 13px;
   text-align: center;
   padding: 8px;
@@ -210,10 +210,10 @@ p {
   justify-content: center;
   min-height: 48px;
   padding: 12px 24px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #111110;
   border-radius: 6px;
-  background: #1a1a1a;
-  color: #ffffff;
+  background: #111110;
+  color: #FFFFFF;
   font: inherit;
   font-weight: 700;
   text-decoration: none;
@@ -221,8 +221,8 @@ p {
 }
 
 .btn-secondary {
-  background: #ffffff;
-  color: #1a1a1a;
+  background: #FFFFFF;
+  color: #111110;
 }
 
 .btn-text {
@@ -238,10 +238,10 @@ p {
 /* Kartu */
 
 .card {
-  border: 1px solid #bdbdbd;
+  border: 1px solid #CCCBC7;
   border-radius: 8px;
   padding: 20px;
-  background: #ffffff;
+  background: #FFFFFF;
 }
 
 .grid {
@@ -262,10 +262,10 @@ p {
 .tag {
   display: inline-block;
   padding: 2px 10px;
-  border: 1px solid #8c8c8c;
+  border: 1px solid #595958;
   border-radius: 999px;
   font-size: 13px;
-  color: #333333;
+  color: #595958;
 }
 
 .tags {
@@ -285,11 +285,11 @@ p {
   padding: 0;
   list-style: none;
   font-size: 14px;
-  color: #333333;
+  color: #595958;
 }
 
 .stats strong {
-  color: #1a1a1a;
+  color: #111110;
 }
 
 /* Beranda: hero */
@@ -322,7 +322,7 @@ p {
   display: flex;
   align-items: center;
   gap: 16px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #CCCBC7;
   border-radius: 8px;
   padding: 12px 16px;
 }
@@ -357,7 +357,7 @@ p {
 
 .quote footer {
   font-size: 14px;
-  color: #555555;
+  color: #595958;
 }
 
 /* Ajakan */
@@ -376,7 +376,7 @@ p {
 .search {
   display: grid;
   gap: 16px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #CCCBC7;
   border-radius: 8px;
   padding: 20px;
 }
@@ -399,11 +399,11 @@ p {
   width: 100%;
   min-height: 48px;
   padding: 10px 12px;
-  border: 1px solid #757575;
+  border: 1px solid #595958;
   border-radius: 6px;
   font: inherit;
-  background: #ffffff;
-  color: #1a1a1a;
+  background: #FFFFFF;
+  color: #111110;
 }
 
 .result-count {
@@ -412,7 +412,7 @@ p {
 }
 
 .empty {
-  border: 1px dashed #8c8c8c;
+  border: 1px dashed #595958;
   border-radius: 8px;
   padding: 32px 20px;
   text-align: center;
@@ -424,7 +424,7 @@ dialog {
   width: min(560px, calc(100% - 32px));
   max-height: calc(100% - 32px);
   padding: 0;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #111110;
   border-radius: 8px;
 }
 
@@ -453,9 +453,9 @@ dialog::backdrop {
   margin: -8px -8px 0 0;
   min-width: 44px;
   min-height: 44px;
-  border: 1px solid #8c8c8c;
+  border: 1px solid #595958;
   border-radius: 6px;
-  background: #ffffff;
+  background: #FFFFFF;
   font: inherit;
   cursor: pointer;
 }
@@ -468,7 +468,7 @@ dialog::backdrop {
 }
 
 .detail-stats div {
-  border: 1px solid #bdbdbd;
+  border: 1px solid #CCCBC7;
   border-radius: 6px;
   padding: 10px;
   text-align: center;
@@ -476,7 +476,7 @@ dialog::backdrop {
 
 .detail-stats dt {
   font-size: 13px;
-  color: #555555;
+  color: #595958;
 }
 
 .detail-stats dd {
@@ -532,7 +532,7 @@ dialog::backdrop {
 }
 
 .plan-main {
-  border: 3px solid #1a1a1a;
+  border: 3px solid #111110;
   padding: 28px;
 }
 
@@ -541,9 +541,9 @@ dialog::backdrop {
 }
 
 .plan-label-strong {
-  background: #1a1a1a;
-  border-color: #1a1a1a;
-  color: #ffffff;
+  background: #111110;
+  border-color: #111110;
+  color: #FFFFFF;
 }
 
 .price {
@@ -560,7 +560,7 @@ dialog::backdrop {
 .price span {
   font-size: 16px;
   font-weight: 400;
-  color: #555555;
+  color: #595958;
 }
 
 .plan ul {
@@ -616,7 +616,7 @@ dialog::backdrop {
   max-width: 720px;
   margin: 0 auto;
   padding: 40px 24px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #111110;
   text-align: center;
 }
 
@@ -657,7 +657,7 @@ dialog::backdrop {
 }
 
 .plan:not(.plan-main) {
-  border: 3px solid #bdbdbd;
+  border: 3px solid #CCCBC7;
 }
 
 .plan:not(.plan-main) .price {
@@ -694,13 +694,13 @@ dialog::backdrop {
   border-radius: 0;
   font-size: 14px;
   font-weight: 600;
-  color: #333333;
+  color: #595958;
 }
 
 .mentor-card:has(.tag-under-name) .stats {
   margin-top: 8px;
   padding-top: 12px;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #CCCBC7;
 }
 
 .mentor-card:has(.tag-under-name) {
@@ -741,7 +741,7 @@ dialog::backdrop {
 
 .stats-spread span {
   font-size: 13px;
-  color: #555555;
+  color: #595958;
 }
 
 .stats-spread {
@@ -861,14 +861,14 @@ dialog::backdrop {
 #mentor-list .tag-under-name {
   margin-top: 4px;
   font-size: 13px;
-  color: #444444;
+  color: #595958;
 }
 
 /* baris 2: deskripsi */
 #mentor-list .mentor-card > p {
   margin: 16px 0 0;
   font-size: 15px;
-  color: #333333;
+  color: #595958;
 }
 
 /* baris 3: topik */
@@ -886,7 +886,7 @@ dialog::backdrop {
 
 #mentor-list .tags .tag {
   font-size: 12px;
-  color: #444444;
+  color: #595958;
 }
 
 /* baris 4: statistik */
@@ -894,9 +894,9 @@ dialog::backdrop {
   flex-wrap: nowrap;
   align-self: end;
   padding-top: 12px;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid #CCCBC7;
   font-size: 13px;
-  color: #555555;
+  color: #595958;
 }
 
 #mentor-list .stats-spread strong {
@@ -923,11 +923,11 @@ dialog::backdrop {
 }
 
 #mentor-list .mentor-card-clickable:hover {
-  border-color: #1a1a1a;
+  border-color: #111110;
 }
 
 #mentor-list .mentor-card-clickable:focus-within {
-  outline: 3px solid #1a1a1a;
+  outline: 3px solid #111110;
   outline-offset: 2px;
 }
 
@@ -983,7 +983,7 @@ dialog::backdrop {
 .hero-stats {
   margin-top: 4px;
   font-size: 13px;
-  color: #555555;
+  color: #595958;
 }
 
 .hero-more {
@@ -1026,22 +1026,22 @@ dialog::backdrop {
   align-items: center;
   min-height: 44px;
   padding: 8px 16px;
-  border: 1px solid #757575;
+  border: 1px solid #595958;
   border-radius: 999px;
-  background: #ffffff;
+  background: #FFFFFF;
   font-size: 14px;
   cursor: pointer;
 }
 
 .chip input:checked + span {
-  background: #1a1a1a;
-  border-color: #1a1a1a;
-  color: #ffffff;
+  background: #111110;
+  border-color: #111110;
+  color: #FFFFFF;
   font-weight: 600;
 }
 
 .chip input:focus-visible + span {
-  outline: 3px solid #1a1a1a;
+  outline: 3px solid #111110;
   outline-offset: 2px;
 }
 
@@ -1123,7 +1123,7 @@ dialog::backdrop {
 }
 
 .bidang-item:hover {
-  border-color: #1a1a1a;
+  border-color: #111110;
 }
 
 .bidang-more {
@@ -1143,13 +1143,13 @@ dialog::backdrop {
   border-bottom: 2px solid transparent;
   border-radius: 0;
   background: none;
-  color: #444444;
+  color: #595958;
 }
 
 .chip input:checked + span {
   background: none;
-  color: #1a1a1a;
-  border-bottom-color: #1a1a1a;
+  color: #111110;
+  border-bottom-color: #111110;
   font-weight: 700;
 }
 
@@ -1165,13 +1165,13 @@ dialog::backdrop {
 .bidang-card {
   margin: 0;
   padding: 20px;
-  border: 1px solid #bdbdbd;
+  border: 1px solid #CCCBC7;
   border-radius: 8px;
-  background: #ffffff;
+  background: #FFFFFF;
 }
 
 .bidang-card:hover {
-  border-color: #1a1a1a;
+  border-color: #111110;
 }
 
 .bidang-list > li {
@@ -1216,7 +1216,7 @@ dialog::backdrop {
 }
 
 .bidang-tile:hover .bidang-img {
-  outline: 2px solid #1a1a1a;
+  outline: 2px solid #111110;
   outline-offset: 2px;
 }
 
@@ -1264,10 +1264,10 @@ dialog::backdrop {
     gap: 8px;
     min-height: 44px;
     padding: 8px 14px;
-    border: 1px solid #757575;
+    border: 1px solid #595958;
     border-radius: 6px;
-    background: #ffffff;
-    color: #1a1a1a;
+    background: #FFFFFF;
+    color: #111110;
     font: inherit;
     font-weight: 600;
     cursor: pointer;
@@ -1279,7 +1279,7 @@ dialog::backdrop {
     display: block;
     width: 16px;
     height: 2px;
-    background: #1a1a1a;
+    background: #111110;
   }
 
   .nav-toggle-bars {
@@ -1317,7 +1317,7 @@ dialog::backdrop {
   }
 
   .nav ul li + li {
-    border-top: 1px solid #e6e6e6;
+    border-top: 1px solid #CCCBC7;
   }
 
   .nav a {
@@ -1366,8 +1366,8 @@ dialog::backdrop {
     z-index: 20;
     width: min(300px, 80vw);
     padding: 16px 24px;
-    background: #ffffff;
-    border-left: 1px solid #bdbdbd;
+    background: #FFFFFF;
+    border-left: 1px solid #CCCBC7;
     overflow-y: auto;
   }
 
@@ -1539,7 +1539,7 @@ dialog::backdrop {
 .benefit-row p {
   margin: 0;
   font-size: 16px;
-  color: #333333;
+  color: #595958;
 }
 
 /* Daftar mentor: penanda kartu bisa diklik, panah ↗ di kanan atas foto */
@@ -1557,16 +1557,16 @@ dialog::backdrop {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #ffffff;
-  color: #1a1a1a;
+  background: #FFFFFF;
+  color: #111110;
   font-size: 18px;
   font-weight: 700;
   line-height: 1;
 }
 
 #mentor-list .mentor-card-clickable:hover .card-arrow {
-  background: #1a1a1a;
-  color: #ffffff;
+  background: #111110;
+  color: #FFFFFF;
 }
 
 /* Panah ↗ hanya di HP (tanpa hover); di desktop penandanya hover pada kartu */
@@ -1582,13 +1582,13 @@ dialog::backdrop {
   padding: 10px 0;
   font-size: 14px;
   font-weight: 400;
-  color: #555555;
+  color: #595958;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .hero-more:hover {
-  color: #1a1a1a;
+  color: #111110;
 }
 
 /* Hero: mentor dan link "Lihat semua mentor" dikelompokkan dalam satu region (common region).
@@ -1597,7 +1597,7 @@ dialog::backdrop {
   gap: 0;
   padding: 8px 20px 4px;
   border-radius: 12px;
-  background: #f2f2f2;
+  background: #CCCBC7;
 }
 
 .hero-side .hero-mentors {
@@ -1612,15 +1612,15 @@ dialog::backdrop {
 }
 
 .hero-side .hero-mentor + .hero-mentor {
-  border-top: 1px solid #d0d0d0;
+  border-top: 1px solid #CCCBC7;
 }
 
 .hero-side .hero-mentor .ph-avatar {
-  background: #d0d0d0;
+  background: #CCCBC7;
 }
 
 .hero-side .hero-more {
-  border-top: 1px solid #d0d0d0;
+  border-top: 1px solid #CCCBC7;
   justify-self: stretch;
   text-align: right;
   padding: 12px 0;
@@ -1635,13 +1635,13 @@ dialog::backdrop {
   margin-top: 24px;
   padding: 16px 20px;
   border-radius: 8px;
-  background: #f2f2f2;
+  background: #CCCBC7;
 }
 
 .cta-strip p {
   margin: 0;
   font-size: 16px;
-  color: #333333;
+  color: #595958;
 }
 
 @media (min-width: 720px) {
@@ -1664,7 +1664,7 @@ dialog::backdrop {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #555555;
+  color: #595958;
 }
 
 .about-manifesto {
@@ -1685,14 +1685,14 @@ dialog::backdrop {
 
 .about-col {
   padding: 20px;
-  border: 1px dashed #8c8c8c;
+  border: 1px dashed #595958;
   border-radius: 8px;
-  color: #555555;
+  color: #595958;
 }
 
 .about-col-strong {
-  border: 2px solid #1a1a1a;
-  color: #1a1a1a;
+  border: 2px solid #111110;
+  color: #111110;
 }
 
 .about-col li + li {
@@ -1702,7 +1702,7 @@ dialog::backdrop {
 .about-story {
   margin: 0;
   padding-top: 24px;
-  border-top: 1px solid #bdbdbd;
+  border-top: 1px solid #CCCBC7;
 }
 
 .about-steps {
@@ -1735,8 +1735,8 @@ dialog::backdrop {
 .kicker-num {
   margin-right: 8px;
   padding: 0 4px;
-  border: 1px solid #1a1a1a;
-  color: #1a1a1a;
+  border: 1px solid #111110;
+  color: #111110;
 }
 
 .section-head .about-kicker {
@@ -1758,7 +1758,7 @@ dialog::backdrop {
   align-content: space-between;
   gap: 24px;
   padding: 24px;
-  border: 2px solid #1a1a1a;
+  border: 2px solid #111110;
   border-radius: 8px;
 }
 
@@ -1871,7 +1871,7 @@ dialog::backdrop {
     min-height: 44px;
     font-size: 16px;
     font-weight: 400;
-    color: #555555;
+    color: #595958;
     text-underline-offset: 4px;
   }
 }
@@ -1892,7 +1892,7 @@ dialog::backdrop {
 }
 
 .hero-arrow:focus-visible {
-  outline: 3px solid #1a1a1a;
+  outline: 3px solid #111110;
   outline-offset: 2px;
 }
 
@@ -1928,7 +1928,7 @@ dialog::backdrop {
   max-width: calc(100% - 140px);
   padding: 14px 16px;
   border-radius: 12px;
-  background: #ffffff;
+  background: #FFFFFF;
 }
 
 .hero-photo-card p {
@@ -1951,10 +1951,10 @@ dialog::backdrop {
 .hero-arrow {
   width: 48px;
   height: 48px;
-  border: 1px solid #1a1a1a;
+  border: 1px solid #111110;
   border-radius: 50%;
-  background: #ffffff;
-  color: #1a1a1a;
+  background: #FFFFFF;
+  color: #111110;
   font: inherit;
   font-size: 20px;
   cursor: pointer;
@@ -2050,7 +2050,7 @@ dialog::backdrop {
     right: 16px;
     width: 32px;
     height: 32px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid #CCCBC7;
     font-size: 16px;
   }
 
@@ -2109,12 +2109,12 @@ dialog::backdrop {
   padding: 12px 0;
   min-height: 44px;
   font-size: 16px;
-  color: #555555;
+  color: #595958;
   text-underline-offset: 4px;
 }
 
 .about-jump:hover {
-  color: #1a1a1a;
+  color: #111110;
 }
 
 /* ===== Kelompok elemen: fungsi sama, tampilan sama (similarity) =====
@@ -2150,13 +2150,13 @@ dialog::backdrop {
 .benefit-row,
 .plan:not(.plan-main),
 #mentor-list .mentor-card {
-  border: 1px solid #bdbdbd;
+  border: 1px solid #CCCBC7;
 }
 
 .about-col-strong,
 .quote-feature,
 .plan-main {
-  border: 2px solid #1a1a1a;
+  border: 2px solid #111110;
 }
 
 #mentor-list .mentor-card {
@@ -2187,26 +2187,26 @@ dialog::backdrop {
   padding: 12px 0;
   font-size: 16px;
   font-weight: 400;
-  color: #555555;
+  color: #595958;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .hero-more:hover,
 .about-jump:hover {
-  color: #1a1a1a;
+  color: #111110;
 }
 
 /* 4. Angka statistik mentor (rating, sesi, pengalaman): ukuran sama di Hero dan Daftar mentor */
 .stats {
   font-size: 13px;
-  color: #555555;
+  color: #595958;
 }
 
 .stats strong,
 #mentor-list .stats-spread strong {
   font-size: 15px;
-  color: #1a1a1a;
+  color: #111110;
 }
 
 @media (max-width: 719px) {
@@ -2609,5 +2609,730 @@ h1 {
 
   .hero h1 {
     font-size: 32px;
+  }
+}
+
+
+/* ===================================================================
+   HIGH FIDELITY (pekan 3): typography dan warna dari CLAUDE.md bagian 5
+   Font  : Poppins
+   Palet : versi kedua (latar #F4F3EE, keterangan #595958, garis input #868582,
+           garis kartu #CCCBC7, placeholder #E2E1DD, sukses #2E7D32, error #C0392B)
+           dengan aksen hitam #111110 dan hijau neon #B5FF00:
+           hitam untuk teks, garis tombol, dan section tegas (Hero, kotak ajakan, footer);
+           hijau untuk tombol utama, label pilihan utama, dan menu aktif, selalu dengan teks hitam
+   =================================================================== */
+
+body {
+  background: #FFFFFF;
+  color: #111110;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+/* --- Type scale (ukuran / line-height) --- */
+
+/* Judul halaman: hanya Hero */
+.hero h1 {
+  font-size: 40px;
+  line-height: 48px;
+}
+
+/* Judul section */
+h1,
+h2 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+/* Subjudul: judul kartu, harga, kutipan utama */
+h3,
+.h3-size,
+.benefit-row h2,
+.hero-photo-name,
+.price,
+.plan:not(.plan-main) .price,
+.quote-feature blockquote p {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/* Teks pembuka */
+.lead,
+.about-lead,
+.section-head .lead,
+.hero .lead,
+.logo {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+/* Body */
+body,
+p,
+li,
+.btn,
+.quote p,
+.cta-strip p,
+.benefit-row p,
+#mentor-list .mentor-card > p,
+.result-count,
+.chip span,
+.hero-more,
+.about-jump,
+.stats strong,
+#mentor-list .stats-spread strong {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Teks kecil: keterangan */
+.muted,
+.stats,
+.hero-stats,
+#mentor-list .stats-spread,
+.tag-under-name,
+#mentor-list .tag-under-name,
+#mentor-list .mentor-card-top .muted,
+#mentor-list .mentor-card > div:not(.mentor-card-top) > .muted,
+.bidang-tile p,
+.quote footer,
+.price span {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Label */
+.about-kicker,
+.about-label,
+.tag,
+#mentor-list .tags .tag,
+.plan-label,
+.ph,
+.bidang-img,
+.benefit-icon {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* Judul tetap memakai line-height di atas, angka statistik tetap tebal */
+.stats strong,
+#mentor-list .stats-spread strong {
+  font-weight: 600;
+}
+
+@media (max-width: 719px) {
+  .hero h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  h1,
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h3,
+  .h3-size,
+  .benefit-row h2,
+  .hero-photo-name,
+  .price,
+  .plan:not(.plan-main) .price,
+  .quote-feature blockquote p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .lead,
+  .about-lead,
+  .section-head .lead,
+  .hero .lead,
+  .benefit-row p {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .benefit-row p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .bidang-tile p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+/* Hero: baris judul diatur per frasa, tidak dibatasi lebar karakter (Poppins lebih lebar dari font sistem) */
+.hero h1 {
+  max-width: none;
+}
+
+
+/* --- Palet: latar, dan aksen lime hanya untuk aksi utama --- */
+body {
+  background: #F4F3EE;
+  color: #111110;
+}
+
+.site-header,
+.nav {
+  background: #F4F3EE;
+}
+
+/* Tombol utama: lime dengan garis dan teks #111110 (15,6:1) */
+.btn {
+  background: #B5FF00;
+  border: 2px solid #111110;
+  color: #111110;
+}
+
+.btn:hover {
+  background: #111110;
+  border-color: #111110;
+  color: #B5FF00;
+}
+
+/* Tombol sekunder: tanpa lime, cukup garis #111110 */
+.btn-secondary {
+  background: #FFFFFF;
+  border: 2px solid #111110;
+  color: #111110;
+}
+
+.btn-secondary:hover {
+  background: #CCCBC7;
+  color: #111110;
+}
+
+/* Link: lime tidak terbaca sebagai teks (1,03:1), jadi link memakai warna teks dengan garis bawah */
+.hero-more,
+.about-jump {
+  color: #111110;
+  text-decoration-thickness: 1px;
+}
+
+.hero-more:hover,
+.about-jump:hover {
+  color: #111110;
+  text-decoration-thickness: 2px;
+}
+
+/* Kartu Per sesi: pilihan utama di Harga */
+.plan-main {
+  border: 2px solid #111110;
+}
+
+.plan-label-strong {
+  background: #B5FF00;
+  border: 1px solid #111110;
+  color: #111110;
+}
+
+/* Fokus keyboard memakai warna teks, karena lime tidak terlihat di atas latar */
+:focus-visible,
+.chip input:focus-visible + span,
+.hero-arrow:focus-visible,
+#mentor-list .mentor-card-clickable:focus-within {
+  outline-color: #111110;
+}
+
+/* Tombol panah Hero */
+.hero-arrow {
+  border: 1px solid #111110;
+  background: #FFFFFF;
+  color: #111110;
+}
+
+.hero-arrow:hover {
+  background: #B5FF00;
+}
+
+/* Kartu mentor bisa diklik */
+#mentor-list .mentor-card-clickable:hover {
+  border-color: #111110;
+}
+
+.card-arrow {
+  border: 1px solid #111110;
+  color: #111110;
+}
+
+#mentor-list .mentor-card-clickable:hover .card-arrow {
+  background: #B5FF00;
+  color: #111110;
+}
+
+
+/* --- Palet Paper Cream: variasi section --- */
+
+/* Garis input: Warm Brown supaya kolom terlihat (5,9:1); Paper Shadow hanya untuk garis dekoratif */
+input,
+.field input {
+  border-color: #868582;
+}
+
+
+/* Section tegas: latar Vinyl Black */
+.hero,
+.site-footer {
+  background: #111110;
+  color: #F4F3EE;
+}
+
+.hero h1,
+.hero .lead,
+.hero .hero-more,
+.site-footer .logo,
+.site-footer a {
+  color: #F4F3EE;
+}
+
+.hero .lead,
+.site-footer .muted {
+  color: #CCCBC7;
+}
+
+.hero .btn,
+.cta-strip .btn {
+  border-color: #B5FF00;
+}
+
+.hero .btn:hover,
+.cta-strip .btn:hover {
+  background: #F4F3EE;
+  border-color: #F4F3EE;
+  color: #111110;
+}
+
+.hero .hero-more:hover,
+.site-footer a:hover {
+  color: #B5FF00;
+}
+
+.hero :focus-visible,
+.site-footer :focus-visible,
+.cta-strip :focus-visible {
+  outline-color: #B5FF00;
+}
+
+.site-footer {
+  border-top: 0;
+}
+
+/* Kotak ajakan di bawah testimoni: blok hitam, tombol lime */
+.cta-strip {
+  background: #111110;
+}
+
+.cta-strip p {
+  color: #F4F3EE;
+}
+
+
+/* Section berwarna tidak butuh garis pemisah */
+.section + .section,
+.hero + .section {
+  border-top: 0;
+}
+
+/* Desktop: kartu info mentor di Hero tetap putih dengan teks hitam */
+.hero .hero-photo-card,
+.hero .hero-photo-card .stats strong {
+  color: #111110;
+}
+
+.hero .hero-photo-card .muted,
+.hero .hero-photo-card .hero-stats {
+  color: #595958;
+}
+
+/* HP: info mentor Hero berada di bawah foto, di atas latar hitam */
+@media (max-width: 719px) {
+  .hero .hero-photo-card,
+  .hero .hero-photo-card .hero-stats,
+  .hero .hero-photo-card .stats strong {
+    color: #F4F3EE;
+  }
+
+  .hero .hero-photo-card .muted {
+    color: #CCCBC7;
+  }
+}
+
+/* Versi kedua: placeholder foto dan gambar lebih terang dari garis kartu */
+.ph,
+.bidang-img,
+.benefit-icon,
+.ph-avatar {
+  background: #E2E1DD;
+}
+
+/* ===== Hover: semuanya hijau neon #B5FF00 =====
+   Di atas latar hitam, hijau tampil sebagai warna teks (15,5:1).
+   Di atas latar terang juga teks hijau neon (pilihan peserta; kontras 1,03:1, dicek di 3.5). */
+
+/* Tombol utama: hijau jadi garis dan teks di atas hitam */
+.btn:hover,
+.hero .btn:hover,
+.cta-strip .btn:hover {
+  background: #111110;
+  border-color: #B5FF00;
+  color: #B5FF00;
+}
+
+/* Tombol sekunder dan tombol panah: latar hijau, teks hitam */
+.btn-secondary:hover,
+.hero-arrow:hover {
+  background: #B5FF00;
+  border-color: #111110;
+  color: #111110;
+}
+
+/* Link di latar hitam: teks hijau */
+.hero .hero-more:hover,
+.site-footer a:hover {
+  color: #B5FF00;
+}
+
+/* Link dan menu di latar terang: hanya warna teks yang berubah.
+   Cek kontras 3.5: hijau neon di latar terang 1,09:1 (tidak lolos), diganti peserta ke #4F7000 (5,2:1). */
+.about-jump:hover,
+.nav a:hover {
+  background: none;
+  color: #4F7000;
+}
+
+/* Kartu mentor dan kartu bidang: penanda hijau saat di-hover */
+#mentor-list .mentor-card-clickable:hover .card-arrow {
+  background: #B5FF00;
+  color: #111110;
+}
+
+.bidang-tile:hover h3 {
+  background: none;
+  color: #4F7000;
+  text-decoration: none;
+}
+
+.bidang-tile:hover .bidang-img {
+  outline: 2px solid #111110;
+}
+
+/* Hover: garis di latar terang memakai warna yang sama dengan hover teks di latar terang (#4F7000) */
+.btn-secondary:hover,
+.hero-arrow:hover,
+#mentor-list .mentor-card-clickable:hover,
+#mentor-list .mentor-card-clickable:hover .card-arrow {
+  border-color: #4F7000;
+}
+
+.bidang-tile:hover .bidang-img {
+  outline-color: #4F7000;
+}
+
+.hero-more:hover,
+.site-footer a:hover {
+  text-decoration-color: #B5FF00;
+}
+
+.about-jump:hover {
+  text-decoration-color: #4F7000;
+}
+
+/* Cerita user: layout tetap (satu testimoni besar, dua di samping), warna kartu besar disamakan dengan kartu Wulan */
+.quote-feature {
+  background: #FFFFFF;
+  border: 1px solid #CCCBC7;
+}
+
+/* About: kedua kolom kontras memakai warna kartu yang sama (latar putih, garis tipis) */
+.about-col,
+.about-col-strong {
+  background: #FFFFFF;
+  border: 1px solid #CCCBC7;
+}
+
+
+
+/* About (polish 3.4): label kolom kembali jadi label teks biasa seperti "KENAPA MENTORKU ADA",
+   supaya tidak bersaing dengan judul section (hierarchy). Hijau neon hanya untuk aksi utama. */
+.about-col .about-label {
+  color: #595958;
+}
+
+/* Audit 3.4: nilai di luar type scale dan palet dikembalikan ke keputusan bagian 5 */
+#mentor-list .card-arrow {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.hero-arrow,
+.nav-close {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.nav-toggle,
+.nav-close,
+input,
+button {
+  color: #111110;
+}
+
+.nav-toggle,
+.nav-close {
+  border-color: #111110;
+}
+
+/* Beranda, Bidang
+   Desktop: grid 3 kolom, gambar persegi panjang mendatar 16:10 supaya section tidak terlalu tinggi.
+   HP: satu baris kartu yang bisa digeser ke samping (seperti filter bidang di Daftar mentor),
+   kartu berikutnya terlihat sebagian sebagai tanda bisa digeser. */
+.bidang-img,
+.bidang-tile .bidang-img {
+  aspect-ratio: 16 / 10;
+  margin-bottom: 12px;
+}
+
+@media (min-width: 720px) {
+  .bidang-list,
+  .bidang-list.plain-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 16px;
+  }
+}
+
+@media (max-width: 719px) {
+  .bidang-list,
+  .bidang-list.plain-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-right: -16px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+  }
+
+  .bidang-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bidang-list > li {
+    flex: 0 0 70%;
+    scroll-snap-align: start;
+  }
+
+  .bidang-img,
+  .bidang-tile .bidang-img {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* Beranda, Bidang: semua kartu bidang dikelompokkan dalam satu wadah hitam.
+   Di dalamnya, setiap kartu (gambar, nama, keterangan) tanpa latar sendiri.
+   Desktop: gambar 1:1. HP: wadah hitam dengan baris kartu yang bisa digeser. */
+.bidang-list,
+.bidang-list.plain-list {
+  padding: 24px;
+  border-radius: 16px;
+  background: #111110;
+}
+
+.bidang-tile {
+  display: block;
+  border-radius: 12px;
+  color: #F4F3EE;
+  text-decoration: none;
+}
+
+.bidang-tile h3 {
+  color: #F4F3EE;
+}
+
+.bidang-tile p,
+.bidang-tile .muted {
+  color: #CCCBC7;
+}
+
+.bidang-tile .bidang-img {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 720px) {
+  .bidang-img,
+  .bidang-tile .bidang-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 719px) {
+  .bidang-list,
+  .bidang-list.plain-list {
+    margin-right: 0;
+    padding: 16px;
+    scroll-padding: 0 16px;
+  }
+}
+
+/* Hover di wadah hitam: hijau neon (15,5:1) */
+.bidang-tile:hover h3 {
+  color: #B5FF00;
+}
+
+.bidang-tile:hover .bidang-img {
+  outline: 2px solid #B5FF00;
+  outline-offset: 2px;
+}
+
+.bidang-tile:focus-visible {
+  outline: 3px solid #B5FF00;
+  outline-offset: 4px;
+}
+
+/* Beranda, Bidang di HP: satu bidang selebar wadah hitam, dengan tombol panah seperti di Hero */
+.bidang-wrap {
+  position: relative;
+}
+
+.bidang-nav {
+  display: none;
+}
+
+@media (max-width: 719px) {
+  .bidang-list > li {
+    flex: 0 0 100%;
+  }
+
+  .bidang-list,
+  .bidang-list.plain-list {
+    padding-bottom: 80px;
+  }
+
+  .bidang-nav {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: flex;
+    gap: 8px;
+  }
+}
+
+/* Jarak antar section: dua section berlatar sama yang bersebelahan tidak menjumlahkan jaraknya (64 + 64 = 128).
+   Jarak antar isi section jadi sama di mana pun: 64px di desktop, 48px di HP,
+   sama dengan jarak dari tepi section hitam (Hero, footer) ke isi section terang. */
+.section:not(.hero) + .section {
+  padding-top: 0;
+}
+
+/* Daftar mentor: list mentor berisi aksi utama (Pesan sesi), jadi dikelompokkan dalam wadah hitam seperti Bidang di Beranda.
+   Kartu di dalamnya tanpa latar sendiri, dipisah garis #595958. Teks terang #F4F3EE (17:1), keterangan #CCCBC7 (11,6:1). */
+.mentor-wrap {
+  margin-top: 32px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #111110;
+}
+
+/* Jumlah hasil di dalam wadah hitam, hijau neon (15,5:1) */
+.mentor-wrap .result-count {
+  margin: 0 0 16px;
+  color: #B5FF00;
+}
+
+#mentor-list .mentor-card {
+  background: transparent;
+  border: 1px solid #595958;
+  color: #F4F3EE;
+}
+
+#mentor-list .mentor-card h3,
+#mentor-list .mentor-card > p,
+#mentor-list .stats-spread strong,
+#mentor-list .stats strong {
+  color: #F4F3EE;
+}
+
+#mentor-list .mentor-card .muted,
+#mentor-list .mentor-card-top .muted,
+#mentor-list .mentor-card > div:not(.mentor-card-top) > .muted,
+#mentor-list .tag-under-name,
+#mentor-list .stats-spread,
+#mentor-list .stats {
+  color: #CCCBC7;
+}
+
+#mentor-list .tags .tag {
+  border-color: #CCCBC7;
+  color: #F4F3EE;
+}
+
+#mentor-list .stats-spread {
+  border-top-color: #595958;
+}
+
+/* Hover dan fokus di wadah hitam: hijau neon (15,5:1) */
+#mentor-list .mentor-card-clickable:hover,
+#mentor-list .mentor-card-clickable:focus-within {
+  border-color: #B5FF00;
+  outline-color: #B5FF00;
+}
+
+#mentor-list .mentor-card-clickable:hover h3 {
+  color: #B5FF00;
+}
+
+#mentor-list .card-arrow {
+  border-color: #111110;
+}
+
+#mentor-list .mentor-card-clickable:hover .card-arrow {
+  background: #B5FF00;
+  border-color: #B5FF00;
+  color: #111110;
+}
+
+@media (max-width: 719px) {
+  .mentor-wrap {
+    padding: 16px;
+  }
+}
+
+/* Beranda, Bidang: panah ↗ di kanan atas gambar (seperti kartu di Daftar mentor) sebagai tanda kartu bisa diklik.
+   Tampil di desktop dan HP. */
+.bidang-img {
+  position: relative;
+}
+
+.bidang-tile .card-arrow {
+  display: flex;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #111110;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #111110;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.bidang-tile:hover .card-arrow {
+  background: #B5FF00;
+  border-color: #B5FF00;
+  color: #111110;
+}
+
+/* Panah ↗ di kartu bidang hanya di HP, sama seperti kartu di Daftar mentor; di desktop penandanya hover */
+@media (min-width: 720px) {
+  .bidang-tile .card-arrow {
+    display: none;
   }
 }

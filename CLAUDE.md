@@ -127,12 +127,12 @@ Setiap langkah punya panduan di `langkah/pekan-N.md` dengan nomor yang sama: ken
 - [x] 2.7 Laporan pekan ini dengan `/laporan` *(kamu dan Claude Code)*
 
 ### Pekan 3 · Typography dan warna website
-- [ ] 3.1 Tulis font, type scale, dan palet beserta alasannya *(kamu)*
-- [ ] 3.2 Ganti mode tampilan ke high fidelity *(Claude Code)*
-- [ ] 3.3 Terapkan typography dan warna ke seluruh halaman website sekaligus *(Claude Code)*
-- [ ] 3.4 Nilai halaman utuh, tulis section yang perlu di-polish, lalu audit nilai yang terpakai *(kamu, lalu Claude Code)*
-- [ ] 3.5 Cek kontras setiap pasangan warna dan catat yang lolos *(kamu)*
-- [ ] 3.6 Laporan pekan ini dengan `/laporan` *(kamu dan Claude Code)*
+- [x] 3.1 Tulis font, type scale, dan palet beserta alasannya *(kamu)*
+- [x] 3.2 Ganti mode tampilan ke high fidelity *(Claude Code)*
+- [x] 3.3 Terapkan typography dan warna ke seluruh halaman website sekaligus *(Claude Code)*
+- [x] 3.4 Nilai halaman utuh, tulis section yang perlu di-polish, lalu audit nilai yang terpakai *(kamu, lalu Claude Code)*
+- [x] 3.5 Cek kontras setiap pasangan warna dan catat yang lolos *(kamu)*
+- [x] 3.6 Laporan pekan ini dengan `/laporan` *(kamu dan Claude Code)*
 
 ### Pekan 4 · Spacing dan design token
 - [ ] 4.1 Tulis spacing scale dan aturan Button dan Input *(kamu)*
@@ -222,7 +222,7 @@ _Panduan, format, dan contoh setiap bagian ada di `langkah/pekan-1.md`._
 
 ## 3. Mode tampilan
 
-**Mode:** wireframe
+**Mode:** high fidelity
 
 Mode tampilan menentukan seberapa jadi tampilannya: `wireframe` (pekan 2, website) → `high fidelity` (mulai pekan 3). Claude Code menggantinya di langkah 3.2 setelah kamu setujui. Web app tidak melewati wireframe: di pekan 5 layarnya langsung dibangun dalam mode `high fidelity`. (Mode tampilan berbeda dengan Fase 1–3 di learning path, yang menandai bagian program.)
 
@@ -321,10 +321,35 @@ Mode tampilan menentukan seberapa jadi tampilannya: `wireframe` (pekan 2, websit
 
 ## 5. Typography dan warna (pekan 3)
 
-- **Font:** [nama font dan alasannya]
-- **Type scale:** [ukuran/line-height untuk judul, subjudul, body, label]
-- **Palet:** [warna dan maknanya: latar, teks, aksen, sukses, error]
-- **Pasangan warna yang lolos kontras:** [teks di atas latar, minimal 4.5:1]
+- **Font:** Poppins, karena dinilai flexible dan dapat terbaca dengan jelas
+- **Type scale:** (ukuran / line-height, dalam px)
+
+  | Peran | Desktop | HP |
+  |---|---|---|
+  | Judul halaman (hanya Hero) | 40 / 48 | 32 / 40 |
+  | Judul section | 32 / 40 | 24 / 32 |
+  | Subjudul | 24 / 32 | 20 / 28 |
+  | Teks pembuka | 20 / 28 | 20 / 28 |
+  | Body | 16 / 24 | 16 / 24 |
+  | Teks kecil | 14 / 20 | 14 / 20 |
+  | Label | 12 / 16 | 12 / 16 |
+
+- **Palet:** latar #F4F3EE, teks #111110, aksen #B5FF00 untuk energi dan aksi utama, sukses #2E7D32, error #C0392B
+  - **Warna pendukung:** teks keterangan #595958 (paragraf pembuka, jabatan, deskripsi, rating), garis kartu dan pemisah #CCCBC7, placeholder foto #E2E1DD, garis input #868582, latar kartu #FFFFFF, hover teks dan garis di latar terang #4F7000. Hitam #111110 juga jadi latar section tegas (Hero, kotak ajakan, footer), dengan teks #F4F3EE dan hijau #B5FF00 di atasnya.
+- **Pasangan warna yang lolos kontras:**
+
+  | Pasangan | Teks | Latar | Rasio | Lolos |
+  |---|---|---|---|---|
+  | Teks utama di latar | #111110 | #F4F3EE | 17:1 | ya |
+  | Teks utama di kartu | #111110 | #FFFFFF | 18,89:1 | ya |
+  | Keterangan di latar | #595958 | #F4F3EE | 6,31:1 | ya |
+  | Keterangan di kartu | #595958 | #FFFFFF | 7.01:1 | ya |
+  | Label "Foto" di placeholder | #595958 | #E2E1DD | 5,35:1 | ya |
+  | Teks tombol di hijau | #111110 | #B5FF00 | 15,53:1 | ya |
+  | Teks terang di section hitam | #F4F3EE | #111110 | 17:1 | ya |
+  | Paragraf Hero di hitam | #CCCBC7 | #111110 | 11,63:1 | ya |
+  | Hover hijau di hitam | #B5FF00 | #111110 | 15,53:1 | ya |
+  | Hover hijau di latar terang | #B5FF00 | #F4F3EE | 1.09:1 | tidak, diganti ke #4F7000 |
 
 ## 6. Token dan component (pekan 4)
 

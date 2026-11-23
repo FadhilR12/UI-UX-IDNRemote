@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mentorku: belajar dari yang sudah sampai di sana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="../tokens.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -105,50 +108,57 @@
           </h2>
           <p class="lead hide-mobile">Enam bidang soft skill yang bisa kamu latih bareng mentor. Pilih satu, lalu lihat siapa yang bisa bantu.</p>
         </div>
-        <ul class="bidang-list plain-list">
+        <div class="bidang-wrap">
+          <ul class="bidang-list plain-list" id="bidang-list">
           <li>
             <a class="bidang-tile" href="mentor.html?bidang=Interview">
-              <div class="ph bidang-img" aria-hidden="true">Gambar Interview</div>
+              <div class="ph bidang-img" aria-hidden="true">Gambar Interview<span class="card-arrow">↗</span></div>
               <h3>Interview</h3>
               <p class="muted">Simulasi interview dan metode STAR</p>
             </a>
           </li>
           <li>
             <a class="bidang-tile" href="mentor.html?bidang=CV%20dan%20portofolio">
-              <div class="ph bidang-img" aria-hidden="true">Gambar CV dan portofolio</div>
+              <div class="ph bidang-img" aria-hidden="true">Gambar CV dan portofolio<span class="card-arrow">↗</span></div>
               <h3>CV dan portofolio</h3>
               <p class="muted">Review CV, portofolio, dan LinkedIn</p>
             </a>
           </li>
           <li>
             <a class="bidang-tile" href="mentor.html?bidang=Presentasi">
-              <div class="ph bidang-img" aria-hidden="true">Gambar Presentasi</div>
+              <div class="ph bidang-img" aria-hidden="true">Gambar Presentasi<span class="card-arrow">↗</span></div>
               <h3>Presentasi</h3>
               <p class="muted">Demo fitur dan presentasi ke atasan</p>
             </a>
           </li>
           <li>
             <a class="bidang-tile" href="mentor.html?bidang=Bahasa%20Inggris%20untuk%20kerja">
-              <div class="ph bidang-img" aria-hidden="true">Gambar Bahasa Inggris untuk kerja</div>
+              <div class="ph bidang-img" aria-hidden="true">Gambar Bahasa Inggris untuk kerja<span class="card-arrow">↗</span></div>
               <h3>Bahasa Inggris untuk kerja</h3>
               <p class="muted">Standup, rapat, dan ngobrol sama klien</p>
             </a>
           </li>
           <li>
             <a class="bidang-tile" href="mentor.html?bidang=Negosiasi">
-              <div class="ph bidang-img" aria-hidden="true">Gambar Negosiasi</div>
+              <div class="ph bidang-img" aria-hidden="true">Gambar Negosiasi<span class="card-arrow">↗</span></div>
               <h3>Negosiasi</h3>
               <p class="muted">Gaji, promosi, dan pindah kerja</p>
             </a>
           </li>
           <li>
             <a class="bidang-tile" href="mentor.html?bidang=Memimpin%20tim">
-              <div class="ph bidang-img" aria-hidden="true">Gambar Memimpin tim</div>
+              <div class="ph bidang-img" aria-hidden="true">Gambar Memimpin tim<span class="card-arrow">↗</span></div>
               <h3>Memimpin tim</h3>
               <p class="muted">Persiapan jadi tech lead</p>
             </a>
           </li>
         </ul>
+          <!-- Hanya di HP: geser ke bidang sebelumnya atau berikutnya, seperti tombol panah di Hero -->
+          <div class="bidang-nav">
+            <button type="button" class="hero-arrow" id="bidang-prev" aria-label="Bidang sebelumnya" aria-controls="bidang-list">&larr;</button>
+            <button type="button" class="hero-arrow" id="bidang-next" aria-label="Bidang berikutnya" aria-controls="bidang-list">&rarr;</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -208,6 +218,7 @@
     </div>
   </footer>
   <script src="hero.js"></script>
+  <script src="bidang.js"></script>
   <script src="nav.js"></script>
 </body>
 </html>

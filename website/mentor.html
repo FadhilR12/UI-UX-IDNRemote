@@ -4,6 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Daftar mentor · Mentorku</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="../tokens.css">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -54,8 +57,10 @@
         </form>
 
         <!-- 2. List mentor: semua mentor beserta detailnya dan tombol Pesan sesi · M1, M3 -->
-        <h2 class="result-count" id="result-count" aria-live="polite">8 mentor</h2>
-        <ul class="grid grid-2 plain-list" id="mentor-list" aria-labelledby="result-count"></ul>
+        <div class="mentor-wrap">
+          <h2 class="result-count" id="result-count" aria-live="polite">8 mentor</h2>
+          <ul class="grid grid-2 plain-list" id="mentor-list" aria-labelledby="result-count"></ul>
+        </div>
         <div class="empty" id="empty" hidden>
           <p><strong>Belum ada mentor yang cocok dengan pencarianmu.</strong></p>
           <p class="muted">Coba kata lain, atau pilih "Semua bidang".</p>
