@@ -106,7 +106,7 @@ Isi "Tanggapan peserta" dari pesan peserta berikutnya; kalau belum ada, tulis "m
 
 ## Progres
 
-**Pekan sekarang:** 2
+**Pekan sekarang:** 3
 
 Setiap langkah punya panduan di `langkah/pekan-N.md` dengan nomor yang sama: kenapa, apa yang ditulis, template, dan kapan cukup. *(kamu)* = kamu yang menulis, di chat atau langsung di dokumen ini. *(Claude Code)* = Claude Code membangun dari tulisanmu. Langkah dicentang setelah kamu menilai hasilnya: lewat `/cek`, atau dengan bilang sudah pas.
 
@@ -262,9 +262,10 @@ Mode tampilan menentukan seberapa jadi tampilannya: `wireframe` (pekan 2, websit
 - **Posisi di flow:** datang dari iklan atau pencarian (asumsi), lanjut ke Daftar
 - **Satu aksi utama:** Pesan sesi
 - **Urutan section:**
-  1. Hero: slogan singkat tentang Mentorku dengan tombol Pesan sesi di bawahnya, dan beberapa mentor ditampilkan di sebelahnya beserta rating, jumlah sesi, dan pengalamannya, lalu link Lihat semua mentor ke Daftar mentor. Hanya beberapa mentor, supaya pengunjung tidak bingung memilih dari banyak pilihan. List Mentor terpisah dihapus karena redundan dengan hero dan Daftar mentor · menjawab M1, M3, aksi utama
-  2. Bidang: enam bidang yang bisa dilatih, masing-masing dengan satu kalimat isi latihannya dan anchor ke Daftar mentor dengan filter bidang itu sudah terpilih (referensi: section Skills di skillex.webflow.io) · menjawab M1 dan M2
-  3. Cerita User: testimoni dari user yang sudah memakai Mentorku, dengan foto user · menjawab M3
+  1. Hero: slogan singkat tentang Mentorku dengan tombol Pesan sesi di bawahnya, dan beberapa mentor ditampilkan di sebelahnya beserta rating, jumlah sesi, dan pengalamannya, lalu link Lihat semua mentor ke Daftar mentor. Hanya beberapa mentor, supaya pengunjung tidak bingung memilih dari banyak pilihan. List Mentor terpisah dihapus karena redundan dengan hero dan Daftar mentor. Mentor ditampilkan sebagai kartu foto, satu mentor per bidang yang bergantian lewat tombol panah (referensi: kartu foto di hero Topmate); di HP, nama, jabatan, dan rating ada di bawah foto · menjawab M1, M3, aksi utama
+  2. About: identitas atau story tersendiri supaya Mentorku tidak terasa generic (referensi: kodlo.ai). Isinya manifesto "Naik level nggak harus ditebak sendirian. Tanya ke yang sudah pernah sampai.", satu paragraf tentang sesinya, kontras Kalau sendirian dan Kalau bareng mentor, lalu link Dengarkan dari yang sudah coba ke Cerita User. Contoh perjalanan Rino dihapus karena redundan dengan kontras dan testimoni
+  3. Bidang: enam bidang yang bisa dilatih, masing-masing dengan satu kalimat isi latihannya dan anchor ke Daftar mentor dengan filter bidang itu sudah terpilih (referensi: section Skills di skillex.webflow.io) · menjawab M1 dan M2
+  4. Cerita User: testimoni dari user yang sudah memakai Mentorku, dengan foto user, lalu kartu ajakan kecil dengan tombol Pesan sesi (tombol utama) di bawah testimoni · menjawab M3, aksi utama
 
 #### Daftar mentor
 
@@ -273,7 +274,7 @@ Mode tampilan menentukan seberapa jadi tampilannya: `wireframe` (pekan 2, websit
 - **Satu aksi utama:** Pesan sesi
 - **Urutan section:**
   1. Pencarian mentor: pengunjung memasukkan kriteria untuk menemukan mentor yang dicari, dengan pilihan bidang berupa chip yang bisa diklik (referensi: section Categories di skillex.webflow.io) · menjawab M1 dan M2
-  2. List mentor: menampilkan semua mentor beserta detailnya langsung di list (tanpa popup), dengan tombol Pesan sesi di setiap mentor · menjawab M1, M3
+  2. List mentor: menampilkan semua mentor beserta detailnya langsung di list (tanpa popup), dengan tombol Pesan sesi di setiap mentor. Pesan sesi berupa kartu yang bisa diklik (tanpa tombol terlihat, referensi: OLX), dengan panah ↗ di kartu khusus di HP; di HP foto mentor jadi kotak kecil di samping nama · menjawab M1, M3
 
 **Section: List mentor** (langkah 2.5)
 - Tujuan: Pengunjung dapat mencari mentor yang sesuai dengan kriteria dan menampilkan semua mentor beserta detailnya sebagai default
@@ -289,7 +290,7 @@ Mode tampilan menentukan seberapa jadi tampilannya: `wireframe` (pekan 2, websit
 - **Satu aksi utama:** Daftar
 - **Urutan section:**
   1. Benefit: menunjukkan apa saja yang didapat dari sesi · menjawab M2
-  2. Harga: menampilkan dua pilihan, coba 1 sesi dan Paket 4 sesi. 1 sesi tampil paling menonjol, Paket 4 sesi tetap terlihat dengan label rekomendasi. Tombol Daftar dan coba 1 sesi disatukan di kartu Per sesi (section Ajakan untuk mencoba dihapus), dan kartu Paket 4 sesi punya tombol sekunder bergaris supaya paket tetap bisa dipilih tanpa bersaing dengan 1 sesi · menjawab M2, aksi utama
+  2. Harga: menampilkan dua pilihan, coba 1 sesi dan Paket 4 sesi. 1 sesi tampil paling menonjol, Paket 4 sesi tetap terlihat dengan label rekomendasi. Tombol Daftar dan coba 1 sesi disatukan di kartu Per sesi (section Ajakan untuk mencoba dihapus), dan kartu Paket 4 sesi punya tombol sekunder bergaris supaya paket tetap bisa dipilih tanpa bersaing dengan 1 sesi. Kedua kartu sama tinggi dan selebar halaman, rata kiri dengan judul seperti section lain · menjawab M2, aksi utama
 
 **Section: [nama, misalnya Hero]** (diisi saat section ini diperbaiki)
 - Tujuan: [apa yang harus dipahami atau dilakukan user di section ini]

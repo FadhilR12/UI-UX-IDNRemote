@@ -571,5 +571,59 @@
 ### 2026-11-23 · 2.7 Laporan pekan ini dengan `/laporan`
 - **Permintaan:** "oke perbaiki laporan lalu push"
 - **Yang dikerjakan:** laporan/pekan-2.md diperbarui dengan iterasi 23 November 2026 (keputusan design, cara mengarahkan, feedback); refleksi lama tetap. Commit dan push ke origin/main.
-- **Tanggapan peserta:** menunggu
+- **Tanggapan peserta:** diterima, lanjut ke ukuran huruf
 - **Feedback `/cek`:** - · tercentang: ya (sudah dari sebelumnya)
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "ukuran huruf seperti usulan mu, lalu coba sebutkan apa yang kamu tanyakan untuk sction harga"
+- **Yang dikerjakan:** skala ukuran huruf kelipatan 4 diterapkan ke ketiga halaman, sama di HP dan desktop: 12 untuk label dan keterangan (label di atas judul, jabatan, bidang, topik, satuan statistik), 16 untuk teks isi, 20 untuk judul kartu, 24 untuk judul section, 28 untuk judul halaman dan harga. File: website/style.css.
+- **Tanggapan peserta:** diterima, lanjut ke posisi judul Harga
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Harga)
+- **Permintaan:** "coba pindahkan ke kiri"
+- **Yang dikerjakan:** label "Harga", judul "Coba satu sesi dulu, lanjut kalau cocok", paragraf, dan dua kartu harga dipindah dari rata tengah ke rata kiri, sama seperti judul lain. File: website/harga.html, website/style.css.
+- **Tanggapan peserta:** judul tetap kiri, kartu harga minta dikembalikan ke tengah
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Harga)
+- **Permintaan:** "hmmm untuk card harga nya tetap di tengah"
+- **Yang dikerjakan:** dua kartu harga dikembalikan ke tengah halaman; label, judul, dan paragraf section Harga tetap rata kiri. File: website/style.css.
+- **Tanggapan peserta:** menilai ukuran huruf terlalu kecil untuk keterbacaan
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "hmm sepertinya untuk font size terlalu kecil deh buat agar keterbacaan nya jelas" lalu "coba terapkan dulu deh"
+- **Yang dikerjakan:** skala ukuran huruf versi 2, sama di HP dan desktop: 12 hanya untuk label kapital dan tag topik; 16 untuk teks isi dan keterangan (jabatan, deskripsi bidang, rating, catatan harga), keterangan dibedakan lewat warna abu; 20 untuk judul kartu dan paragraf pembuka; 24 untuk judul section; 32 untuk judul halaman. Statistik di kartu mentor dibolehkan turun baris supaya tidak keluar dari kartu. File: website/style.css.
+- **Tanggapan peserta:** "yang harga dia masih belum sama seperti yang lain"
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Harga)
+- **Permintaan:** "yang harga dia masih belum sama seperti yang lain" lalu "semuanya" (tiga perbedaan yang disebut Claude Code)
+- **Yang dikerjakan:** (1) kartu harga selebar halaman dan mulai dari garis kiri judul, sama seperti kartu benefit dan kartu mentor; (2) harga dari 28px jadi 24px sesuai skala baru; (3) tinggi kartu mengikuti isinya, ruang kosong di atas tombol Per sesi hilang (tombol kedua kartu tidak lagi sejajar); catatan "Hemat 12%" dirapatkan ke harganya. File: website/style.css.
+- **Tanggapan peserta:** kartu harga minta sama tinggi, judul Harga minta disamakan
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (Harga)
+- **Permintaan:** "buat card harga sama rata, lalu untuk title di harga samakan dengan title yang lain."
+- **Yang dikerjakan:** kedua kartu harga dibuat sama tinggi dengan tombol sejajar di dasar kartu; jarak nama paket ke harga dirapatkan (4px) seperti judul kartu lain. Ukuran judul di ketiga halaman dicek lewat nilai yang terpakai di browser: sudah sama per level, jadi judul Harga belum diubah dan ditanyakan ke peserta. File: website/style.css.
+- **Tanggapan peserta:** judul semua disamakan, kecuali Hero
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "tidak usah menggunakan judul halaman, semuanya sama. Kecuali hero untuk hero dia menggunakan 32 px tidak masalah, tapi sisanya tolong samakan"
+- **Yang dikerjakan:** semua judul halaman dan judul section jadi 24px dengan tinggi baris yang sama ("Cari mentor yang pas buat targetmu", "Satu sesi, isinya apa aja?", dan semua judul section); hanya judul Hero Beranda 32px. Berlaku di HP dan desktop. File: website/style.css.
+- **Tanggapan peserta:** minta skala teks dinaikkan lagi
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "setelah aku pikir pikir tolong naikan lagi skala teks nya" lalu "naik" (teks isi ikut naik)
+- **Yang dikerjakan:** skala ukuran huruf versi 3, sama di HP dan desktop: Hero 40px, semua judul lain 32px, judul kartu dan harga 24px, teks isi dan paragraf pembuka 20px, keterangan (jabatan, rating, tag, link pendukung, tombol) 16px, label kapital 12px. Di HP, judul tidak lagi dipaksa pecah per frasa supaya tidak jadi baris pendek-pendek. File: website/style.css.
+- **Tanggapan peserta:** ditolak, minta dikembalikan ("eh untuk teks kembalikan seperti tadi saja")
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-23 · di luar langkah (semua halaman website)
+- **Permintaan:** "eh untuk teks kembalikan seperti tadi saja"
+- **Yang dikerjakan:** skala versi 3 dihapus; kembali ke skala sebelumnya: Hero 32px, semua judul lain 24px, judul kartu dan paragraf pembuka 20px, harga 24px, teks isi dan keterangan 16px, label kapital dan tag 12px. Judul di HP kembali dipotong per frasa. File: website/style.css.
+- **Tanggapan peserta:** menunggu
+- **Feedback `/cek`:** - · tercentang: -

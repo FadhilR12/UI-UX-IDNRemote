@@ -2389,3 +2389,225 @@ dialog::backdrop {
     row-gap: 16px;
   }
 }
+
+/* ===== Skala ukuran huruf (kelipatan 4), sama di HP dan desktop =====
+   12 : label kecil dan keterangan (label di atas judul, jabatan, bidang, topik, satuan statistik)
+   16 : teks isi (paragraf, daftar, tombol, link, angka statistik)
+   20 : judul kartu (nama mentor, nama bidang, nama paket, judul benefit, kutipan utama)
+   24 : judul section
+   28 : judul halaman dan harga */
+
+/* 28 */
+h1,
+.price,
+.plan:not(.plan-main) .price {
+  font-size: 28px;
+}
+
+/* 24 */
+h2 {
+  font-size: 24px;
+}
+
+/* 20 */
+h3,
+.h3-size,
+.benefit-row h2,
+.hero-photo-name,
+.quote-feature blockquote p,
+.logo {
+  font-size: 20px;
+}
+
+/* 16 */
+body,
+p,
+.lead,
+.about-lead,
+.quote p,
+.cta-strip p,
+.benefit-row p,
+#mentor-list .mentor-card > p,
+.result-count,
+.chip span,
+.hero-more,
+.about-jump,
+.price span,
+.stats strong,
+#mentor-list .stats-spread strong {
+  font-size: 16px;
+}
+
+/* 12 */
+.about-kicker,
+.about-label,
+.muted,
+.tag,
+#mentor-list .tags .tag,
+.tag-under-name,
+#mentor-list .tag-under-name,
+#mentor-list .mentor-card-top .muted,
+#mentor-list .mentor-card > div:not(.mentor-card-top) > .muted,
+.stats,
+.hero-stats,
+#mentor-list .stats-spread,
+.bidang-tile p,
+.quote footer,
+.ph,
+.bidang-img,
+.benefit-icon,
+.ph-avatar-sm {
+  font-size: 12px;
+}
+
+@media (max-width: 719px) {
+  h1,
+  .price,
+  .plan:not(.plan-main) .price {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3,
+  .h3-size,
+  .benefit-row h2 {
+    font-size: 20px;
+  }
+
+  .about-lead,
+  .benefit-row p {
+    font-size: 16px;
+  }
+
+  .bidang-tile p,
+  .bidang-img,
+  .benefit-icon {
+    font-size: 12px;
+  }
+}
+
+/* Harga: kartu harga selebar halaman dan mulai dari garis kiri judul, sama seperti kartu di halaman lain.
+   Tinggi kartu mengikuti isinya, jadi tidak ada ruang kosong di atas tombol. Harga 24px (skala v2). */
+.plans {
+  max-width: none;
+  margin: 0;
+  align-items: stretch;
+}
+
+.plan,
+.plan-main {
+  min-height: 0;
+}
+
+/* Kedua kartu sama tinggi; tombol menempel di dasar kartu supaya sejajar */
+.plan-cta,
+.plan .btn {
+  margin-top: auto;
+}
+
+.plan h3 {
+  margin-bottom: 4px;
+}
+
+.price,
+.plan:not(.plan-main) .price {
+  font-size: 24px;
+}
+
+@media (max-width: 719px) {
+  .price,
+  .plan:not(.plan-main) .price {
+    font-size: 24px;
+  }
+}
+
+/* ===== Skala ukuran huruf v2: keterbacaan =====
+   12 : hanya label kapital dan tag topik
+   16 : teks isi dan keterangan (jabatan, deskripsi bidang, rating, catatan harga); keterangan dibedakan lewat warna abu
+   20 : judul kartu dan paragraf pembuka di bawah judul
+   24 : judul section
+   32 : judul halaman */
+
+h1 {
+  font-size: 32px;
+}
+
+.lead,
+.about-lead,
+.section-head .lead,
+.hero .lead {
+  font-size: 20px;
+}
+
+.muted,
+.tag-under-name,
+#mentor-list .tag-under-name,
+#mentor-list .mentor-card-top .muted,
+#mentor-list .mentor-card > div:not(.mentor-card-top) > .muted,
+.stats,
+.hero-stats,
+#mentor-list .stats-spread,
+.bidang-tile p,
+.quote footer {
+  font-size: 16px;
+}
+
+/* tetap 12: label kapital dan tag topik */
+.about-kicker,
+.about-label,
+.tag,
+#mentor-list .tags .tag {
+  font-size: 12px;
+}
+
+@media (max-width: 719px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  .lead,
+  .about-lead,
+  .section-head .lead,
+  .hero .lead {
+    font-size: 20px;
+  }
+
+  .bidang-tile p {
+    font-size: 16px;
+  }
+}
+
+/* Statistik kartu mentor: boleh turun baris supaya teks 16px tidak keluar dari kartu */
+#mentor-list .stats-spread {
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 4px 16px;
+}
+
+/* Harga: catatan "Hemat 12%" menempel ke harganya, jarak ke daftar isi sama dengan kartu Per sesi */
+.plan .muted {
+  margin: 0;
+}
+
+/* Judul: semua judul section dan judul halaman 24px; hanya judul Hero Beranda 32px */
+h1 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.hero h1 {
+  font-size: 32px;
+}
+
+@media (max-width: 719px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
