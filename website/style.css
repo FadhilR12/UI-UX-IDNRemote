@@ -3465,7 +3465,8 @@ button {
   gap: 8px;
 }
 
-.plan-row h3 {
+.plan-row h3,
+.plan-row h2 {
   margin: 0;
   color: #111110;
 }
@@ -3600,4 +3601,704 @@ button {
   .plan-row .plan-cta {
     max-width: none;
   }
+}
+
+
+/* ===================================================================
+   REVISI FEEDBACK FASILITATOR (setelah pekan 3), pilihan peserta:
+   1C  Foto: potret grayscale yang diberi warna aksen. Foto pengganti dari Unsplash (img/CREDITS.md).
+       Potret mentor dan user: duotone hitam ke hijau #B5FF00 (grayscale + multiply di atas latar hijau).
+       Foto suasana di kartu Bidang: grayscale, berubah jadi duotone hijau saat di-hover, sama seperti hover lain.
+   2A  Batas section lewat ritme latar, tanpa garis: Hero hitam, About terang #F4F3EE,
+       Bidang putih #FFFFFF, Cerita user terang, Ajakan hitam, footer hitam dengan garis pemisah.
+   3C  Ajakan sebelum footer: urgensi dari target user di kiri, slot nyata yang tersisa di kanan.
+   =================================================================== */
+
+/* --- 1C. Foto --- */
+.ph.photo {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  background: #B5FF00;
+  font-size: 0;
+}
+
+.ph.photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 25%;
+  filter: grayscale(1) contrast(1.1);
+  mix-blend-mode: multiply;
+}
+
+/* Foto yang subjeknya berdiri atau duduk penuh: fokus ke wajah */
+.ph.photo img[src*="mentor-laras"] {
+  object-position: 50% 20%;
+}
+
+.ph.photo img[src*="mentor-putri"] {
+  object-position: 50% 15%;
+}
+
+/* Panah ↗ tetap di atas foto */
+.ph.photo .card-arrow {
+  z-index: 1;
+  font-size: 16px;
+}
+
+/* Foto suasana Bidang: grayscale di atas latar terang, hijau hanya saat di-hover */
+.ph.photo-scene {
+  background: #F4F3EE;
+}
+
+.ph.photo-scene img {
+  mix-blend-mode: normal;
+  object-position: 50% 50%;
+  transition: opacity 0.2s;
+}
+
+.bidang-tile:hover .ph.photo-scene,
+.bidang-tile:focus-visible .ph.photo-scene {
+  background: #B5FF00;
+}
+
+.bidang-tile:hover .ph.photo-scene img,
+.bidang-tile:focus-visible .ph.photo-scene img {
+  mix-blend-mode: multiply;
+}
+
+/* Hero: foto memenuhi bingkai, tanpa label placeholder */
+.hero-photo-img.photo {
+  padding: 0;
+}
+
+/* HP, Daftar mentor: foto kotak kecil di samping nama */
+@media (max-width: 719px) {
+  #mentor-list .ph.photo {
+    position: relative;
+  }
+}
+
+/* --- 2A. Ritme latar per section --- */
+.section-light {
+  background: #F4F3EE;
+}
+
+.section-white {
+  background: #FFFFFF;
+}
+
+.section-dark {
+  background: #111110;
+  color: #F4F3EE;
+}
+
+/* Tiap section punya latar sendiri, jadi jarak atasnya kembali penuh
+   (mengalahkan .section:not(.hero) + .section dari pekan 3) */
+.section.section-light:not(.hero),
+.section.section-white:not(.hero),
+.section.section-dark:not(.hero) {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+@media (max-width: 719px) {
+  .section.section-light:not(.hero),
+  .section.section-white:not(.hero),
+  .section.section-dark:not(.hero) {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+
+
+/* ===================================================================
+   REVISI FEEDBACK FASILITATOR KEDUA (Loom), pilihan peserta:
+   1A+C  Bidang jadi section hitam penuh (ritme: Hero hitam, About terang, Bidang hitam,
+         Cerita user terang, Ajakan hitam), ditambah whitespace lebih lega dan garis tebal di awal tiap section.
+   2A    Pembanding About: "Kalau sendirian" redup dengan tanda ✕, "Kalau bareng mentor" kartu hitam dengan ✓ hijau.
+   3A    Ajakan terakhir lebih besar: tiga langkah sesi pertama, yang didapat, dan slot nyata.
+   =================================================================== */
+
+/* --- 1C. Whitespace lebih lega: 112px desktop, 72px HP --- */
+.section.section-light:not(.hero),
+.section.section-white:not(.hero),
+.section.section-dark:not(.hero) {
+  padding-top: 112px;
+  padding-bottom: 112px;
+}
+
+@media (max-width: 719px) {
+  .section.section-light:not(.hero),
+  .section.section-white:not(.hero),
+  .section.section-dark:not(.hero) {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+/* --- 1C. Garis tebal di awal tiap section: hitam di latar terang (17:1), terang di latar hitam --- */
+.section.section-light:not(.hero) > .container::before,
+.section.section-white:not(.hero) > .container::before,
+.section.section-dark:not(.hero) > .container::before {
+  content: "";
+  display: block;
+  height: 4px;
+  margin-bottom: 32px;
+  background: #111110;
+}
+
+.section.section-dark:not(.hero) > .container::before {
+  background: #F4F3EE;
+}
+
+/* --- 1A. Bidang: section hitam penuh, wadah hitam lama dilepas --- */
+.bidang-section .bidang-list,
+.bidang-section .bidang-list.plain-list {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+}
+
+.bidang-section .section-head .lead {
+  color: #CCCBC7;
+}
+
+/* Hover di latar hitam: hijau neon (15,5:1), bukan hijau gelap #4F7000 */
+.bidang-section .bidang-tile:hover h3,
+.bidang-section .bidang-tile:focus-visible h3 {
+  color: #B5FF00;
+}
+
+.bidang-section .bidang-tile:hover .bidang-img,
+.bidang-section .bidang-tile:focus-visible .bidang-img {
+  outline: 2px solid #B5FF00;
+}
+
+.bidang-section .bidang-tile:focus-visible {
+  outline-color: #B5FF00;
+}
+
+.bidang-section .hero-arrow {
+  border-color: #F4F3EE;
+}
+
+/* HP: baris kartu bisa digeser sampai tepi layar */
+@media (max-width: 719px) {
+  .bidang-section .bidang-list,
+  .bidang-section .bidang-list.plain-list {
+    padding-bottom: 12px;
+  }
+}
+
+/* --- 2A. Pembanding yang tegas --- */
+.about-contrast {
+  gap: 16px;
+}
+
+.about-col.about-col-weak {
+  background: #E2E1DD;
+  border: 0;
+  color: #595958;
+}
+
+.about-col.about-col-strong {
+  background: #111110;
+  border: 0;
+  color: #F4F3EE;
+}
+
+.about-col-strong .about-label {
+  color: #B5FF00;
+}
+
+.about-col-weak .about-label {
+  color: #595958;
+}
+
+.about-col .plain-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.about-col .plain-list li::before {
+  flex: 0 0 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.about-col-weak .plain-list li::before {
+  content: "✕";
+  border: 1px solid #868582;
+  color: #595958;
+}
+
+.about-col-strong .plain-list li::before {
+  content: "✓";
+  background: #B5FF00;
+  color: #111110;
+}
+
+.about-col {
+  padding: 24px;
+  border-radius: 16px;
+}
+
+@media (max-width: 719px) {
+  .about-col {
+    padding: 20px;
+  }
+}
+
+
+/* ===================================================================
+   REVISI KETIGA (permintaan peserta):
+   - Foto mentor dan user tampil berwarna asli (foto formal), tanpa efek hijau. Foto Bidang tetap grayscale + hijau saat hover.
+   - Tombol panah Hero dan Bidang diganti swipe, dengan titik penanda posisi (carousel.js).
+   - Ajakan terakhir minimalis: menyambung "Mereka sudah duluan" ke "Sekarang giliranmu", satu tombol.
+   =================================================================== */
+
+/* --- Foto potret berwarna asli --- */
+.ph.photo:not(.photo-scene) {
+  background: #E2E1DD;
+}
+
+.ph.photo:not(.photo-scene) img {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.ph.photo img[src*="mentor-laras"],
+.ph.photo img[src*="mentor-putri"] {
+  object-position: 50% 25%;
+}
+
+/* --- Hero: jalur kartu mentor yang bisa digeser --- */
+.carousel-track {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.hero-track:focus-visible {
+  outline: 2px solid #B5FF00;
+  outline-offset: 4px;
+  border-radius: 16px;
+}
+
+/* Tanpa tombol panah, kartu info boleh selebar foto */
+.hero-photo-card {
+  max-width: calc(100% - 32px);
+}
+
+/* --- Titik penanda: target sentuh 44px, titiknya 8px --- */
+.dots {
+  display: flex;
+  gap: 0;
+  margin-top: 8px;
+}
+
+.dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.dot::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background: #868582;
+  transition: width 0.2s;
+}
+
+.dot[aria-current="true"] {
+  width: 40px;
+}
+
+.dot[aria-current="true"]::before {
+  width: 28px;
+  background: #B5FF00;
+}
+
+.dot:hover::before {
+  background: #F4F3EE;
+}
+
+.dot[aria-current="true"]:hover::before {
+  background: #B5FF00;
+}
+
+.dot:focus-visible {
+  outline: 2px solid #B5FF00;
+  outline-offset: -6px;
+  border-radius: 8px;
+}
+
+/* Hero: titik di kiri, link Lihat semua mentor di kanan pada baris yang sama */
+.hero-photo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.hero-photo .hero-track {
+  grid-column: 1 / -1;
+}
+
+.hero-photo .hero-more {
+  margin-top: 8px;
+}
+
+/* --- Bidang: titik hanya di HP (di desktop semua kartu terlihat dalam grid) --- */
+.bidang-dots {
+  display: none;
+}
+
+.bidang-nav {
+  display: none !important;
+}
+
+@media (max-width: 719px) {
+  .bidang-dots {
+    display: flex;
+  }
+
+  .bidang-section .bidang-list,
+  .bidang-section .bidang-list.plain-list {
+    position: relative;
+    padding-bottom: 0;
+  }
+}
+
+/* ===================================================================
+   REVISI KEEMPAT (permintaan peserta):
+   - Titik penanda carousel di tengah.
+   - Ajakan terakhir jadi kartu hitam di section putih: hook, ajakan, tombol di kiri; benefit di kanan.
+   =================================================================== */
+
+/* --- Titik penanda di tengah; link Lihat semua mentor di baris sendiri, rata kanan --- */
+.dots {
+  justify-content: center;
+}
+
+.hero-photo {
+  display: block;
+}
+
+.hero-photo .hero-more {
+  margin-top: 0;
+}
+
+/* --- Kartu ajakan di dalam Cerita user (menimpa .cta-card dari wireframe pekan 2) --- */
+#cerita .cta-card {
+  margin-top: 64px;
+}
+
+@media (max-width: 719px) {
+  #cerita .cta-card {
+    margin-top: 48px;
+  }
+}
+
+.cta-card {
+  display: grid;
+  justify-items: stretch;
+  max-width: none;
+  margin: 0;
+  border: 0;
+  text-align: left;
+  gap: 32px;
+  padding: 48px;
+  border-radius: 24px;
+  background: #111110;
+  color: #F4F3EE;
+}
+
+@media (min-width: 900px) {
+  .cta-card {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+}
+
+.cta-card .about-kicker {
+  color: #B5FF00;
+}
+
+.cta-card h2 {
+  color: #F4F3EE;
+}
+
+.cta-card .story-title span {
+  display: block;
+}
+
+.cta-card .lead {
+  max-width: 480px;
+  margin: 16px 0 32px;
+  color: #CCCBC7;
+}
+
+.cta-card .btn {
+  justify-self: start;
+  border-color: #B5FF00;
+}
+
+.cta-card :focus-visible {
+  outline-color: #B5FF00;
+}
+
+.cta-card-side {
+  padding: 32px;
+  border-radius: 16px;
+  background: #F4F3EE;
+  color: #111110;
+}
+
+.cta-card-label {
+  margin: 0 0 16px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.cta-benefits {
+  margin-bottom: 24px;
+}
+
+.cta-card-price {
+  margin: 0;
+  padding-top: 16px;
+  border-top: 1px solid #CCCBC7;
+  font-size: 14px;
+  line-height: 20px;
+  color: #595958;
+}
+
+@media (max-width: 719px) {
+  .cta-card {
+    padding: 24px;
+    border-radius: 16px;
+  }
+
+  .cta-card-side {
+    padding: 20px;
+  }
+
+  .cta-card .btn {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+/* ===================================================================
+   REVISI KELIMA (permintaan peserta): "Lihat semua mentor" jadi slide terakhir carousel Hero
+   =================================================================== */
+.hero-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  aspect-ratio: 1 / 1;
+  padding: 40px;
+  border: 1px solid #595958;
+  border-radius: 12px;
+  color: #F4F3EE;
+  text-decoration: none;
+}
+
+.hero-all-avatars {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.hero-all-avatars img {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #111110;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 25%;
+}
+
+.hero-all-avatars img + img {
+  margin-left: -16px;
+}
+
+.hero-all-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.hero-all-text {
+  max-width: 320px;
+  color: #CCCBC7;
+}
+
+.hero-all-link {
+  margin-top: 16px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hero-all:hover,
+.hero-all:focus-visible {
+  border-color: #B5FF00;
+}
+
+.hero-all:hover .hero-all-link,
+.hero-all:focus-visible .hero-all-link {
+  color: #B5FF00;
+}
+
+.hero-all:focus-visible {
+  outline: 2px solid #B5FF00;
+  outline-offset: -4px;
+}
+
+@media (max-width: 719px) {
+  .hero-all {
+    aspect-ratio: 16 / 10;
+    padding: 24px;
+  }
+
+  .hero-all-avatars img {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Perbaikan overflow di HP: kolom grid Hero tidak boleh melebar mengikuti isi carousel
+   (min-width bawaan item grid = lebar isinya, sehingga halaman jadi lebih lebar dari layar) */
+.hero-grid > *,
+.hero-photo,
+.bidang-wrap,
+.carousel-track {
+  min-width: 0;
+}
+
+.hero-slide {
+  min-width: 0;
+}
+
+/* HP: kartu Lihat semua mentor mengikuti tinggi isinya, setinggi slide lain */
+@media (max-width: 719px) {
+  .hero-all {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 240px;
+  }
+}
+
+
+/* ===================================================================
+   REVISI KEENAM (permintaan peserta), khusus HP:
+   - Titik penanda swipe lebih kecil (target sentuh tetap setinggi 44px).
+   - Kartu ajakan kembali sederhana seperti kotak ajakan awal: satu kalimat dan tombol.
+   =================================================================== */
+.cta-card-short {
+  display: none;
+}
+
+@media (max-width: 719px) {
+  .dots {
+    margin-top: 4px;
+  }
+
+  .dot {
+    width: 14px;
+  }
+
+  .dot::before {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+  }
+
+  .dot[aria-current="true"] {
+    width: 26px;
+  }
+
+  .dot[aria-current="true"]::before {
+    width: 18px;
+  }
+
+  .cta-card {
+    gap: 16px;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .cta-card .about-kicker,
+  .cta-card h2,
+  .cta-card .lead,
+  .cta-card-side {
+    display: none;
+  }
+
+  .cta-card-short {
+    display: block;
+    margin: 0 0 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #F4F3EE;
+  }
+}
+
+
+/* ===================================================================
+   REVISI KETUJUH (permintaan peserta): aksen hijau di section Bidang.
+   Hijau #B5FF00 di latar hitam (15,5:1): label section dan panah ↗ di kartu (baris kedua judul kembali putih atas permintaan peserta).
+   Foto tetap grayscale, hijau saat hover.
+   =================================================================== */
+.bidang-section .about-kicker {
+  color: #B5FF00;
+}
+
+.bidang-section .story-title span {
+  display: block;
+}
+
+
+.bidang-section .bidang-tile .card-arrow {
+  border-color: #B5FF00;
+  background: #B5FF00;
+  color: #111110;
 }

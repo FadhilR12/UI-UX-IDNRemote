@@ -34,8 +34,8 @@ function card(m) {
 
   return el('li', { className: 'card mentor-card mentor-card-clickable' }, [
     el('div', { className: 'mentor-card-top' }, [
-      Object.assign(el('div', { className: 'ph ph-photo' }, [
-        `Foto ${m.name}`,
+      Object.assign(el('div', { className: 'ph photo ph-photo' }, [
+        el('img', { src: `img/mentor-${m.id}.jpg`, alt: '', loading: 'lazy' }),
         el('span', { className: 'card-arrow', textContent: '↗' }),
       ]), { ariaHidden: 'true' }),
       el('div', {}, [

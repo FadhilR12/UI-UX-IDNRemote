@@ -317,3 +317,87 @@
 - **Yang dikerjakan:** laporan/pekan-3.md ditambah iterasi halaman Harga setelah laporan (refleksi tetap); commit dan push. File: laporan/pekan-3.md.
 - **Tanggapan peserta:** menunggu
 - **Feedback `/cek`:** - · tercentang: ya (sudah dari sebelumnya)
+
+### 2026-11-26 · Revisi feedback fasilitator (setelah 3.6)
+- **Permintaan:** "Coba kasih foto2 dan thumbnailnya mas biar kelihatan real • Perjelas batas antar sectionnya • Coba explore lagi bagian CTA sebelum footer, kasih urgensi kenapa perlu segera daftar ... ditambah kita buat separation per section"
+- **Yang dikerjakan:** Claude Code menawarkan tiga arah untuk tiap feedback; peserta memilih "1. C 2. A 3. C". Foto pengganti dari Unsplash dengan efek duotone hijau untuk potret, grayscale untuk foto suasana Bidang; ritme latar per section di Beranda; section Ajakan baru sebelum footer dengan slot Sabtu 5 Desember dari `data/mentors.json`. File: website/index.html, website/hero.js, website/mentor.js, website/style.css, website/img/ (17 foto dan CREDITS.md), CLAUDE.md bagian 4.
+- **Tanggapan peserta:** dilanjutkan dengan revisi fasilitator kedua (entri berikutnya)
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi feedback fasilitator kedua (Loom)
+- **Permintaan:** "btw ini revisian lagi twin" (ringkasan Loom: section "Kenapa Mentorku ada" dan Bidang terlihat seperti satu section, pembatas elemen pembanding belum tegas, CTA terakhir diperbesar dan diberi benefit serta konteks pesan sesi pertama)
+- **Yang dikerjakan:** Claude Code menawarkan arah untuk tiap poin; peserta memilih "1. A & C 2. A 3. A". Bidang jadi section hitam penuh, padding section 112px (HP 72px) dan garis tebal 4px di awal tiap section; kartu pembanding About redup ✕ vs hitam ✓; section Ajakan dengan tiga langkah sesi pertama, panel harga Rp250.000 dan yang didapat, serta slot Sabtu. File: website/index.html, website/style.css, CLAUDE.md bagian 4.
+- **Tanggapan peserta:** diterima sebagian; foto potret tanpa hijau dan formal, panah diganti swipe, CTA terlalu penuh sehingga dibuat minimalis (lihat entri berikutnya)
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi peserta setelah revisi fasilitator kedua
+- **Permintaan:** "twin tolong gambar mentor dan reviewer tidak usah di hijaukan lek, bidang sih aman. lalu gunakan foto yang formal. Ganti tombol buat menggerakan bidang dan mentor menjadi swipe saja. Berikan penanda nya juga ya twin. Untuk CTA nya terlalu penuh twin aku pengen yang minimalistic saja yang penting cerita dari web ini masih tersambung dari hero ke cerita user dan motivasi user masih tinggi untuk menekan CTA untuk pesan sesi pertama."
+- **Yang dikerjakan:** 11 foto mentor dan user diganti foto formal dari Unsplash, tampil berwarna asli; Hero jadi jalur kartu mentor yang di-swipe dan Bidang di HP di-swipe, keduanya dengan titik penanda (carousel.js menggantikan hero.js dan bidang.js); section Ajakan dibuat minimalis ("Sekarang giliranmu. Mulai dari satu sesi.", satu tombol, satu baris harga). File: website/index.html, website/style.css, website/carousel.js, website/img/, CLAUDE.md bagian 4.
+- **Tanggapan peserta:** diterima sebagian; foto Putri dan Hendra dinilai belum profesional (entri berikutnya), lalu titik penanda dipindah ke tengah dan CTA dijadikan kartu
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi peserta: foto Putri dan Hendra
+- **Permintaan:** "putri ayu dan hendra wijaya belum professional twin aku takut sama hendra wijaya gigi dia besar sekali. Tolong sesuaikan di daftar mentor juga twin"
+- **Yang dikerjakan:** foto Putri Ayu dan Hendra Wijaya diganti foto formal (blazer putih, jas biru), otomatis terpakai di Hero dan Daftar mentor. File: website/img/mentor-putri.jpg, website/img/mentor-hendra.jpg, website/img/CREDITS.md.
+- **Tanggapan peserta:** diterima, lanjut ke revisi titik penanda dan kartu ajakan
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi peserta: titik penanda dan kartu ajakan
+- **Permintaan:** "twin kalau penanda carrousel di tengah aja twin, untuk CTA di bawah kyknya tetap jadi card aja twin tapi berikan hook dan ajakan gitu mungkin serta benefit."
+- **Yang dikerjakan:** titik penanda Hero dan Bidang dipindah ke tengah; section Ajakan jadi kartu hitam di section putih dengan hook, ajakan, tombol Pesan sesi, dan panel benefit sesi pertama. File: website/index.html, website/style.css, CLAUDE.md bagian 4.
+- **Tanggapan peserta:** diterima, kartu ajakan dipindah ke section Cerita user (entri berikutnya)
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi peserta: kartu ajakan masuk ke Cerita user
+- **Permintaan:** "taruh di section yang sama kyk cerita user aja twin CTA nya."
+- **Yang dikerjakan:** section Ajakan terpisah dihapus; kartu ajakan hitam dipindah ke akhir section Cerita user, 64px di bawah testimoni. File: website/index.html, website/style.css, CLAUDE.md bagian 4.
+- **Tanggapan peserta:** diterima, lanjut ke Lihat semua mentor di carousel Hero
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi peserta: Lihat semua mentor di carousel Hero
+- **Permintaan:** "twin untuk hero lihat semua mentor nya masukin ke carrousel aja deh, masukin di paling kanan twin"
+- **Yang dikerjakan:** link Lihat semua mentor di bawah Hero dihapus dan diganti slide ketujuh di ujung kanan carousel (deretan foto 8 mentor, "Masih ada mentor lain", link ke Daftar mentor), dengan titik penanda ketujuh. File: website/index.html, website/style.css, CLAUDE.md bagian 4.
+- **Tanggapan peserta:** melaporkan overflow di HP (entri berikutnya)
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Perbaikan overflow di HP
+- **Permintaan:** "overflow twin buat di hp"
+- **Yang dikerjakan:** di lebar 390px halaman Beranda melebar jadi 892px karena kolom grid Hero mengikuti lebar isi carousel; ditambah min-width: 0 pada kolom Hero, wadah Bidang, dan jalur carousel, dan kartu Lihat semua mentor di HP mengikuti tinggi isinya. Dicek di lebar 390px: Beranda, Daftar mentor, dan Harga selebar layar. File: website/style.css.
+- **Tanggapan peserta:** diterima, lanjut ke penanda dan CTA di HP
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi peserta: penanda swipe dan CTA di HP
+- **Permintaan:** "penanda swipe nya kecilin aja twin di mobile, lalu cta nya dipersimple aja seperti awal untuk mobile"
+- **Yang dikerjakan:** di HP titik penanda jadi 6px (yang aktif 18px), target sentuh tetap setinggi 44px; kartu ajakan di HP hanya menampilkan "Siap ngobrol sama mentor pertamamu? Mulai dari satu sesi aja." dan tombol Pesan sesi, seperti kotak ajakan awal. Desktop tidak berubah. File: website/index.html, website/style.css, CLAUDE.md bagian 4.
+- **Tanggapan peserta:** diterima, lanjut ke aksen hijau di Bidang
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi peserta: aksen hijau di Bidang
+- **Permintaan:** "di section bidang tolong ditambahin ada warna hijau nya twin"
+- **Yang dikerjakan:** label "Mau latihan apa" dan baris kedua judul ("latihannya juga beda.") jadi hijau #B5FF00, panah ↗ di kartu Bidang (HP) berlatar hijau; foto tetap grayscale dan hijau saat hover. File: website/style.css.
+- **Tanggapan peserta:** diterima, lanjut ke audit
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Audit tampilan dengan skill design-taste-frontend
+- **Permintaan:** "audit aja twin"
+- **Yang dikerjakan:** pengecek layout dan konsistensi dari skill dijalankan ke Beranda, Daftar mentor, dan Harga (1440 sampai 320) tanpa mengubah file; temuan disaring jadi yang relevan untuk program (aksesibilitas, target sentuh, fokus) dan yang tidak relevan (aturan satu section satu layar milik skill).
+- **Tanggapan peserta:** memilih membetulkan nomor 2 (fokus keyboard di slide Lihat semua mentor) dan 3 (urutan heading di Harga); nomor 1 (area sentuh titik penanda) tidak dikerjakan
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Revisi peserta: judul Bidang tanpa hijau
+- **Permintaan:** "btw untuk latihannya juga beda kyknya jangan hijau deh"
+- **Yang dikerjakan:** baris kedua judul Bidang kembali putih; label "Mau latihan apa" dan panah ↗ tetap hijau. File: website/style.css.
+- **Tanggapan peserta:** diterima
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · Perbaikan dari audit: fokus carousel dan heading Harga
+- **Permintaan:** "nomor 2 dan 3 saja betulkan twin"
+- **Yang dikerjakan:** carousel Hero langsung menggeser ke kartu yang difokus lewat Tab (slide Lihat semua mentor kini terlihat dengan garis fokus hijau, titik ketujuh aktif); judul kartu Per sesi dan Paket 4 sesi di Harga diganti dari h3 ke h2 dengan ukuran subjudul yang sama (h1, lalu h2). File: website/carousel.js, website/harga.html, website/style.css.
+- **Tanggapan peserta:** diterima
+- **Feedback `/cek`:** - · tercentang: -
+
+### 2026-11-26 · 3.6 (laporan diperbarui setelah revisi)
+- **Permintaan:** "oke gng kita push btw buat lporan dulu yak"
+- **Yang dikerjakan:** laporan/pekan-3.md ditambah revisi setelah feedback fasilitator di keempat bagian (refleksi tetap); commit dan push. File: laporan/pekan-3.md.
+- **Tanggapan peserta:** menunggu
+- **Feedback `/cek`:** - · tercentang: ya (sudah dari sebelumnya)
